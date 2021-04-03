@@ -4,7 +4,7 @@ import TabItem from "@theme/TabItem";
 import BrowserWindow from "./BrowserWindow/BrowserWindow";
 import Monaco from "./Monaco";
 import LoadingAnimation from "./LoadingAnimation";
-import { copyShareUrl, runBeaconCode } from "../utils";
+import { copyShareUrl, runCoinlibCode } from "../utils";
 import { ExecutionState } from "../ExecutionState";
 
 const Child = ({ code }) => {
@@ -22,7 +22,7 @@ const Child = ({ code }) => {
     await clear();
     setExecutionState(ExecutionState.STARTED);
     setTimeout(async () => {
-      await runBeaconCode(runnableCode, setOutput);
+      await runCoinlibCode(runnableCode, setOutput);
       setExecutionState(ExecutionState.ENDED);
     }, 10); // TODO: Remove workaround?
   };
@@ -124,7 +124,7 @@ const Child = ({ code }) => {
   );
 };
 
-export const RunnableCode = ({ children, color, beacon, taquito }) => {
+export const RunnableCode = ({ children }) => {
   return (
     <Tabs
       groupId="beaconOrTaquito"

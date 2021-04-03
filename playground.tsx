@@ -5,7 +5,7 @@ import useWindowSize from "@site/src/hooks/useWindowSize";
 import Monaco from "@site/src/components/Monaco";
 import styles from "./styles.module.css";
 import { ExecutionState } from "../ExecutionState";
-import { copyShareUrl, runBeaconCode } from "../utils";
+import { copyShareUrl, runCoinlibCode } from "../utils";
 
 const defaultCode = `import { TezosProtocol } from "@airgap/coinlib-core";
 
@@ -76,7 +76,7 @@ function Playground() {
     }
     await clear();
     setExecutionState(ExecutionState.STARTED);
-    await runBeaconCode(input, setOutput);
+    await runCoinlibCode(input, setOutput);
     setExecutionState(ExecutionState.ENDED);
   };
 
@@ -90,7 +90,7 @@ function Playground() {
   }
 
   return (
-    <Layout title="Beacon" description="Beacon Playground" noFooter={true}>
+    <Layout title="AirGap" description="AirGap Playground" noFooter={true}>
       <div className={classnames(styles.runbox)}>
         <button
           onClick={execute}

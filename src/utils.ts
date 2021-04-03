@@ -27,7 +27,7 @@ const removeImports = (code: string) => {
     .join("\n");
 };
 
-export const runBeaconCode = (
+export const runCoinlibCode = (
   rawCode: string,
   setOutput: (str: string) => void
 ) => {
