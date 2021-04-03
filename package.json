@@ -1,0 +1,55 @@
+{
+  "name": "beacon-docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "npm run embed-code && docusaurus start",
+    "prepare": "node scripts/fix-coinlib.js",
+    "build": "npm run embed-code && docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "pretty-source": "npx prettier --ignore-unknown --write 'src/**/*'",
+    "pretty-docs": "npx prettier --ignore-unknown --write 'docs/**/*'",
+    "generate-monaco-types": "node scripts/generate-monaco-types.js",
+    "remove-folders": "rm -rf build-docs && rm -rf docs",
+    "clear-folders": "npm run remove-folders && mkdir build-docs && mkdir docs",
+    "embed-code": "npm run generate-monaco-types && npm run pretty-source && tsc src/examples/*.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && embedme 'build-docs/**/*.mdx' --source-root ./build-examples && rm -r docs && mv build-docs docs && npm run pretty-docs"
+  },
+  "dependencies": {
+    "@airgap/coinlib-core": "^0.10.6",
+    "@docusaurus/core": "2.0.0-alpha.72",
+    "@docusaurus/preset-classic": "2.0.0-alpha.72",
+    "@mdx-js/react": "^1.6.21",
+    "clsx": "^1.1.1",
+    "mermaid": "^8.9.2",
+    "monaco-editor": "^0.23.0",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-monaco-editor": "^0.43.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "embedme": "^1.22.0",
+    "file-loader": "^6.2.0",
+    "monaco-editor-webpack-plugin": "^3.0.1",
+    "postcss": "^8.2.8",
+    "typescript": "^4.2.3"
+  }
+}

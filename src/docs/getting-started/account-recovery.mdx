@@ -1,0 +1,24 @@
+---
+title: Account Recovery
+---
+
+All you need to migrate your accounts to a new Vault is the 24 words that you had to write down during the setup. With those 24 words it's possible to re-create all your accounts on a new Vault in case your old one breaks or is lost. You can also have 2 or more Vaults with the same 24 words on it.
+
+:::caution
+If you use a custom derivation path or BIP39 Passphrase, you also need those to access your funds.
+:::
+
+## External Account Recovery
+
+AirGap follows the BIP39 standard. Most modern wallets use the BIP39 standard, so the 24 words can be imported in all wallets that follow this standard. Please note: The default derivation path can sometimes be different depending on the wallet. If you import your 24 words in another wallet and the accounts you get do not match, please make sure to use the following derivation paths, depending on the currency. These are the defaults that AirGap uses:
+
+| Currency                | Derivation Path     |
+| ----------------------- | ------------------- |
+| Bitcoin (HD Wallet)     | m/44'/0'/0'         |
+| Ethereum                | m/44'/60'/0'/0/0    |
+| Tezos                   | m/44h/1729h/0h/0h   |
+| Polkadot                | m/44'/354'/0'/0/0   |
+| Kusama                  | m/44'/434'/0'/0/0   |
+| Cosmos                  | m/44'/118'/0'/0/0   |
+| Groestlcoin (HD Wallet) | m/44'/17'/0'        |
+| Aeternity               | m/44h/457h/0h/0h/0h |

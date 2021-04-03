@@ -1,0 +1,59 @@
+---
+title: Introduction
+---
+
+## What is the difference between a "Secret", "Seed Phrase", "Recovery Key" and "Password"?
+
+- We refer to the "Secret" as the 24 words you get when setting up a new Vault. This is also commonly referred to as a "Seed Phrase" or "Mnemonic". Those 24 words are everything you need to recover your funds in case you lose access to your Vault.
+
+- The "Recovery Key" is a key that is only used on Android. On Android, it is possible that the device randomly wipes the secure storage where your seed phrase is stored. If this happens, you have 2 options. You can either import your 24 words again, then the "Recovery Key" is not needed. Or you can enter the "Recovery Key", which will restore your 24 words.
+
+:::caution
+The "Recovery Key" can only be used together with the Vault where it was set up. If your Vault is lost or defective, the "Recovery Key" will NOT allow you to access your funds. For that, you need a backup of your **24 words**.
+:::
+
+- The "Password" can optionally be set when adding a Secret. This will allow you to set an additional password that is required every time the Vault accesses your Secret in order to generate accounts or sign transactions. This password will w**NOT** allo you to recover your funds in case you lose your 24 word backup.
+
+- The "Passphrase" (sometimes also known as "25th word" or "BIP39 passphrase) can optionally be set when creating an account. This is an advanced feature. Only use it if you understand how it works.
+
+## Why is [Insert Coin Name] not supported?
+
+Our main focus is **security**. Adding new coins can decrease security if it's not done carefully. When we integrate a coin, we usually do a security audit or have the code reviewed by a third party. This requires us to work with some kind of entity behind those coins to fund development and ensure continuous support of the currency.
+
+We hope that once the project gains more traction, more projects will reach out to us to work together on the integrations.
+
+## Reproducible builds
+
+// TODO: Walletscrutiny reference
+
+## Security
+
+// TODO: Secure Secret Generation
+// TODO: Dice Roll / Coinflip support
+// TODO: BIP39 support
+// TODO: BIP85 support
+// TODO: Inlined Dependencies
+// TODO: Offline
+// TODO: Fully air-gapped
+
+## Recommended Devices
+
+// TODO: Recommended Devices?
+
+## AirGap vs Hardware Wallets
+
+// TODO: Comparison Matrix?
+
+1. AirGap Vault is completely air-gapped. This means that there is no physical (or wireless) connection between your private key and the internet. With other HW wallets, you always have a cable where you don't really see what's happening (your computer could be sending thousands of commands to the HW wallet to try and exploit it, you simply don't know).
+
+2. The big screen of the Vault allows you to see much more details about a transaction. You don't have to see it on a tiny screen and click through multiple pages to verify the basic data. This increases security.
+
+3. You are more protected against targeted supply chain attacks. When buying a HW wallet (especially second hand), you always have a risk that the hardware was modified in a malicious way (eg. to give you a non-random seed phrase that the attacker knows and can steal from). Using a phone doesn't fully protect you against it, but because nobody knows that you are using it specifically for this purpose, I would argue it's a lot harder to actually do it.
+
+4. Privacy. A couple months ago, the ledger database with millions of emails and hundreds of thousands of phone numbers and addresses were leaked. Those people are now targeted via email, via phone, or could even be attacked in their home. Our wallet can be installed on any phone. You don't have to register anywhere or tell anyone that you are using AirGap.
+
+5. In case someone breaks into your house, an old phone will probably not be taken because it doesn't have a lot of value and is usually trackable via GPS. Nobody will expect that it might hold bitcoins. Whereas if they find a HW wallet, they will for sure take it (and maybe even be motivated to search for the recovery key somewhere in your room).
+
+One last thing that I will not list as a "pro" or "con", because people have different opinions about it:
+
+HW wallets are very specific devices. This means they serve a "single" purpose and can only include what's necessary. This reduces the attack surface. But at the same time, those HW wallets are usually developed by small teams, whereas phones (and their software) are developed by multi-billion dollar companies. While the attack vector is bigger, they also have a lot more resources to make their product secure (both hardware and software).
