@@ -36,7 +36,7 @@ module.exports = {
           docId: "coinlib/installation",
           label: "Developers",
         },
-        // { to: "playground/", label: "Playground", position: "right" },
+        { to: "playground/", label: "Playground", position: "right" },
         {
           href: "https://github.com/airgap-it",
           label: "GitHub",

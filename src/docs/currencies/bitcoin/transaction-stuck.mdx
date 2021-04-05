@@ -1,0 +1,54 @@
+---
+title: My Bitcoin transaction is stuck
+---
+
+If your Bitcoin transaction is stuck, it is most likely due to low fees.
+
+On the Bitcoin network, transactions are prioritised by the amount of fees they pay to the miners. If you set a low fee, the miners are less likely to include the transaction in a block.
+
+:::tip Fee Calculation
+Fee calculation for bitcoin transactions depends on many parameters. You can use **[this website](https://btc.network/estimate)** to get an idea of the average fees.
+:::
+
+When this happens, you have the following options.
+
+### Wait for average fees to decrease
+
+You can wait until the average transaction fee comes down again. It is quite common for the average fees to fluctuate depending on the time of the day or the day of the week. If the transaction is not time critical, you can just wait until the transaction is included.
+
+### Wait for the transaction to be removed
+
+After a certain time (usually a few weeks), it is possible that your transaction gets removed from the list of the pending transactions. When that happens, you can create a new transaction as if you never did the previous one.
+
+### CPFP (Child Pays For Parent)
+
+:::caution Advanced
+This is an advanced feature that will require some programming knowledge. Only do this if you know what you are doing.
+:::
+
+CPFP is an advanced feature where you create a new transaction that depends on your pending transaction. The new transaction needs to have a very high fee (eg. 2x standard fee) so miners are incentivised to include your pending transaction, just so they can get the reward of the new transaction. This is only possible under some circumstances, specifically if you are the recipient of one of the outputs in your transaction. You can check your transaction hash on a blockexplorer (eg. https://blockchair.com/bitcoin/). If the transaction has 2 outputs and was created by AirGap Wallet, then it should be possible.
+
+AirGap Wallet does not support creating CPFP transactions. You will have to manually create it and sign it with the Vault. To create the transaction, we recommend using our [airgap-coin-lib library](https://github.com/airgap-it/airgap-coin-lib). Reach out to us if you need help doing this.
+
+### Pay a miner to prioritise your transaction
+
+You can pay a miner to prioritise your transaction.
+
+:::caution Advanced
+We do **not** recommend this method because you don't get any guarantees that it works. Please do your own research before doing this.
+:::
+
+To find those services, search online for "how to accelerate bitcoin transactions". Be very careful when doing this. There are likely many scam websites out there that will take your money and do absolutely nothing. Do your own research before doing this.
+
+<!--
+### RBF (Replace By Fee) (Currently not supported by AirGap)
+
+:::warning not supported
+This is currently not supported by AirGap
+:::
+
+Some wallets allow the fee of a transaction to be increased. This is not currently possible in AirGap. -->
+
+## I used the default fee, why was it set too low?
+
+Estimating the fee accuartely is hard. Fee estimations are based on the average fees paid in the recent blocks. This is usually a good indication of which fees are necessary in order to be included in one of the next blocks. However, it is possible that network activity takes an unexpected turn and fees increase significantly in a short time. AirGap tries to estimate the fees in a way so you don't overpay for standard transactions, but it still gets included even if there is a slight increase in network usage. If you need the transaction to be included very quickly, please use the websites mentioned above to estimate and set the fee yourself.

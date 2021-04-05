@@ -1,0 +1,35 @@
+---
+title: My Ethereum Transaction is stuck
+---
+
+If your Ethereum transaction is stuck, it is most likely due to low fees.
+
+On the Ethereum network, transactions are prioritised by the amount of fees they pay to the miners. If you set a low fee, the miners are less likely to include the transaction in a block.
+
+:::tip Gas Prices
+You can use **[GAS NOW](https://www.gasnow.org/)** or **[ETH GAS STATION](https://www.ethgasstation.info/)** to see the current average fees on the network.
+:::
+
+When this happens, you have the following options.
+
+### Wait for average fees to decrease
+
+You can wait until the average transaction fee comes down again. It is quite common for the average fees to fluctuate depending on the time of the day or the day of the week. If the transaction is not time critical, you can just wait until the transaction is included.
+
+### Overwrite the transaction
+
+You can "overwrite" a transaction by submitting a new transaction to the network with a higher fee and the same nonce. Every Ethereum transaction contains a "nonce", which is a number that increases by 1 every time you create a new transaction. While a transaction is pending, new transactions prepared in AirGap Wallet have the same nonce as the pending transaction. So you can simply prepare a new transaction with the same amount to the same address, but with a **higher fee**.
+
+:::caution Check the nonce
+Make sure the nonce of the new transaction is **the same** as the one currently pending. If the nonce is higher, both transactions will be valid and both could be included in the chain, which means you will be paying that amount twice!
+:::
+
+To confirm that the nonce is the same, create your new transaction and give it to the Vault for signing. On the signing screen, toggle the "extra details" button, which will show you the nonce. The nonce in that screen is in hex format. You can convert it to decimal by entering the part after "0x" here:
+
+https://www.binaryhexconverter.com/hex-to-decimal-converter
+
+// TODO: Add images (Vault Extra Details, Block Explorer (Etherscan) Nonce, HEX to DEC example)
+
+## I used the default fee, why was it set too low?
+
+Estimating the fee accuartely is hard. Fee estimations are based on the average fees paid in the recent blocks. This is usually a good indication of which fees are necessary in order to be included in one of the next blocks. However, it is possible that network activity takes an unexpected turn and gas prices increase significantly in a short time. This is usually the case when a certain event happens, eg. the release of a new token, or if a lot of people participate in a certain smart contract. AirGap tries to estimate the fees in a way so you don't overpay for standard transactions, but it still gets included even if there is a slight increase in network usage. If you need the transaction to be included very quickly, please use one of the websites mentioned above to estimate and set the fee yourself.
