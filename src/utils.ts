@@ -1,4 +1,4 @@
-// import * as coinlib from "@airgap/coinlib-core";
+import * as coinlib from "@airgap/coinlib-core";
 import * as ts from "typescript";
 
 function replaceAll(string: string, search: string, replace: string) {
@@ -73,8 +73,7 @@ export const runCoinlibCode = (
     try {
       runnable = eval(code);
       runnable
-        .run({}, myLog)
-        // .run(coinlib, myLog)
+        .run(coinlib, myLog)
         .then((result: string) => {
           if (result) {
             appendOutput("Returned:\n" + JSON.stringify(result, null, 2));
