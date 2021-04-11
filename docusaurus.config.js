@@ -5,7 +5,7 @@ module.exports = {
   title: "AirGap Docs",
   tagline: "Guides for the AirGap Wallet",
   url: "https://docs.airgap.it",
-  baseUrl: "/",
+  baseUrl: "/airgap-docs",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.png",
