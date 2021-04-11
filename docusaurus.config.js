@@ -97,6 +97,11 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Papers AG - Open Source MIT License`,
     },
+    announcementBar: {
+      id: 'beta-docs',
+      content:
+        'This documentation is currently work in progress. Some information might be inaccurate.',
+    },
   },
   presets: [
     [
