@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: FAQ
 ---
 
 ## What is the difference between a "Secret", "Seed Phrase", "Recovery Key" and "Password"?
@@ -26,7 +26,17 @@ We hope that once the project gains more traction, more projects will reach out 
 
 ## Reproducible builds
 
-// TODO: Walletscrutiny reference
+The builds of `AirGap Vault` are **reproducible**. This means that the app downloaded from the Play Store match the source code that is published on GitHub. If this is not the case, it means that there could be hidden malicious code in the published version that is not visible in the published source code.
+
+The independent website [WalletScrutiny](https://walletscrutiny.com/android/it.airgap.vault/) examines a wide variety of cryptocurrency wallets to determine their reproducibility. We're happy to say that AirGap Vault was one of the first wallets to be marked as "reproducible".
+
+:::tip
+The `AirGap Wallet` is application is also rerpoducible, but it is not checked for reproducibility by WalletScrutiny because it doesn't contain any private keys.
+:::
+
+:::tip
+iOS applications cannot be checked for reproducibility because of the was Apple processes the Apps during their release process.
+:::
 
 ## Use vault as offline device
 
@@ -36,15 +46,85 @@ We recommend that you factory reset your phone before using it as your air-gappe
 
 ## Security
 
-// TODO: Secure Secret Generation
-// TODO: Dice Roll / Coinflip support
-// TODO: BIP39 support
-// TODO: BIP85 support
-// TODO: Inlined Dependencies
-// TODO: Offline
-// TODO: Fully air-gapped
+The security concept behind air-gapped systems is to work with two physically separated devices, one of which has no connection to the outside world or any network. In the context of AirGap, the component which has no internet connection is the AirGap Vault. The two components, AirGap Vault and AirGap Wallet, communicate through one-way communication using QR codes.
 
-## Recommended Devices
+<!-- // TODO: Inlined Dependencies
+// TODO: Offline
+// TODO: Fully air-gapped -->
+
+## Supply Chain attacks
+
+In the past years, mutliple cryptocurrency wallets have been targeted by attackers to try and steal users funds. One common attack vector is the supply chain attack. In this attack, the attacker tries to compromise a dependency that is used in the wallet and use it to inject malicious code. At AirGap, we take utmost care of evaluating the dependencies we use. We have also introduced a system that separates the dependencies used during testing and development from the dependencies that are used to build and run the project. This reduces the risk of malicious code injection during the build and test steps.
+
+### Security Audits
+
+The application as a whole, as well as multiple components, have been audited by different third party companies.
+
+**All audits have found no way of extracting the private key from AirGap Vault.**
+
+The security audits, as well as explanations of our remediations can be found [here](https://medium.com/airgap-it/airgap-third-party-security-audit-bcb18deb9ca9).
+
+### Secure Secret Generation
+
+#### Additional Entropy
+
+The entropy seeder uses the native secure random generator provided by the device and concatenates this with the sha3 hash of the additional entropy (audio, video, touch, accelerometer). The rationale behind this is:
+
+- The sha3 hashing algorithm is cryptographically secure, such that the following holds: `entropy(sha3(secureRandom())) >= entropy(secureRandom())`
+- Adding bytes to the sha3 function will never lower entropy but only add to it, such that the following holds: `entropy(sha3(secureRandom() + additionaEntropy)) >= entropy(sha3(secureRandom()))`
+- By reusing the hash of an earlier "round" as a salt, we can incorporate the entire collected entropy of the previous round
+- Native secure random cannot be fully trusted because there is no API to check the entropy pool it's using
+
+The algorithm being used for the entropy seeding:
+
+```typescript
+const ENTROPY_BYTE_SIZE = 256;
+let entropyHashHexString = null;
+
+function toHexString(array) {
+  return array
+    .map(function (i) {
+      return ("0" + i.toString(16)).slice(-2);
+    })
+    .join("");
+}
+
+function seedEntropy(additionalEntropyArray) {
+  const secureRandomArray = new Uint8Array(ENTROPY_BYTE_SIZE);
+  window.crypto.getRandomValues(secureRandomArray);
+  console.log(
+    entropyHashHexString +
+      toHexString(secureRandomArray) +
+      toHexString(additionalEntropyArray)
+  );
+  entropyHashHexString = sha3_256(
+    entropyHashHexString +
+      toHexString(secureRandomArray) +
+      toHexString(additionalEntropyArray)
+  );
+  return entropyHashHexString;
+}
+```
+
+<!-- #### Dice Roll
+
+:::caution
+This feature is currently being tested and is not released yet.
+:::
+
+#### Coin Flips
+
+:::caution
+This feature is currently being tested and is not released yet.
+:::
+
+## BIP85 Child Entropy
+
+:::caution
+This feature is currently being tested and is not released yet.
+::: -->
+
+<!-- ## Recommended Devices
 
 // TODO: Recommended Devices?
 
@@ -64,4 +144,4 @@ We recommend that you factory reset your phone before using it as your air-gappe
 
 One last thing that I will not list as a "pro" or "con", because people have different opinions about it:
 
-HW wallets are very specific devices. This means they serve a "single" purpose and can only include what's necessary. This reduces the attack surface. But at the same time, those HW wallets are usually developed by small teams, whereas phones (and their software) are developed by multi-billion dollar companies. While the attack vector is bigger, they also have a lot more resources to make their product secure (both hardware and software).
+HW wallets are very specific devices. This means they serve a "single" purpose and can only include what's necessary. This reduces the attack surface. But at the same time, those HW wallets are usually developed by small teams, whereas phones (and their software) are developed by multi-billion dollar companies. While the attack vector is bigger, they also have a lot more resources to make their product secure (both hardware and software). -->
