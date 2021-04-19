@@ -16,6 +16,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "pretty-source": "npx prettier --ignore-unknown --write 'src/**/*'",
     "pretty-docs": "npx prettier --ignore-unknown --write 'docs/**/*'",
+    "prettier": "npm run pretty-source",
     "generate-monaco-types": "node scripts/generate-monaco-types.js",
     "remove-folders": "rm -rf build-docs && rm -rf docs",
     "clear-folders": "npm run remove-folders && mkdir build-docs && mkdir docs",
