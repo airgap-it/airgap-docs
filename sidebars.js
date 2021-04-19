@@ -11,6 +11,18 @@ module.exports = {
     },
     {
       type: "category",
+      label: "AirGap Vault",
+      items: ["airgap-vault/introduction"],
+      collapsed: true,
+    },
+    {
+      type: "category",
+      label: "AirGap Wallet",
+      items: ["airgap-wallet/introduction"],
+      collapsed: true,
+    },
+    {
+      type: "category",
       label: "Currencies",
       items: [
         {
@@ -19,13 +31,6 @@ module.exports = {
           items: [
             "currencies/bitcoin/introduction",
             "currencies/bitcoin/wallet-compatibility",
-            {
-              type: "category",
-              label: "Troubleshoot",    
-              items: [
-                "currencies/bitcoin/troubleshooting/transaction-stuck",
-              ]
-            }
           ],
           collapsed: true,
         },
@@ -35,13 +40,6 @@ module.exports = {
           items: [
             "currencies/ethereum/introduction",
             "currencies/ethereum/wallet-compatibility",
-            {
-              type: "category",
-              label: "Troubleshoot",    
-              items: [
-                "currencies/ethereum/troubleshooting/transaction-stuck",
-              ]
-            }
           ],
           collapsed: true,
         },
@@ -108,15 +106,25 @@ module.exports = {
     },
     {
       type: "category",
-      label: "AirGap Vault",
-      items: ["airgap-vault/introduction"],
-      collapsed: true,
-    },
-    {
-      type: "category",
-      label: "AirGap Wallet",
-      items: ["airgap-wallet/introduction"],
-      collapsed: true,
+      label: "Troubleshooting",    
+      items: [
+        {
+          type: "category",
+          label: "Bitcoin (BTC)",
+          items: [
+            "currencies/ethereum/troubleshooting/transaction-stuck",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Ethereum (ETH)",
+          items: [
+            "currencies/bitcoin/troubleshooting/transaction-stuck",
+          ],
+          collapsed: true,
+        }
+      ]
     },
     "FAQ",
     "CHANGELOG",
