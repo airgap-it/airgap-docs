@@ -6,6 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "npm run embed-code && docusaurus start",
     "prepare": "node scripts/fix-coinlib.js",
+    "build": "npm run embed-code && docusaurus build",
     "build:netlify": "npm run embed-code && npm run change-base-path && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
