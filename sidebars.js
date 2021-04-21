@@ -110,9 +110,17 @@ module.exports = {
       items: [
         {
           type: "category",
+          label: "General",
+          items: [
+            "troubleshooting/general/not-enough-balance",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
           label: "Bitcoin (BTC)",
           items: [
-            "currencies/ethereum/troubleshooting/transaction-stuck",
+            "troubleshooting/currencies/bitcoin/transaction-stuck",
           ],
           collapsed: true,
         },
@@ -120,13 +128,16 @@ module.exports = {
           type: "category",
           label: "Ethereum (ETH)",
           items: [
-            "currencies/bitcoin/troubleshooting/transaction-stuck",
+            "troubleshooting/currencies/ethereum/transaction-stuck",
           ],
           collapsed: true,
         }
       ]
     },
     "FAQ",
+    "FAQ-2",
+    "FAQ-website",
+    "glossary",
     "CHANGELOG",
     {
       type: "link",

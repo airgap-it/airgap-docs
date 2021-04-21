@@ -1,0 +1,213 @@
+---
+title: FAQ 2
+---
+
+import TOCInline from "@theme/TOCInline"
+
+<TOCInline toc={toc} />
+
+## How does AirGap guarantee the reliability, security, maintainability of its wallet?
+
+The security part is guaranteed by design. By using a second device that is offline all the time (this is the one with your private key), there is no way that your private key can be stolen. Even if we have bugs or malicious code in our app, it has no way of “sending” your keys to anyone because it is offline.
+The code of our apps is open source, so if the app is not maintained anymore, you or the community can always change and update the code if needed.
+
+## What is the relationship between Paper.ch and AirGap?
+
+AirGap is a product of Papers.ch, which is a software development company located in Switzerland that has dedicated 10+ years of its existence to developing secure, mobile-first software and embracing paradigm-shifting technologies like blockchain to provide a more distributed, secure, and accessible future of human interaction.
+
+## Will AirGap be available in other languages aside from English?
+
+Currently, AirGap is available in English, German and Chinese. We will add more languages with a later release.
+
+## Are you planning on having a token for AirGap?
+
+Never say never, but as of now, AirGap does not have a utility token of its own and there are no plans to add one.
+
+## What are the supported coins/tokens on the AirGap wallet?
+
+- Bitcoin(BTC)
+- Aeternity(AE)
+- Ethereum(ETH)
+- Groestlcoin(GRS)
+- Tezos(XTZ)
+- Cosmos(ATM)
+- Polkadot(DOT)
+- Kusama(KSM)
+
+ERC20
+CryptoFranc(XCHF),
+USDT erc20,
+Binance coin (BNB),
+ChainLink(LINK),
+Crypto.com coin(CRO),
+USD coin(USDC),
+Bitfinex LEO(LEO),
+yearn.finance(YFI),
+HuobiToken(HT),
+VeChain(VEN),
+EthLend(LEND),
+Wrapped Bitcoin(WBTC),
+Dai Stablecoin(DAI),
+TrueUSD (TUSD),
+Maker(MKR),
+Theta Token(THETA),
+OMG Network(OMG),
+Ino Coin(INO),
+Compound(COMP),
+OKB(OKB),
+Binance USD(BUSD),
+Basic Attention Token(BAT),
+HEDG trade(HEDG),
+Insight Chain(INB),
+Ox (ZRX),
+LoopringCoin(LRC),
+NXM(NXM),
+Paxos Standard(PAX),
+Republic token(REN),
+Kyber Network(KNC)…
+(List to be completed)
+
+## How much do I pay to use AirGap?
+
+AirGap is a completely free software to use. You do not need to pay any money.
+
+## What are the similarities between AirGap and Ledger?
+
+AirGap is similar to a hardware wallet such as the Ledger, but with added security. For AirGap, there is no two-way communication between the device that stores your secret and the one connected to the internet. The communication happens over QR codes and is thus more secure.
+
+## I try to reinstall the AirGap Vault and import my secret key but it is not working
+
+During the creation of your secret key, you wrote down a 24 words phrase - this is what you need to restore your accounts. If your secret cannot be imported, it is most likely a typo, or you have written down a wrong word. You can use the official wordlist to check if every word is valid: https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt
+
+## What version of Android OS supports the AirGap Wallet and Vault?
+
+AirGap Vault and AirGap Wallet require at least Android 5.0. Make sure that the WebView is updated to the latest version (=> Add tutorial)
+
+## I can't download AirGap Vault in the Google Play Store. Do you have any other download links?
+
+You can download the APK from our GitHub release page
+https://github.com/airgap-it/airgap-vault/releases/
+
+## What is a derivative path?
+
+Derivation path is a piece of data that help derive multiple addresses within a single HD wallet
+If you are interested in a full explanation, here is a link to stack overflow that explains what a derivative path means in detail.
+https://ethereum.stackexchange.com/questions/70017/can-someone-explain-the-meaning-of-derivation-path-in-wallet-in-plain-english-s
+
+## Why and when should I change the derivation path?
+
+This is an advanced feature. You should never change the default derivation path. Changing the derivation path can lead to you losing access to your funds.
+
+## Scanning the QR code using AirGap Vault isn’t working, what are the likely solutions?
+
+In such a scenario you can play around with the screen brightness, too bright and too low may affect device QR code scanning functionality. Ensure the camera is accurately positioned and it isn’t blurred.
+
+## Can I still set a password after setting up my AirGap Vault and generating a secret?
+
+The password to protect your secret can only be set on initial generation and not afterward.
+
+## If I lose or change my phone how can I be able to access my fund?
+
+During the creation of your wallet, you were advised to write down 24 words. This phrase can be used to recover your wallet.
+
+## Trying to Import my 24-word phrase but the import button is still disabled?
+
+Link to number 8
+
+## I wanted to send a coin but received a "no secret found" error.
+
+This happens when you are starting the vault app for the first time. So there are no secrets stored to sign the transaction
+You need to import your secret first, then create the wallet where you want to send funds from, and try again
+
+## I'm sending a coin but it has been showing pending for a while.
+
+Sometimes transactions can take longer to get confirmed. Confirmation time of up to an hour or even more, and this can be because of low gas fee or network congestion.
+
+## What are the chances of my coins getting stolen if both apps(AirGap vault and wallet) are on the same device?
+
+If a person intending to steal your fund can have your fingerprint/pattern/ping/faceid and you didn't set an additional AirGap Vault password, then yes they would be able to create transactions but for maximum security, we do recommend the dual phone approach. The AirGap vault on an offline device while the AirGap wallet on an online device.
+
+## Is there a way to get my private key from the vault app?
+
+Currently, AirGap Vault does not offer exporting of private key.
+
+## How do I import my secret word/mnemonics?
+
+Here is our medium post that shows step by step guide on how you import your secret word
+https://medium.com/airgap-it/airgap-the-step-by-step-guide-c4c3d3fe9a05
+
+## What does the "non-base58 character" error mean when sending coins?
+
+This error usually occurs when you try to send funds to an invalid address (an address that doesn't belong to that currency), please do check address again.
+
+## Does AirGap requires KYC?
+
+No, AirGap does not require KYC.
+
+## Does exchanging currencies in AirGap require KYC?
+
+No, you do not require KYC to use the exchange functionality on AirGap
+
+## How do I reset my password?
+
+To reset your password, you either reinstall the apps, or just remove the secret in the AirGap vault and add it again
+Note: Always backup your seed phrase before embarking on this process.
+
+## What is social recovery?
+
+With social recovery you can create secret shares and distribute them to social contacts you trust. You can also recover a lost secret if you have a set number of these secret shares.
+Keep in mind that you will only be able to successfully recover your secret if you have as many shares for recovery as you have defined in the initial setup.
+
+## Is there a way to hide the balance on the AirGap wallet?
+
+Currently, no but we will be working on this feature soon
+
+## I want to deposit money to the exchange, but it's not working?
+
+Two possible issues here, you have your password wrongly inputted or phone does not support WebView.
+
+## How do I check my recent transactions history?
+
+Inside the AirGap wallet click on whatever coin you want to check for its transaction history. The next page displays the transaction history.
+
+## Is it possible to store any erc20 token with AirGap?
+
+Yes, but the unlisted ones will not reflect in the AirGap wallet. We are working on releasing WalletConnect support, which will let you work with any ERC20 tokens.
+
+## how can I get the private key of my AE address?
+
+We currently do not support the export of private keys in AirGap but during the setup of the vault, you wrote down 24 words. These words are used to derive the private key.
+
+## How do I create a second address for any of the supported coins in the vault?
+
+Select Add Account and then Advanced Mode. You then change the derivation path. For example, 1 instead of 0 at the end. Then click the create button.
+It is important that you write down your derivation path somewhere, as you will need the exact derivation path to get back to that account.
+We do encourage that you should never change the derivative path.
+
+## While setting up the AirGap vault why does it need access to my microphone and camera?
+
+The microphone and camera are needed to add additional entropy for the secret generation. You don't have to grant this permission, the secret generation will still be possible.
+
+## What version of IOS supports the AirGap Wallet and Vault?
+
+AirGap Vault and AirGap Wallet require at least iOS version 11.
+
+## Does AirGap support other languages' mnemonics aside english?
+
+We currently only support english mnemonics.
+
+## I have a 15 word phrase for tezos.can that be imported into AirGap?
+
+Yes, you can import your 15 word secret into AirGap
+
+## AirGap wallet sends me to the AirGap vault during the transaction process but doesn't provide an option to sign & broadcast the transaction.
+
+For such scenarios, force closing the vault and retrying the transaction solves the problem.
+
+## Can I enter the amount I want to send in USD, not in a token amount?
+
+This functionality will be available soon
+
+## Why is it taking so long deriving my wallet?
+
+It shouldn’t take long for your wallet to set up. This may be because of your phone model, OS version or network connectivity.

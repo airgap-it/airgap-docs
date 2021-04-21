@@ -1,3 +1,7 @@
 ---
 title: Introduction
 ---
+
+AirGap has a unique offline approach where your secret is securely generated with AirGap Vault on an offline device and then stored in the secure enclave of your offline mobile phone. This means you will have a secret that has never touched any network.
+
+AirGap Wallet the companion application that is installed on your every-day smartphone is responsible for internet and protocol access. Transactions are created in AirGap Wallet, then communicated with one-way QR code to AirGap Vault, where the signing happens. To broadcast the transaction to the network, AirGap Wallet scans back the signed transaction QR code.
