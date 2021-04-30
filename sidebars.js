@@ -106,54 +106,45 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Troubleshooting",    
+      label: "Troubleshooting",
       items: [
         {
           type: "category",
           label: "General",
-          items: [
-            "troubleshooting/general/not-enough-balance",
-          ],
+          items: ["troubleshooting/general/not-enough-balance"],
           collapsed: true,
         },
         {
           type: "category",
           label: "Bitcoin (BTC)",
-          items: [
-            "troubleshooting/currencies/bitcoin/transaction-stuck",
-          ],
+          items: ["troubleshooting/currencies/bitcoin/transaction-stuck"],
           collapsed: true,
         },
         {
           type: "category",
           label: "Ethereum (ETH)",
-          items: [
-            "troubleshooting/currencies/ethereum/transaction-stuck",
-           ],
-           collapsed: true,
-         },
-         {
-           type: "category",
-           label: "Tezos (XTZ)",
-           items: [
-             "troubleshooting/currencies/tezos/FAQ",
-           ],
-           collapsed: true,
-         },
-         {
-           type: "category",
-           label: "Cosmos (ATOM)",
-           items: [
-             "troubleshooting/currencies/cosmos/FAQ",
-            ],
+          items: ["troubleshooting/currencies/ethereum/transaction-stuck"],
           collapsed: true,
-        }
-      ]
+        },
+        {
+          type: "category",
+          label: "Tezos (XTZ)",
+          items: ["troubleshooting/currencies/tezos/FAQ"],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Cosmos (ATOM)",
+          items: ["troubleshooting/currencies/cosmos/FAQ"],
+          collapsed: true,
+        },
+      ],
     },
     "FAQ",
     "glossary",
-     "CHANGELOG-VAULT",
-     "CHANGELOG-WALLET",    {
+    "CHANGELOG-VAULT",
+    "CHANGELOG-WALLET",
+    {
       type: "link",
       label: "AirGap Website",
       href: "https://airgap.it",
