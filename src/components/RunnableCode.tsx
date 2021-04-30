@@ -123,7 +123,5 @@ const Child = ({ code }) => {
 };
 
 export const RunnableCode = ({ children }) => {
-  return (
-    <Child code={children[0]} />
-  );
+  return <Child code={children[0]} />;
 };
