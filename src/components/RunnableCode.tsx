@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 import BrowserWindow from "./BrowserWindow/BrowserWindow";
 import Monaco from "./Monaco";
 import LoadingAnimation from "./LoadingAnimation";
@@ -123,5 +125,21 @@ const Child = ({ code }) => {
 };
 
 export const RunnableCode = ({ children }) => {
-  return <Child code={children[0]} />;
+  return (
+    <Tabs
+      groupId="beaconOrTaquito"
+      defaultValue="beacon"
+      values={[
+        { label: "Beacon", value: "beacon" },
+        { label: "Taquito", value: "taquito" },
+      ]}
+    >
+      <TabItem value="beacon">
+        <Child code={children[0]} />
+      </TabItem>
+      <TabItem value="taquito">
+        <Child code={children[0]} />
+      </TabItem>
+    </Tabs>
+  );
 };
