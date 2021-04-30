@@ -2,10 +2,10 @@ const path = require("path");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "AirGap Docs",
+  title: "AirGap Support",
   tagline: "Guides for the AirGap Wallet",
-  url: "https://docs.airgap.it",
-  baseUrl: "/airgap-docs/",
+  url: "https://support.airgap.it",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.png",
@@ -18,12 +18,6 @@ module.exports = {
         src: "img/logo.svg",
       },
       items: [
-        {
-          type: "doc",
-          position: "left",
-          docId: "getting-started/introduction",
-          label: "Getting Started",
-        },
         {
           type: "doc",
           position: "left",
