@@ -94,7 +94,7 @@ module.exports = {
     announcementBar: {
       id: "beta-docs",
       content:
-        "This documentation is currently work in progress. Some information might be inaccurate.",
+        "This documentation is currently work in progress. Some pages might be incomplete.",
     },
   },
   presets: [
