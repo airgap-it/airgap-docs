@@ -11,3 +11,27 @@ import TOCInline from "@theme/TOCInline";
 ### UTXO
 
 Unspent Transaction Output
+
+### Private Key
+
+Usually, people refer to the [Secret](#secret) or [Mnemonic](#mnemonic) when they use the term private key.
+
+Technically, a private key is derived from a mnemonic and is not the same as a mnemonic/seed phrase. In AirGap, we never display the raw private key, only the mnemonic.
+
+### Secret
+
+The 24 words that are generated during setup. Those 24 words are everything you need to recover your accounts in case you lose your Vault.
+
+:::warning Backup
+Make sure you ALWAYS have at least one paper backup of your 24 words. If you lose your 24 words, you will lose all your funds. Nobody, including AirGap Support, will be able to help you if you don't have your 24 words.
+:::
+
+### Mnemonic
+
+A human readable representation of entropy that is used to generate accounts. Mnemonics are usually 12 or 24 words long.
+
+In AirGap, we refer to this as [Secret](#secret)
+
+### Seed Phrase
+
+Same as [Mnemonic](#mnemonic)

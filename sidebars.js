@@ -131,12 +131,26 @@ module.exports = {
             "troubleshooting/currencies/ethereum/transaction-stuck",
           ],
           collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Tezos (XTZ)",
+          items: [
+            "troubleshooting/currencies/tezos/FAQ",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Cosmos (ATOM)",
+          items: [
+            "troubleshooting/currencies/cosmos/FAQ",
+          ],
+          collapsed: true,
         }
       ]
     },
     "FAQ",
-    "FAQ-2",
-    "FAQ-website",
     "glossary",
     "CHANGELOG-VAULT",
     "CHANGELOG-WALLET",
