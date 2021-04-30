@@ -138,7 +138,8 @@ module.exports = {
     "FAQ-2",
     "FAQ-website",
     "glossary",
-    "CHANGELOG",
+    "CHANGELOG-VAULT",
+    "CHANGELOG-WALLET",
     {
       type: "link",
       label: "AirGap Website",
