@@ -7,7 +7,6 @@
     "start": "npm run embed-code && docusaurus start",
     "prepare": "node scripts/fix-coinlib.js",
     "build": "npm run embed-code && docusaurus build",
-    "build:netlify": "npm run embed-code && npm run change-base-path && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -20,8 +19,7 @@
     "generate-monaco-types": "node scripts/generate-monaco-types.js",
     "remove-folders": "rm -rf build-docs && rm -rf docs",
     "clear-folders": "npm run remove-folders && mkdir build-docs && mkdir docs",
-    "embed-code": "npm run generate-monaco-types && npm run pretty-source && tsc src/examples/*.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && embedme 'build-docs/**/*.mdx' --source-root ./build-examples && rm -r docs && mv build-docs docs && npm run pretty-docs",
-    "change-base-path": "replace 'baseUrl: \"/airgap-docs/\",' 'baseUrl: \"/\",' ./docusaurus.config.js"
+    "embed-code": "npm run generate-monaco-types && npm run pretty-source && tsc src/examples/*.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && embedme 'build-docs/**/*.mdx' --source-root ./build-examples && rm -r docs && mv build-docs docs && npm run pretty-docs"
   },
   "dependencies": {
     "@airgap/coinlib-core": "^0.10.6",
