@@ -18,6 +18,11 @@ This allows you to manage multiple mnemonics (eg. for multiple wallets) while on
 
 ## What are the use cases for BIP-85
 
+- Financial Structure: Most organizations have a hierarchical structure in place, and this also involves managing funds. The financial department in an organization could want to assign a separate wallet to a separate department without giving access to the main account to any department. With BIP-85 an organization can now create different seeds for different departments without sharing the master seed. If one department's finance is compromised, the whole organization and the rest department are still safe.
+- Seed creation without the need to backup: An individual can create child seeds for elderly parents who are unable to store or secure seeds.
+- Multi-wallet setup: A user can now own multiple wallets without worrying about backing them all up aside from the master seed used in generating the other wallet.
+
+
 ## How to use BIP-85 in AirGap Vault
 
 To derive a BIP-85 child entropy from one of your Secrets, go to the Settings page and open the detail page.
