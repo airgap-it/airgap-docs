@@ -1,0 +1,51 @@
+---
+title: BIP-85
+slug: /features/bip85
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+import { IPhoneX } from "react-device-frames";
+
+:::caution Advanced features
+BIP-85 is an advanced feature. Make sure you understand how it works before you use it.
+:::
+
+## What is BIP-85
+
+[BIP-85](https://github.com/bitcoin/bips/blob/master/bip-0085.mediawiki) allows you to derive "entropy" from your mnemonics.
+The entropy that is derived can be used in other wallets or applications.
+Even if that wallet is compromised and the derived entropy is compromised, the parent mnemonic (and all other derived entropies) are still safe.
+This allows you to manage multiple mnemonics (eg. for multiple wallets) while only having to back up one of your mnemonics.
+
+## What are the use cases for BIP-85
+
+## How to use BIP-85 in AirGap Vault
+
+To derive a BIP-85 child entropy from one of your Secrets, go to the Settings page and open the detail page.
+Click on "Generate BIP85 Child Mnemonic" to get to the generation page.
+
+<IPhoneWrapper src={"/img/bip85/1-bip85-settings.png"} />
+
+On the BIP-85 Generation page, you can set a few settings.
+
+- Mnemonic Length: This defines the length of the child mnemonic
+- Index: Changing the index will derive a different child mnemonic, so if you want a new mnemonic for a new purpose, make sure to set the index to a value you have not used before
+- Advanced Mode - BIP-39 Passphrase: This allows you to set an extra passphrase that will be used to derive entropy.
+
+:::caution Warning
+To derive the same child mnemonic again, all of the input values (length, index, passphrase) need to be the same. So make sure you don't forget any of the values.
+:::
+
+<IPhoneWrapper src={"/img/bip85/2-bip85-generate.png"} />
+
+On the next page you can see the derived mnemonic. You can now write it on a piece of paper or directly import it into another wallet.
+
+:::note Backup
+The child mnemonics do not have to be backed up. They can always be derived again from the parent mnemonic. You just have to make sure that you properly back up your parent mnemonic.
+:::
+
+<IPhoneWrapper src={"/img/bip85/3-bip85-view.png"} />
+
+If you click on "Verify", you will be taken to a screen that lets you validate that you have written down the child mnemonic correctly
+
+<IPhoneWrapper src={"/img/bip85/4-bip85-verify.png"} />
