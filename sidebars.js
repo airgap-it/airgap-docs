@@ -155,7 +155,10 @@ module.exports = {
     {
       type: "category",
       label: "Examples",
-      items: ["coinlib/examples/get-address"],
+      items: [
+        "coinlib/examples/get-address",
+        "coinlib/examples/serializer/v2/introduction"
+      ],
       collapsed: true,
     },
   ],
