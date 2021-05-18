@@ -157,7 +157,8 @@ module.exports = {
       label: "Examples",
       items: [
         "coinlib/examples/get-address",
-        "coinlib/examples/serializer/v2/introduction"
+        "coinlib/examples/get-btc-addresses-from-account-share",
+        "coinlib/examples/serializer/v2/introduction",
       ],
       collapsed: true,
     },
