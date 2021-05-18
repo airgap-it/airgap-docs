@@ -140,6 +140,14 @@ module.exports = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "Guides",
+      items: [
+        "guides/BIP-85",
+        "guides/sapling"
+      ],
+    },
     "FAQ",
     "glossary",
     "CHANGELOG-VAULT",

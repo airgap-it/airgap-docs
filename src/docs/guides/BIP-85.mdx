@@ -1,0 +1,64 @@
+---
+title: BIP-85
+slug: /features/bip85
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+:::caution Advanced features
+BIP-85 is an advanced feature. Make sure you understand how it works before you use it.
+:::
+
+## What is BIP-85
+
+[BIP-85](https://github.com/bitcoin/bips/blob/master/bip-0085.mediawiki) allows you to derive "entropy" from your mnemonics.
+The entropy that is derived can be used in other wallets or applications.
+Even if that wallet is compromised and the derived entropy is compromised, the parent mnemonic (and all other derived entropies) are still safe.
+This allows you to manage multiple mnemonics (eg. for multiple wallets) while only having to back up one of your mnemonics.
+
+## What are the use cases for BIP-85
+
+- Financial Structure: Most organizations have a hierarchical structure in place, and this also involves managing funds. The financial department in an organization could want to assign a separate wallet to a separate department without giving access to the main account to any department. With BIP-85 an organization can now create different seeds for different departments without sharing the master seed. If one department's finance is compromised, the whole organization and the rest department are still safe.
+- Seed creation without the need to backup: An individual can create child seeds for elderly parents or their kids who are unable to store or secure seeds.
+- Multi-wallet setup: A user can now own multiple wallets without worrying about backing them all up aside from the master seed used in generating the other wallet.
+
+
+## How to use BIP-85 in AirGap Vault
+
+To derive a BIP-85 child entropy from one of your Secrets, go to the Settings page and open the detail page.
+Click on "Generate BIP85 Child Mnemonic" to get to the generation page.
+
+<IPhoneWrapper src={"/img/bip85/1-bip85-settings.png"} />
+
+On the BIP-85 Generation page, you can set a few settings.
+
+- Mnemonic Length: This defines the length of the child mnemonic
+- Index: Changing the index will derive a different child mnemonic, so if you want a new mnemonic for a new purpose, make sure to set the index to a value you have not used before
+- Advanced Mode - BIP-39 Passphrase: This allows you to set an extra passphrase that will be used to derive entropy.
+
+:::caution Warning
+To derive the same child mnemonic again, all of the input values (length, index, passphrase) need to be the same. So make sure you don't forget any of the values.
+:::
+
+<IPhoneWrapper src={"/img/bip85/2-bip85-generate.png"} />
+
+On the next page you can see the derived mnemonic. You can now write it on a piece of paper or directly import it into another wallet.
+
+:::note Backup
+The child mnemonics do not have to be backed up. They can always be derived again from the parent mnemonic. You just have to make sure that you properly back up your parent mnemonic.
+:::
+
+<IPhoneWrapper src={"/img/bip85/3-bip85-view.png"} />
+
+If you click on "Verify", you will be taken to a screen that lets you validate that you have written down the child mnemonic correctly
+
+<IPhoneWrapper src={"/img/bip85/4-bip85-verify.png"} />
+
+
+## Recovery
+
+BIP-85 is supported by ColdCard and the [iancoleman bip39 web tool](https://iancoleman.io/bip39/). In case you don't have access to AirGap Vault anymore, you can use either of those 2 apps to recover your BIP-85 child mnemonics.
+
+:::caution
+Never enter your main mnemonic on an online site.
+:::
