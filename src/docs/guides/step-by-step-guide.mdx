@@ -5,7 +5,7 @@ slug: /features/step-by-step-guide
 
 import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
 
-In this guide, we explain how a user can install, set up the Vault and Wallet and sign a transaction.
+In this guide, we explain how a user can install, set up the AirGap Vault and Wallet.
 
 ## Decisions — Do I want the maximum safety?
 
@@ -18,7 +18,7 @@ using a one-way communication with QR code. This method is recommended for handl
 2. The second method is the two apps, single device approach. In this method, the private key is generated and securely stored in the AirGap Vault 
 app and installed on the same device as the AirGap Wallet. This method is recommended for handling small amounts of funds.
 
-## Step by Step — From installation to a successful transaction
+## Step by Step guide for setting up AirGap.
 
 1. Download the AirGap Vault and Wallet
 - [Android AirGap Vault](https://play.google.com/store/apps/details?id=it.airgap.vault)
@@ -42,6 +42,69 @@ We recommend you generate new mnemonics and do not use one that has already been
 
 <IPhoneWrapper src={"/img/setup/03-setup.jpeg"} />
 
-5. Generate your secret
+5. Generate your Mnemonics by moving your phone around to record video, audio, and acceleration until all shields are full.
+
+:::note Optional
+The microphone, camera, accelerator, and touch are needed to add additional entropy for the mnemonics generation. You don't have to grant this permission if you dislike it, the generation will still be possible.
+:::
 
 <IPhoneWrapper src={"/img/setup/04-setup.jpeg"} />
+
+6. After reading and understanding the rules, click the "Understand" button.
+
+<IPhoneWrapper src={"/img/setup/05-setup.jpeg"} />
+
+7. Backup your mnemonic by writing it down on a piece of paper
+
+:::warning Warning
+Never lose your mnemonic and never store it on an online device or app 
+:::
+
+<IPhoneWrapper src={"/img/setup/06-setup.jpeg"} />
+
+8. Verify your mnemonic by selecting them from the option in the order they appear on the previous page.
+
+<IPhoneWrapper src={"/img/setup/07-setup.jpeg"} />
+
+9. Give your mnemonic a name so that you can identify this specific account just in case you set up multiple accounts.
+You can also set up a password for your wallet by ticking the box beside the passcode. 
+Click the "Confirm" button.
+
+<IPhoneWrapper src={"/img/setup/08-setup.jpeg"} />
+
+10. Use your fingerprint to store the secret in the secure enclave of the mobile device.
+
+<IPhoneWrapper src={"/img/setup/09-setup.jpeg"} />
+
+11. Select a new account of your desired protocol and click the "Create" button.
+
+:::note Possible Protocol
+The supported protocols are Aeternity, Bitcoin, Ethereum, Groesticoin, Tezos, Cosmos, Polkadot, Kusama, Shielded Tez.
+:::
+
+<IPhoneWrapper src={"/img/setup/10-setup.jpeg"} />
+
+12. Grant access to the secret in the secure enclave of the AirGap Vault app with the security option put in place.
+
+<IPhoneWrapper src={"/img/setup/11-setup.jpeg"} />
+
+13. A new account for the selected coin has now been created.
+
+<IPhoneWrapper src={"/img/setup/12-setup.jpeg"} />
+
+14. Select the account that was created and click the “sync” button to sync the Vault with the Wallet.
+
+<IPhoneWrapper src={"/img/setup/13-setup.jpeg"} />
+
+15. Select a preference for how AirGap Vault interacts with AirGap Wallet. Select “offline device” if you’re using the offline approach or “same device” if you’ve installed both apps on the same device.
+
+<IPhoneWrapper src={"/img/setup/14-setup.jpeg"} />
+
+16. If you’re going down the offline route you will be shown the Sync QR code, which you need to scan with AirGap Wallet. For this open AirGap Wallet, go to the “Scan QRs” tab and scan the QR code. If you’re using the same device approach, you’ll be automatically forwarded to the “Confirm Import” screen in the AirGap Wallet.
+
+<IPhoneWrapper src={"/img/setup/15-setup.jpeg"} />
+<IPhoneWrapper src={"/img/setup/16-setup.jpeg"} />
+
+17. After importing the account, your balance should be visible in the AirGap wallet in the “Accounts tab”.
+
+<IPhoneWrapper src={"/img/setup/17-setup.jpeg"} />
