@@ -1,0 +1,36 @@
+---
+title: How to update android webview
+slug: /guides/update-webview
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+When installing AirGap Vault on an old Android device, one common challenge is that the Webview on these old devices is not up to date. This can lead to a variety of errors (usually the App opening and just showing a white screen).
+
+On this page, we have a quick guide on how to update the Android webview.
+
+:::note Play Store required
+To update the Android System Webview using this method, your device needs to have the Play Store App installed.
+:::
+
+1. Open the Play Store
+2. Search for “Android System Webview”
+
+<IPhoneWrapper src={"/img/webview/1-android-webview.png"} />
+
+3. Click the "update" button
+
+:::note Update button unavailable
+If update button is unavailable, skip this step and repeat the same process for “Google Chrome”
+:::
+
+<IPhoneWrapper src={"/img/webview/2-android-webview.png"} />
+
+Some devices (depending on the software version), use the Webview version that is provided by "Google Chrome".
+Repeat the process above for "Google Chrome" as well.
+
+<IPhoneWrapper src={"/img/webview/3-android-webview.png"} />
+
+<IPhoneWrapper src={"/img/webview/4-android-webview.png"} />
+
+After completing those steps, AirGap Vault should run. If there are still issues, please reach out to us.
