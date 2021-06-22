@@ -143,10 +143,7 @@ module.exports = {
     {
       type: "category",
       label: "Guides",
-      items: [
-        "guides/BIP-85",
-        "guides/sapling"
-      ],
+      items: ["guides/BIP-85", "guides/sapling", "guides/update-webview"],
     },
     "FAQ",
     "glossary",
@@ -165,7 +162,7 @@ module.exports = {
       label: "Examples",
       items: [
         "coinlib/examples/get-address",
-        "coinlib/examples/serializer/v2/introduction"
+        "coinlib/examples/serializer/v2/introduction",
       ],
       collapsed: true,
     },
