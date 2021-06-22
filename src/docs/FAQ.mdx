@@ -432,3 +432,39 @@ Every 24 hours, the pending states in the wallet are cleared. You can try again 
 ## There are significantly more coins available in the wallet than in the vault. So, does that mean the coins that aren’t can't be placed in the vault are less safe?
 
 The coins that are only in the wallet and not in the vault are tokens based on either ERC20 tokens on Ethereum or FA1.2/2 on Tezos. There are no “less secure” coins that only exist in the wallet. Those tokens are stored on your ETH or XTZ accounts and securely managed by the vault.
+
+## Can I import the BTC account created in the AirGap Vault into other wallets using the private key?
+
+You cannot get the private key from the Vault but you can import the mnemonic phrase into any wallet that supports BIP39 and HD wallets.
+
+## How long does it take to exchange currencies on AirGap
+
+It usually takes around 20 to 30 minutes. If you did not receive the funds after an hour, please contact us.
+
+## If I send some AE, do I need to set fees, or does AirGap do it automatically, since the slider rests on disabled?
+
+The fee slider is selecting "Slow & Cheap" by default. That fee is high enough for AE at the moment. You can manually adjust the fee by clicking the toggle button on top of the slider.
+
+## Is it possible to have a new coin listed on AirGap?
+
+Yes it is possible, we want to support as many chains and coins as possible, but we also follow a procedure of getting in touch with the teams behind the coins for a potential integration.
+
+## What are the available exchange pairs?
+
+The list of available exchange pairs can be seen on the exchange tab. This functionality is provided to us by third parties (Changelly and ChangeNow) and may vary based on what they provide.
+
+## How do I go about ensuring the AirGap Vault stays up to date if not actually connected to the internet, what do you recommend?
+
+If you are on Android, you could transfer the new APK using an SD card. Otherwise, we recommend that you completely wipe and reset the phone and start over from scratch. That sounds like a lot of work, but you don't actually have to update the Vault all the time. Unless we find critical security issues or add a breaking change, you can just keep the version you have until you need a new feature that we release.
+
+## Why must I have a minimum of 1 DOT balance in my AirGap wallet?
+
+AirGap does not set any minimum balance requirement on any token or coin. This is a design on the Polkadot network, an address is only active when it holds a minimum amount (currently set at 1 DOT). This minimum amount is called an existential deposit (ED). An option to completely sweep an account will be added in the future.
+
+## Can I send NFTs (on Tezos) to my AirGap Wallet?
+
+Yes, you can send NFTs to AirGap. But you can't see them inside AirGap Wallet, you will see them on the dApps that support those NFTs.
+
+## How long does it take to unbound in Polkadot?
+
+Unbonding takes 28 days.
