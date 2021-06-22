@@ -143,7 +143,12 @@ module.exports = {
     {
       type: "category",
       label: "Guides",
-      items: ["guides/BIP-85", "guides/sapling", "guides/update-webview"],
+      items: [
+        "guides/BIP-85",
+        "guides/sapling",
+        "guides/update-webview",
+        "guides/vault-offline-update",
+      ],
     },
     "FAQ",
     "glossary",
