@@ -413,6 +413,26 @@ This functionality will be available in the future.
 
 It shouldn’t take more than a couple seconds for your wallet to set up. Close the app and try again.
 
+## How do I find my exchange transaction ids?
+
+Currently, we do not have a UI for you to find transaction IDs for exchanges. However, if need be, please send us an email or use any of our support platforms with your address and amount attached, and we will be able to assist you.
+
+## I am having problems with Polkadot and Kusama seeing balance and also delegatioins.
+
+Polkadot and Kusama routinely update their runtime, and if it does contain breaking changes, that can sometimes cause issues. To be on the safe side, we are making sure to review the changelog to see if they have any breaking changes.
+
+## Why does our tezos baking record show unstable and not precise?
+
+Our baker payouts are done manually using AirGap. In the past, there was a bug in our payment script that affected a specific payout to a contract, resulting in a fee estimation failure. Due to this, we partially missed two payouts. After the bug was resolved, the missed payouts have been paid in full, and one of the following payouts has been paid twice as a way to compensate our delegators. So overall, our payouts are higher than they should be.
+
+## What actions to take if eth transactions have been dropped and replaced and it is under a pending state in the wallet?
+
+Every 24 hours, the pending states in the wallet are cleared. You can try again with a higher fee if the transaction was deleted from the mempool because the fee was too low.
+
+## There are significantly more coins available in the wallet than in the vault. So, does that mean the coins that aren’t can't be placed in the vault are less safe?
+
+The coins that are only in the wallet and not in the vault are tokens based on either ERC20 tokens on Ethereum or FA1.2/2 on Tezos. There are no “less secure” coins that only exist in the wallet. Those tokens are stored on your ETH or XTZ accounts and securely managed by the vault.
+
 ## Can I import the BTC account created in the AirGap Vault into other wallets using the private key?
 
 You cannot get the private key from the Vault but you can import the mnemonic phrase into any wallet that supports BIP39 and HD wallets.
