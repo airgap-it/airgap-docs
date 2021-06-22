@@ -3,8 +3,6 @@ title: How to update AirGap Vault on an offline phone (Android)
 slug: /guides/airgap-vault-offline-update-android
 ---
 
-import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
-
 :::note Advanced
 This guide is for only android user.
 :::
@@ -17,18 +15,25 @@ In this guide, we outline the steps to updating the vault app without connecting
 
 - Scroll down to the latest release info section and download the apk.
 
-<IPhoneWrapper src={"img/offline-update/1-offline-update.jpg"} />
+<img src={"/img/offline-update/1-offline-update.jpg"} />
 
-- Connect an SD Card to your PC/Laptop using a sandisk or something related.
+- Connect an SD Card to your PC/Laptop.
 
-<IPhoneWrapper src={"img/offline-update/2-offline-update.jpg"} />
+<img src={"/img/offline-update/2-offline-update.jpg"} />
 
 - Format the SD card.
 
-- Move or copy the downloaded apk to the SD card.
+- Copy the downloaded apk to the SD card.
 
-- Eject and remove your SD card from your PC/laptop and insert it into the phone with the vault installed.
+- Eject and remove your SD card from your PC/laptop.
 
-<IPhoneWrapper src={"img/offline-update/3-offline-update.jpg"} />
+- Insert the SD card into the phone with the Vault installed.
 
-- Locate the apk and install
+<img src={"/img/offline-update/3-offline-update.jpg"} />
+
+- Locate the apk and install.
+
+- There might be a warning screen about the apk being from an untrusted source. By default, you are only allowed to install apps through the Play Store.
+  When updating the app, you can ignore this warning because only updates that are signed by AirGap can be installed over the existing app.
+
+- Format the SD card on your phone.
