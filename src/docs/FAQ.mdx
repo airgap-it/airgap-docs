@@ -468,3 +468,23 @@ Yes, you can send NFTs to AirGap. But you can't see them inside AirGap Wallet, y
 ## How long does it take to unbound in Polkadot?
 
 Unbonding takes 28 days.
+
+## What is AirGap business model/ how does Airgap make money?
+
+AirGap is developed by papers.ch, a company that has a focus in mobile security and blockchain technology. The development is partially funded out of our own pockets and part of it is paid through grants by various cryptocurrency foundations.
+
+## Does AirGap have any plan to develop a desktop version of the vault?
+
+We do not have any plan to develop the desktop version of the vault. But you can build the Vault to run on the desktop yourself. We will also add unofficial builds to our CI in the future. But we currently don't have any plans to distribute official desktop builds. The reason for this is that the Vault on Desktop is less secure unless it is used on an air-gapped laptop. We don't want to risk users installing it on their online machines by accident, so this is a feature only available for advanced users.
+
+## If I didn't back up my mnemonics when creating my wallet, how can I retrieve it?
+
+You can recover your mnemonics if you still have access to the vault by going to settings > select account > show mnemonics. Unfortunately, It also means that your funds cannot be accessed if you do not have access to the vault.
+
+## Why does AirGap Vault generate looping qr code for signing ERC20 token transactions?
+
+ERC 20 transactions can contain more data than a single QR code can display. In this case, it is split up into multiple parts.
+
+## Why is the price reflected on certain assets on my account not the same as the market price?
+
+This variation is most likely just a difference in the API that displays the price.
