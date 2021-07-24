@@ -1,0 +1,100 @@
+---
+title: social recovery
+slug: /features/social-recovery
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+## What is social recovery?
+Social recovery works by relying on a group of trusted people to assist you in recovering a lost secret. It solves the problem of having a single point of failure when you back up your seed words. The basics of how social recovery works are very simple: You will give each of your trusted contacts one piece of your original seed, but not all of it. That way, none of your contacts can access your funds, even if they tried to. Only if some people get together, the original seed can be recovered.
+
+When setting up social recovery, you can specify how many shares you want to generate, and how many of those are needed to recover the original seed. As an example, you could create 3 shares and require 2 of them to recover your secret. You will then be given 3 new sets of words and you can give one set to each of your 3 trusted parties. If you ever need to reconstruct your original seed, any combination of 2 shares will allow you to do that. But each of your contacts by themselves will have no information about your original secret, making it a very secure system.
+
+Common social recovery setups are a 2-of-3 and a 3-of-5 backup. Which one you choose depends on your preferences. A 2-of-3 backup is easy to set up, but it does leave you vulnerable if 2 contacts collude against you. A 3-of-5 backup is more resilient against this because it requires 3 contacts to collude against you.
+
+A few ideas of where and with whom shares could be stored:
+
+- Family Members
+- Close friends
+- Bank Vault
+- Trustee
+- Hide it in your apartment
+- Bury it somewhere
+- Online Backup
+
+:::caution
+Don’t put multiple shares in the same location.
+:::
+
+:::note
+The process of generating your social recovery shares is using an algorithm called [Shamir’s Secret](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) Sharing. This algorithm allows you to combine any of the shares to get back to your original secret while giving contacts with fewer than the required number of shares NO information about your original secret. This is, in contrast, to simply cutting your original secret into multiple pieces and giving it to your contacts. If you do that, you reveal a part of your secret to each one, leaving you vulnerable to brute force attacks. This is not the case if you use our social recovery generation.
+:::
+
+Some tips regarding the distribution of the shares:
+
+- Write down the shares on a piece of paper. Fold it up and put it into a sealed envelope. 
+- Don’t tell contacts what the envelope is for.
+- Don’t tell people who the other trusted contacts are.
+- Don’t give shares to multiple people in the same circle. Doing this will increase the likelihood of them finding out about it and colluding against you.
+- Regularly check if your contacts still have your shares.
+- Use BIP39 Passphrases and a decoy wallet for an even higher level of security
+
+## How to set up social recovery in AirGap Vault
+We strive to provide our users with the most up-to-date and innovative technology, which is why AirGap has integrated this feature into its Vault.
+
+If you want to set up the social recovery functionality for your wallet, follow these steps:
+
+- Go to the Settings page and choose the mnemonic for which you wish to create social recovery.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-01.png"}/>
+
+- Select “Social Recovery”
+
+On the next page you get a set of numbers 
+
+1. The number of secret shares: This number determines the amount of social contact you wish to maintain.
+2. The number of shares needed for recovery: This number determines the number of secret shares needed to successfully recover your secret.
+
+For this example, we select three for the number of secret shares and two for the number of shares needed for recovery.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-02.png"}/>
+
+- Click the “start” button and back up the first social recovery phrase.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-03.png"}/>
+
+- Click the “next” button and confirm the first social recovery phrase.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-04.png"}/>
+
+- Click the “next” or “continue” button and backup the second social recovery phrase.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-05.png"}/>
+
+- Click the “next” button and confirm the second social recovery phrase.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-06.png"}/>
+
+- Click the “next” or “continue” button and backup the third-social recovery phrase.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-07.png"}/>
+
+- Click the “next” button and confirm the third social recovery phrase.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-08.png"}/>
+
+- Click “Finish”.
+- Make sure you validate that you wrote everything down correctly by importing your newly created social recovery.
+- Now put each of the shares into a sealed envelope and securely distribute them among your trusted contacts
+
+## How to recover your secret with social recovery in AirGap Vault
+
+- To recover your account from social recovery shares, open the AirGap vault and select the “social recovery” import method.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-09.png"}/>
+
+- Select the number of shares that are required for recovery and input the social recovery phrases from the initial setup. In our case, it was two. Click the “Recover” button.
+
+<IPhoneWrapper src={"/img/social-recovery/social-recovery-10.png"}/>
+
+- Success, you’ve recovered your account using social recovery.
