@@ -12,7 +12,11 @@ module.exports = {
     {
       type: "category",
       label: "AirGap Vault",
-      items: ["airgap-vault/introduction", "airgap-vault/supported-devices"],
+      items: [
+        "airgap-vault/introduction",
+        "airgap-vault/supported-devices",
+        "airgap-vault/recommended-devices",
+      ],
       collapsed: true,
     },
     {
