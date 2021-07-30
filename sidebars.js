@@ -146,6 +146,8 @@ module.exports = {
       items: [
         "guides/BIP-85",
         "guides/sapling",
+        "guides/social-recovery",
+        "guides/step-by-step-guide",
         "guides/update-webview",
         "guides/vault-offline-update",
       ],
