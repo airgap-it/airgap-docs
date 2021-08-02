@@ -18,6 +18,7 @@ title: AirGap Wallet Changelog
 - **WalletConnect**: AirGap now supports [WalletConnect](https://walletconnect.org/) to connect to Ethereum dApps
 - **Beacon**: Improve flow with additional feedback
 - **Polkadot/Kusama**: It is now possible to ignore the "Existential Deposit" and transfer all funds out of an account
+- **youves**: Add support for "uUSD" and "YOU" tezos tokens
 
 #### Fixes
 
