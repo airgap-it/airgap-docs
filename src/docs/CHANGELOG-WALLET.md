@@ -2,6 +2,25 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.10.0
+
+#### Features
+
+- **Tezos**: Add possibility to eit fee, gas limit and storage limit for beacon operation requests
+
+## 3.9.1
+
+#### Fixes
+
+- **Bitcoin**: Fix address validation regex that would mark some valid addresses as invalid
+
+## 3.9.0
+
+#### Features
+
+- **Protocols**: Add Moonriver support
+- **Exchange**: Add Quipuswap decentralised exchange on Tezos
+
 ## 3.8.0
 
 #### Features

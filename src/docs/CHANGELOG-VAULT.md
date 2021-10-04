@@ -2,6 +2,22 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.10.0
+
+#### Features
+
+- **Mnemonic Import**: The mnemonic import process has been revamped and is no longer using the system keyboard. Instead, a virtual keyboard is used that increases security and minimises the likelyhood of typos.
+- **Entropy Collection**: We added support for entropy collection with **Dice Rolls** and **Coin Flips**. Those methods will allow advanced users to provide their own entropy to generate a verifiable recovery phrase out of the dice rolls or coin flips.
+- **Reset Device**: A "Reset Device" option has been added to the settings. It will remove all secrets and reset the app back to the factory settings.
+- **Local Error History**: We added an option to export the local error history from the Vault. This is helpful for us to debug issues in case users can't get the Vault to run on their device.
+
+## 3.9.0
+
+#### Features
+
+- **Moonriver**: Add support for Moonriver
+- **Settings**: The interaction preference is now a global setting, instead of a per-secret setting.
+
 ## 3.8.0
 
 #### Features
