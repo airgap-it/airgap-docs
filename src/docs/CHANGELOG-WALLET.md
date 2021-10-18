@@ -2,11 +2,25 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.11.1
+
+#### Fixes
+
+- **Polkadot / Kusama**: Update runtime
+
+## 3.11.0
+
+#### Features
+
+- **Bitcoin SegWit**: AirGap now supports **Bitcoin SegWit**. When generating a new Bitcoin account in AirGap Vault, the user now has 2 options. SegWit or Legacy. Legacy accounts are needed for backwards compatibility. If you have ever generated a Bitcoin account in AirGap Vault, you will need to select the Legacy option to access your funds.
+
+SegWit accounts have a slightly different format and a couple of advantages. Most notabily, transaction fees are a lot smaller for SegWit transactions. We recommend using SegWit accounts whenever possible. If you still have a legacy account, you will have to send all your BTC to a new SegWit account. You can do this to benefit from the lower fees, but it is not required.
+
 ## 3.10.0
 
 #### Features
 
-- **Tezos**: Add possibility to eit fee, gas limit and storage limit for beacon operation requests
+- **Tezos**: Add possibility to edit fee, gas limit and storage limit for beacon operation requests
 
 ## 3.9.1
 

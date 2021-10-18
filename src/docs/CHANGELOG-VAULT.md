@@ -2,6 +2,18 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.11.0
+
+#### Features
+
+- **Bitcoin SegWit**: AirGap now supports **Bitcoin SegWit**. When generating a new Bitcoin account in AirGap Vault, the user now has 2 options. SegWit or Legacy. Legacy accounts are needed for backwards compatibility. If you have ever generated a Bitcoin account in AirGap Vault, you will need to select the Legacy option to access your funds.
+
+SegWit accounts have a slightly different format and a couple of advantages. Most notabily, transaction fees are a lot smaller for SegWit transactions. We recommend using SegWit accounts whenever possible. If you still have a legacy account, you will have to send all your BTC to a new SegWit account. You can do this to benefit from the lower fees, but it is not required.
+
+- **Entropy Collection with Dice Rolls and Coin Flips**: You can now generate mnemonics by providing entropy collected through **dice rolls** and **coin flips**. This feature allows users to generate a deterministic and verifiable mnemonic out of the entropy they provide.
+
+- **Easier BIP85 Child Mnemonic Management**: It is now possible to directly import a BIP85 child mnemonic as a new secret.
+
 ## 3.10.0
 
 #### Features
