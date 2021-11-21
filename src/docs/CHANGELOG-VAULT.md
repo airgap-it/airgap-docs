@@ -2,6 +2,30 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.12.0
+
+#### Features
+
+- **Bitcoin**: Add support for Bitcoin "watch-only" wallets like BlueWallet and Sparrow. Currently, this is a beta feature and should only be used for testing. We are happy for any feedback.
+- **Error History**: Add error history page to see local errors
+- **Docker**: Optimise Dockerfile (thanks @mohammadrafigh)
+
+#### Fixes
+
+- **GitHub Actions**: Fix GitHub Actions pipelines
+
+## 3.11.2
+
+#### Fixes
+
+- **Local Storage**: Fixed a bug that could result in the secrets not being visible.
+
+## 3.11.1
+
+#### Fixes
+
+- **Android**: Bugfixes related to Android 12.
+
 ## 3.11.0
 
 #### Features

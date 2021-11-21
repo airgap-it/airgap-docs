@@ -2,6 +2,29 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.13.0
+
+#### Features
+
+- **Tezos**: Add tokens **QUIPU**, **uDEFI**, **ctez**, **PLENTY** and **WRAP**.
+- **Tezos**: Added support for Tezos generic FA1.2 / FA2 tokens.
+
+#### Fixes
+
+- **Interaction**: Interaction settings did not work under some circumstances.
+- **WalletConnect**: Some requests were not handled correctly.
+
+## 3.12.0
+
+#### Features
+
+- **Interaction**: Users can now set the default interaction setting per secret.
+
+#### Fixes
+
+- **Android**: Fixes for Android 12
+- **Beacon**: Update `beacon-sdk` to version `2.3.5`
+
 ## 3.11.1
 
 #### Fixes
