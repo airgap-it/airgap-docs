@@ -377,7 +377,7 @@ Inside the AirGap wallet click on whatever coin you want to check for its transa
 
 ## Is it possible to store any erc20 token with AirGap?
 
-Yes, but the unlisted ones will not be visible in the AirGap Wallet. We are working on adding WalletConnect support, which will let you work with any ERC20 token.
+Yes, but the unlisted ones will not be visible in the AirGap Wallet. However, you can connect to any Ethereum DApp using the WalletConnect functionality to interact with those tokens.
 
 ## How do I create a second address for any of the supported coins in the vault?
 
@@ -492,3 +492,15 @@ ERC20 transactions can contain more data than a single QR code can display. In t
 ## Why is the price reflected on certain assets on my account not the same as the market price?
 
 This variation is most likely just a difference in the API that displays the price.
+
+## What is delegation in AirGap?
+
+Some protocols (Tezos, Cosmos, Polkadot) allow you to "delegate" your funds and earn rewards. Delegations are slightly different in each protocol in terms of rewards and risks. As a result, we recommend you do some research on your desired protocol. Tezos is the easiest, allowing you to delegate your whole balance with no risk, and without locking in your funds while receiving approximately 5 percent in rewards per year.
+
+## Does AirGap allow freezing of UTXOs?
+
+No, the AirGap Wallet companion app is a very simple wallet and doesn't offer any BTC specific features. To use advanced Bitcoin features, you can connect AirGap Vault to another "watch-only" wallet (eg. BlueWallet or Sparrow) and use AirGap Vault as the signer. This feature is currently in Beta and we're happy for any feedback.
+
+## How to add existing AE wallet (address) to AirGap Wallet?
+
+Simply import your existing mnemonics to AirGap Vault.
