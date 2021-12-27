@@ -148,6 +148,7 @@ module.exports = {
       type: "category",
       label: "Guides",
       items: [
+        "guides/metamask",
         "guides/BIP-85",
         "guides/sapling",
         "guides/social-recovery",
