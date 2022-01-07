@@ -3,8 +3,34 @@ title: Introduction
 slug: /
 ---
 
-[AirGap](https://airgap.it) is a crypto wallet system that lets you secure crypto assets with an offline device.
+[AirGap](https://airgap.it) is a non-custodial cryptocurrency wallet that lets you secure your crypto assets offline. It achieves this by using two apps, called AirGap Vault and AirGap Wallet.
 
-The [AirGap Vault](airgap-vault/introduction) application is installed on a dedicated device that has no connection to any network, thus it is air gapped.
+The [AirGap Vault](airgap-vault/introduction) is responsible for secure seed generation and storage, as well as air-gapped transaction signing through QR codes. The Vault is installed on a dedicated device with no network connection, thereby protecting your seed from attackers.
+Even if you choose to install the Vault on a device with network connectivity, the Vault application still stays offline.
 
-The [AirGap Wallet](airgap-wallet/introduction) is installed on your everyday smartphone.
+The [AirGap Wallet](airgap-wallet/introduction) creates transactions, broadcasts transactions and shows a portfolio overview. The Wallet is installed on your everyday smartphone with network access. The wallet stores public information. The seed is only stored and used in the AirGap Vault, which does not have access to the internet at any time, thus making it inherently more secure than your regular software wallet with internet access.
+
+## Download AirGap Vault
+### Mobile
+
+[📱 Android — Google Play](https://play.google.com/store/apps/details?id=it.airgap.vault)
+
+[📱 iOS — App Store](https://itunes.apple.com/us/app/airgap-vault-secure-secrets/id1417126841?l=de&ls=1&mt=8)
+
+
+## Download AirGap Wallet
+### Mobile
+
+[📱 Android — Google Play](https://play.google.com/store/apps/details?id=it.airgap.wallet)
+
+[📱 iOS — App Store](https://itunes.apple.com/us/app/airgap-vault-secure-secrets/id1417126841?l=de&ls=1&mt=8)
+
+### Web
+https://wallet.airgap.it/
+
+### Desktop
+[💻 Windows — GitHub](https://github.com/airgap-it/airgap-wallet/releases/download/v3.10.0/airgap-wallet-3.10.0.exe)
+
+[💻 macOS — GitHub](https://github.com/airgap-it/airgap-wallet/releases/download/v3.10.0/airgap-wallet-3.10.0.dmg)
+
+[💻 Linus — GitHub](https://github.com/airgap-it/airgap-wallet/releases/download/v3.10.0/airgap-wallet-3.10.0.AppImage)
