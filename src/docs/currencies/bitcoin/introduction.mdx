@@ -6,24 +6,23 @@ title: Introduction
 ## What is Bitcoin?
 Bitcoin was the first decentralized digital currency based on blockchain technology. It was created in 2008 by a mysterious and anonymous developer known as Satoshi Nakamoto, who released the white paper in a cryptography mailing list and later open-sourced the software that implements the protocol.
 
-### Supported format of bitcoin address
-- #### Legacy address format- Supported:
-The original Bitcoin format. This format is not scalable so, it tends to have higher transaction fees than other formats. It is unable to communicate with Segwit addresses. Start with "1", example 13jw7krcy7rzvfeNmQaEyMCueSKnqZm1Z7.
+### Supported Bitcoin Address Types
 
-- #### SegWit address format- Supported:
-The Segwit address format is an improvement for the scalability of the legacy address format. Because SegWit is more scalable, it comes with way cheaper fees. Start with "bc1q", example bc1q60vkdsn37kk9xgm5vw0jasrxw8lsrx68rqwr2g.
+#### SegWit address format
+
+The Segwit address format is an improvement for the scalability of the legacy address format. SegWit comes with cheaper fees. SegWit addresses start with "bc1q", for example `bc1q60vkdsn37kk9xgm5vw0jasrxw8lsrx68rqwr2g`.
 
 [How to setup SegWit in AirGap](https://medium.com/airgap-it/understanding-segwit-666abec4e774)
 
-- #### Taproot - [Coming soon]
-This format comes with the latest bitcoin update, it is a soft fork that improves Bitcoin’s scripts to increase privacy, efficiency, and the network’s ability to process smart contracts. Start with "bc1p", example bc1p60vkdsn37kk9xgm5vw0jasrxw8lsrx68rqwr2g.
+#### Legacy address format
+The original Bitcoin format. This format has higher transaction fees than other formats. Legacy addresses start with "1", for example `13jw7krcy7rzvfeNmQaEyMCueSKnqZm1Z7`.
 
+#### Taproot - [Coming soon]
+This format comes with the latest bitcoin update, it is a soft fork that improves Bitcoin’s scripts to increase privacy, efficiency, and the network’s ability to process smart contracts. Taproot addresses start with "bc1p", for example `bc1p60vkdsn37kk9xgm5vw0jasrxw8lsrx68rqwr2g`.
 
-- #### Compatibility address format - Not Supported
-This format was introduced to solve the compatibility issue between Legacy and Segwit addresses. We currently do not support this format, but we may consider looking into it in the future. Start with "3", example 363SHUfZ4rv2F631EhwzcxUNVKL7Q5JEz6.
+### FAQ
 
-### Got questions?
-[Which other wallet is AirGap bitcoin wallet compatible with?](https://support.airgap.it/currencies/bitcoin/wallet-compatibility)
+[Which other wallets is AirGap bitcoin wallet compatible with?](https://support.airgap.it/currencies/bitcoin/wallet-compatibility)
 
 [Can I import the BTC account created in the AirGap Vault into other wallets using the private key?](https://support.airgap.it/FAQ#can-i-import-the-btc-account-created-in-the-airgap-vault-into-other-wallets-using-the-private-key)
 
