@@ -1,0 +1,87 @@
+---
+title: How To Set Up Secure Cold Wallet With AirGap (iOS)
+slug: /airgap-vault/setup-secure-cold-wallet-airgap-ios
+---
+
+> This document is not finished.
+
+### Setup
+
+- Update software to latest version (Android Install Chrome/Webview if old)
+- Reset Device
+- Remove SIM card
+- Remove SD card / peripherie
+- (MAYBE IOS: FULLY OFFLINE => INSTALL WITH XCODE?)
+- Set up device
+- Set secure pin code
+- Set up face ID / Fingerprint
+
+- Change Settings:
+  - Do not join wifi automatically
+  - Disable WIFI
+  - Disable Bluetooth
+  - Disable NFC
+  - Disable Cellular (disable DATA)
+  - (maybe): Use dummy DNS
+  - (maybe): Add VPN (that has no connectivity)
+  - Make sure speakers are off (Audio transmit)
+
+### Install
+
+#### With App Store
+
+Prerequisites: iCloud Account
+
+- Connect to WiFi, create mobile hotspot with other device and RANDOM PW
+- Login with iCloud account (set up new account, strong PW, 2 Factor)
+- Download AirGap Vault (Make sure it's the correct version, not a "fake" app)
+- After setup, "forget" network, change PW of hotspot
+
+#### With XCode
+
+Prerequisites: Mac
+
+- Download XCode on Mac
+- Download .ipa from github or build yourself
+- Connect phone via USB, install .ipa
+- (is there a way to "untrust" a computer, so it can never be plugged into that pc again without new approval?)
+
+- Verify permissions of app in settings (Turn off Siri)
+
+#### Sideload APK (Android only)
+
+- Wipe microSD card on your pc
+- Copy signed APK from github onto microSD card
+- If possible, enable "write protection" on the SD card
+- Plug into Android device
+- Open media device and install APK
+- If any errors appear, ignore (accept/approve)
+- Format SD card on mobile phone
+- Remove SD card
+- (Ideally: Insert SD card into second air-gapped phone/pc, format card)
+
+### Update
+
+#### With App Store
+
+- Same as "install"
+
+#### With XCode
+
+- Same as "install"
+
+#### Sideload APK (Android only)
+
+- Same as "install"
+
+#### SECURE (recommended)
+
+- Wipe phone and install again
+- MAKE SURE YOU HAVE A BACKUP OF ALL YOUR SEED PHRASES!!!
+
+### Wipe
+
+- Remove all Secrets from AirGap Vault
+- Go to settings, "reset app data" for AirGap Vault (is this possible?)
+- Remove AirGap Vault
+- Erase All Content and Settings
