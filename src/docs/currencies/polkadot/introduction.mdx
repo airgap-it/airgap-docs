@@ -19,6 +19,10 @@ AirGap Polkadot Wallet is a convenient way to store and transfer DOT while stori
 When you create a Polkadot account, The account does not exist yet on-chain. 
 #### Activate account: 
 To activate an account you need an existential deposit, which is 1 DOT. After depositing a minimum of 1 DOT, your address becomes recorded on-chain.
+#### Reaped account
+When your account goes below 1 DOT, it will be reaped, thereby wiped from the blockchain's state to conserve space.
+Going below 1 DOT causes an account to be reaped. It can be reactivated by redepositing at least 1 DOT. 
+AirGap prevents your account from going below 1 DOT to avoid this scenario.
 
 ### How to set up a DOT account.
 This guide uses XTZ as an example, but the same steps can set up Polkadot in AirGap.
