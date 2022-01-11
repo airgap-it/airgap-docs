@@ -3,9 +3,41 @@
 title: coin flip and dice roll entropy generation
 ---
 
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
 The sequence most wallets use to generate your seed phrase is to collect entropy from your device's random number generator (RNG), then turn this entropy into seed phrases, often represented as 12 or 24 words. For example: joke alien raccoon team planet throw frame utility acid rich tobacco setup earth oven solid audit because category play orange slide nut purse ahead
 
 This procedure appears uncomplicated, but there may be an underlying security concern here. The problem is that it's unclear how most RNG chips work. There is no way to tell whether the output of those chips is truly random or if it outputs follows a predefined sequences that appear random but can be reconstructed by the device manufacturer.
 
 We've been aware of this issue with random number generators since the first release of AirGap. As a result, before creating a secret, we collect additional entropy from the camera, microphone, accelerometer, and touch input to decrease the attack vector provided by a compromised RNG. The resulting seed phrase will include both the RNG output and the data from the users. If someone wants to compromise and recalculate the secret, he must know both inputs, therefore a compromised RNG is no longer sufficient to steal your seed in AirGap.
+
+To take security further and eliminate any flaws from the RNG, we introduced the dice roll and coin flip. Instead of relying on the device to give you random numbers to generate the mnemonic, the users have to provide those random numbers themselves using either dice or a coin. 
+
+## Advantages of coin flip and dice roll 
+- ### Elimination of RNG failure
+Since RNG is no longer involved in the equation of creating mnemonics, the associated risks are no longer an issue. 
+- ### Verifiable seed phrase
+It also solves the challenge of not trusting a software because the mnemonic created from the coin flip and dice roll input is deterministic. As a result, a different wallet or software can confirm that the same input will always yield the proper output. The user can be confident that the secret he created on an AirGap was generated randomly and has not been tampered with.
+
+## Steps involved in setting up coin flip and dice roll
+
+The dice roll/coin flip is simple functionality yet a better means of entropy generation. You can produce a precise sequence of inputs by rolling dice or flipping a coin. 
+- In the case of coin flips, 256 flips are required to achieve the randomness or entropy required for a 24-word mnemonic. 
+- In the case of dice rolls, 99 is required. 
+
+### Dice roll
+Here are the things you will need:
+- The vault App
+- Dice with 6 sides (Preferable: A new casino grade dice, more than one dice with good quality).
+- Dice tray (Optional)
+
+:::warning ⚠
+Don’t use Dice Apps on your phone or computer. This defeats the purpose of eliminating RNG.
+:::
+
+- Open the Vault app. On the setup page, toggle the Advanced Mode and click the GENERATE WITH DICE ROLLS button.
+
+
+
 
