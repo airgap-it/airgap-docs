@@ -1,1 +1,11 @@
 
+---
+title: coin flip and dice roll entropy generation
+---
+
+The sequence most wallets use to generate your seed phrase is to collect entropy from your device's random number generator (RNG), then turn this entropy into seed phrases, often represented as 12 or 24 words. For example: joke alien raccoon team planet throw frame utility acid rich tobacco setup earth oven solid audit because category play orange slide nut purse ahead
+
+This procedure appears uncomplicated, but there may be an underlying security concern here. The problem is that it's unclear how most RNG chips work. There is no way to tell whether the output of those chips is truly random or if it outputs follows a predefined sequences that appear random but can be reconstructed by the device manufacturer.
+
+We've been aware of this issue with random number generators since the first release of AirGap. As a result, before creating a secret, we collect additional entropy from the camera, microphone, accelerometer, and touch input to decrease the attack vector provided by a compromised RNG. The resulting seed phrase will include both the RNG output and the data from the users. If someone wants to compromise and recalculate the secret, he must know both inputs, therefore a compromised RNG is no longer sufficient to steal your seed in AirGap.
+
