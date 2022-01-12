@@ -1,0 +1,58 @@
+---
+title: BIP 39 passphrase - plausible deniability
+slug: /airgap-vault/plausible-deniability
+---
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+## Advance seed phrase security
+:::caution Recommendation
+This option is recommended for experienced crypto users.
+:::
+
+Plausible deniability is a security feature that enables you to create a "hidden" account without anybody knowing it exists. 
+It works by adding a passphrase when creating an account. This can be useful to protect you if you are threatened and compelled to provide your mnemonic, or simply as an additional security measure in case you expose your mnemonic.
+
+### How the passphrase works
+When setting up AirGap, a 24-word recovery phrase was shown to you, which we believed you backed up in a secure location. These 24 words provide access to all your accounts. 
+
+- The passphrase is essentially a set of characters, similar to a password, added to your 24-word recovery phrase that grants access to a new account. This character can be anything from a single word space to a long sentence.
+- The passphrase act as a layer of security in case of an attacker. For instance, If your 24-word seed phrase were to be compromised. The attacker has to access both the seed phrase and the passphrase in other to steal your funds.
+- Each unique passphrase opens a distinct set of accounts. You may use as many passphrases as you choose.
+- It works for every coin on AirGap.
+
+:::note Recommendation 
+If you want to set up plausible deniability for your mnemonic, you should add both a normal account (without a BIP-39 passphrase, also called “decoy” account), and another account with a BIP-39 passphrase. 
+You then put a small number of coins on the “decoy” account and put the majority of your funds on your hidden account.
+:::
+
+### How to set up a passphrase in AirGap Vault
+
+If you want to generate an account with a passphrase, follow these steps.
+
+- After [setting up a secret in AirGap](https://medium.com/airgap-it/airgap-the-step-by-step-guide-c4c3d3fe9a05), Click the ADD ACCOUNT button.
+
+<IPhoneWrapper src={"/img/passphrase /pass1.jpeg"} />
+
+- Select any coin you want to use to generate the new account with a passphrase.
+
+<IPhoneWrapper src={"/img/passphrase /pass2.jpeg"} />
+
+- Toggle the Advanced Mode button and input your passphrase.
+- Click the create and tick the “I understand” button.
+
+<IPhoneWrapper src={"/img/passphrase /pass3.jpeg"} />
+
+- Click ok and a new account will now be generated. This account looks and behaves just like any other account, but to use it, you will need to provide the BIP-39 passphrase again.
+
+<IPhoneWrapper src={"/img/passphrase /pass4.jpeg"} />
+
+### Things you should note while setting up a passphrase
+
+- Your passphrase is case-sensitive and can include special characters. Lowercase and uppercase characters are distinguished.
+- Your passphrase is not stored anywhere. You take responsibility for keeping it safe, whether that means creating a physical backup or simply remembering it. If you lose your BIP-39 passphrase, you will lose access to your funds.
+- The mnemonic and BIP-39 passphrases are both needed to recover your account. Make sure you properly back up both of them. Don’t back them up in the same location though, because an attacker will have immediate access to your hidden wallet if he has both.
+- Always add funds to your “hidden” or “decoy” account so attackers will think they have access to your wallet and stop looking.
+- You should closely monitor any balance changes on your standard or “decoy” account. If the balance ever decreases, you will immediately know that someone has access to your mnemonic and you should move your funds to a new mnemonic immediately.
+- If an attacker has access to your mnemonic, he can try to brute force your passphrase. Depending on how strong your passphrase is, this takes between a couple of seconds and thousands of years. Choose a passphrase that is at least 10 characters long. The longer the better.
+
+[Securing your crypto with plausible deniability and BIP-39 passphrases](https://medium.com/airgap-it/securing-your-crypto-with-plausible-deniability-and-bip-39-passphrases-3bb80be72e75)
