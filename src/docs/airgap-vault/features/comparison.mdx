@@ -23,9 +23,9 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 | Open Source               | ✅           | ✅ [^1] | ✅ [^2]  | ✅ [^3] | ❕ [^4]  | ✅ [^5] |
 | Reproducible              | ✅           | ❔       | ✅ [^6]  | ❌ [^6] | ❔      | ✅ [^6] |
 | BIP39 Passphrase          | ✅           | ✅[^7]  | ✅ [^7]  | ✅ [^7] | ✅ [^7]| ✅ [^7] |
-| BTC Segwit                | ✅           | ✅[^11] | ✅ [^10] | ✅[^9]  | ✅[^8] | ✅[^8]  |
-| BTC Taproot               | ➖           | ❔       | ❔       | ➖      | ✅[^12] | ✅     |
-| BTC Multisig              | ➖           | ?        | ?        | ?        | ?      | ?      |
+| BTC Segwit                | ✅           | ✅[^8] | ✅ [^9] | ✅[^10]  | ✅[^11] | ✅[^11]  |
+| BTC Taproot               | ➖           | ❔       | ❔       | ❔      | ✅[^12] | ✅[^13] |
+| BTC Multisig              | ➖           | ✅[^14] | ✅[^15] |✅[^16] | ✅[^17] |✅[^17]  |
 | ETH Metamask              | ✅           | ?        | ?        | ?        | ?      | ?      |
 | BIP85                     | ✅           | ?        | ?        | ✅       | ❌     | ?      |
 | Manage Multiple Mnemonics | ✅           | ❌       | ?        | ❌       | ❌     | ?      |
@@ -55,19 +55,24 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 [^5]: https://wiki.trezor.io/Open-source_software
 [^6]: [reproduceable hardware wallet](https://walletscrutiny.com/?verdict=reproducible&platform=hardware)
 [^7]: https://coinguides.org/bip39-wallets/
-[^8]: https://coinswitch.co/news/segwit-wallet
-[^9]: https://coldcard.com/docs/faq
-[^10]: [shiftcrypto medium](https://medium.com/shiftcrypto/bitbox-desktop-app-4-0-0-a-look-at-bitcoin-addressing-segwit-bech32-and-legacy-abcd788a684b)
-[^11]: https://blog.keyst.one/the-relevance-benefits-of-keystones-btc-only-firmware-8965ebb42e48
+[^8]: https://blog.keyst.one/the-relevance-benefits-of-keystones-btc-only-firmware-8965ebb42e48
+[^9]: [shiftcrypto medium](https://medium.com/shiftcrypto/bitbox-desktop-app-4-0-0-a-look-at-bitcoin-addressing-segwit-bech32-and-legacy-abcd788a684b)
+[^10]: https://coldcard.com/docs/faq
+[^11]: https://coinswitch.co/news/segwit-wallet
 [^12]: https://support.ledger.com/hc/en-us/articles/4410908103185-Creating-a-Bitcoin-Taproot-account-in-Ledger-Live?docs=true
+[^13]: https://wiki.trezor.io/Taproot
+[^14]: https://support.keyst.one/3rd-party-wallets/bitcoin-wallets/electrum/electrum-2-3-psbt-multi-signature
+[^15]: https://shiftcrypto.ch/blog/bitbox02-electrum-bitcoin-multisig/
+[^16]: https://coldcard.com/docs/multisig
+[^17]: https://themoneymongers.com/best-multisig-bitcoin-wallets/
 
 
 ### Bitcoin
 
 |              | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
 | ------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
-| BTC Segwit   | ✅           | ✅       | ✅       | ✅       | ✅     | ✅     |
-| BTC Taproot  | ➖           | ?        | ?        | ?        | ?      | ?      |
+| BTC Segwit   | ✅           | ✅[^11] | ✅ [^10] | ✅[^9]  | ✅[^8] | ✅[^8]  |
+| BTC Taproot  | ➖           | ❔       | ❔       | ❔        | ✅[^12] | ✅[^13] |
 | BTC Multisig | ➖           | ✅       | ✅       | ✅       | ✅     | ✅     |
 
 ### Ethereum
