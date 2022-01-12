@@ -6,9 +6,10 @@ slug: /airgap-vault/comparison-of-airgap-vault-with-other-hardware-wallets
 This page shows a comparison between AirGap Vault and popular hardware wallets. We created the comparison to the best of our knowledge. If any features are missing or some information is wrong, please reach out to us.
 
 ### Legend
+
 ✅ - Supported
 
-❌ - Not Supported 
+❌ - Not Supported
 
 ❕ - Partially Supported
 
@@ -16,26 +17,87 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 
 ❔ - Unsure
 
-
 |                           | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
 | ------------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
 | Altcoin Support           | ✅           | ✅       | ✅       | ❌       | ✅     | ✅     |
 | Open Source               | ✅           | ✅       | ✅       | ✅       | ❕     | ✅     |
-| Reproducible              | ✅           | ❔        | ✅       | ❌       | ❌     | ✅     |
-| BIP39 Passphrase          | ✅           | ✅        | ✅      | ✅       | ✅     | ✅     |
-| BTC Segwit                | ✅           | ✅        | ✅      | ✅       | ✅     | ✅     |
-| BTC Taproot               | ➖            | ❔        | ❔        | ➖      | ✅     | ✅     |
-| BTC Multisig              | ➖            | ?        | ?        | ?        | ?      | ?      |
-| ETH Metamask              | ✅            | ?        | ?        | ?        | ?      | ?      |
+| Reproducible              | ✅           | ❔       | ✅       | ❌       | ❌     | ✅     |
+| BIP39 Passphrase          | ✅           | ✅       | ✅       | ✅       | ✅     | ✅     |
+| BTC Segwit                | ✅           | ✅       | ✅       | ✅       | ✅     | ✅     |
+| BTC Taproot               | ➖           | ❔       | ❔       | ➖       | ✅     | ✅     |
+| BTC Multisig              | ➖           | ?        | ?        | ?        | ?      | ?      |
+| ETH Metamask              | ✅           | ?        | ?        | ?        | ?      | ?      |
 | BIP85                     | ✅           | ?        | ?        | ✅       | ❌     | ?      |
 | Manage Multiple Mnemonics | ✅           | ❌       | ?        | ❌       | ❌     | ?      |
 | Number of Altcoins        | 5            | 10       | ?        | ❌       | ?      | ?      |
 | Runs on any device        | ✅           | ❌       | ❌       | ❌       | ❌     | ❌     |
 | Entropy with dice rolls   | ✅           | ✅       | ?        | ✅       | ?      | ?      |
 | Entropy with coin flips   | ✅           | ❌       | ?        | ❌       | ?      | ?      |
-| Social Recovery           | ✅            | ?        | ?        | ?        | ?      | ?      |
-| Seed XOR                  | ➖            | ?        | ?        | ?        | ?      | ?      |
-| Duress Pin                | ❌            | ?        | ?        | ?        | ?      | ?      |
-| Avg. time to import       | ❔            | ?        | ?        | ?        | ?      | ?      |
-| Avg. time to sign         | ❔            | ?        | ?        | ?        | ?      | ?      |
-| Cost                      | $0    | ?        | ?        | ?        | ?      | ?      |
+| Social Recovery           | ✅           | ?        | ?        | ?        | ?      | ?      |
+| Seed XOR                  | ➖           | ?        | ?        | ?        | ?      | ?      |
+| Duress Pin                | ❌           | ?        | ?        | ?        | ?      | ?      |
+| Avg. time to import       | ❔           | ?        | ?        | ?        | ?      | ?      |
+| Avg. time to sign         | ❔           | ?        | ?        | ?        | ?      | ?      |
+| Cost                      | $0           | ?        | ?        | ?        | ?      | ?      |
+
+### Overall
+
+|                 | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| --------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
+| Altcoin Support | ✅           | ✅       | ✅       | ❌       | ✅     | ✅     |
+| Open Source     | ✅           | ✅ [^1]  | ✅ [^2]  | ? [^3]   | ? [^4] | ? [^5] |
+| Reproducible    | ✅           | ❌       | ✅ [^6]  | ?        | ?      | ?      |
+
+[^1]: Partially open source
+[^2]: Partially open source
+[^3]: Partially open source
+[^4]: Partially open source
+[^5]: Partially open source
+[^6]: https://walletscrutiny.com/hardware/bitBox2/
+
+### Bitcoin
+
+|              | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| ------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
+| BTC Segwit   | ✅           | ✅       | ✅       | ✅       | ✅     | ✅     |
+| BTC Taproot  | ➖           | ?        | ?        | ?        | ?      | ?      |
+| BTC Multisig | ➖           | ✅       | ✅       | ✅       | ✅     | ✅     |
+
+### Ethereum
+
+|          | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| -------- | ------------ | -------- | -------- | -------- | ------ | ------ |
+| Metamask | ✅           | ✅       | ?        | ❌       | ✅     | ✅     |
+
+### Altcoins
+
+|                    | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| ------------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
+| Number of Altcoins | 5            | 10       | 4        | ❌       | many   | many   |
+
+### Features
+
+|                           | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| ------------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
+| BIP39 Passphrase          | ✅           | ✅       | ✅       | ✅       | ✅     | ✅     |
+| Manage Multiple Mnemonics | ✅           | ❌       | ?        | ❌       | ❌     | ?      |
+| BIP85                     | ✅           | ?        | ?        | ✅       | ❌     | ?      |
+
+### Security
+
+|                         | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| ----------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
+| Runs on any device      | ✅           | ❌       | ❌       | ❌       | ❌     | ❌     |
+| Entropy with dice rolls | ✅           | ✅       | ?        | ✅       | ?      | ?      |
+| Entropy with coin flips | ✅           | ❌       | ?        | ❌       | ?      | ?      |
+| Social Recovery         | ✅           | ?        | ?        | ?        | ?      | ?      |
+| Seed XOR                | ➖           | ?        | ?        | ?        | ?      | ?      |
+| Duress Pin              | ❌           | ❌       | ❌       | ❌       | ❌     | ❌     |
+
+### Cost
+
+|                     | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
+| ------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
+| Avg. time to import | ?            | ?        | ?        | ?        | ?      | ?      |
+| Avg. time to sign   | ?            | ?        | ?        | ?        | ?      | ?      |
+| Cost                | $0\*-$50     | ?        | ?        | ?        | ?      | ?      |
