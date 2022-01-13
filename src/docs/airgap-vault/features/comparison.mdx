@@ -35,10 +35,10 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 | Entropy with coin flips   | ✅           | ❌       | ❔        | ❌       | ❔      | ❔      |
 | Social Recovery           | ✅           | ✅[^26]        | ❔        | ❔        | ❌[^27]      |✅[^28]    |
 | Seed XOR                  | ➖           | ❔        | ❔        | ✅[^29]       | ❔      | ❔      |
-| Duress Pin                | ❌           | ?        | ?        | ?        | ?      | ?      |
-| Avg. time to import       | ❔           | ?        | ?        | ?        | ?      | ?      |
-| Avg. time to sign         | ❔           | ?        | ?        | ?        | ?      | ?      |
-| Cost                      | $0           | ?        | ?        | ?        | ?      | ?      |
+| Duress Pin                | ❌           | ❔        | ❔        | ✅        | ❔      | ❔      |
+| Avg. time to import       | ❔           | ❔        | ❔        | ❔        | ❔      | ❔      |
+| Avg. time to sign         | ❔           | ❔        | ❔        | ❔        | ❔      | ❔      |
+| Cost                      | $0           | $169[^30]        | $119[^31]        | $129-$199[^32]        | $59 -$177[^33]  | $53 - $188[^34] |
 
 ### Overall
 
@@ -77,6 +77,13 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 [^27]: https://www.hardwarewalletonline.com/security/shamir-backup/#shamir-ledger
 [^28]: https://wiki.trezor.io/Shamir_Backup
 [^29]: https://bitcoinmagazine.com/guides/how-to-use-coldcard-and-seed-xor
+[^30]: https://shop.keyst.one/products/keystone-pro
+[^31]: https://shiftcrypto.ch/bitbox02/
+[^32]: https://store.coinkite.com/store/coldcard
+[^33]: https://shop.ledger.com/
+[^34]: https://shop.trezor.io/
+
+
 
 
 ### Bitcoin
@@ -85,38 +92,38 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 | ------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
 | BTC Segwit   | ✅           | ✅[^11] | ✅ [^10] | ✅[^9]  | ✅[^8] | ✅[^8]  |
 | BTC Taproot  | ➖           | ❔       | ❔       | ❔        | ✅[^12] | ✅[^13] |
-| BTC Multisig | ➖           | ✅       | ✅       | ✅       | ✅     | ✅     |
+| BTC Multisig              | ➖           | ✅[^14] | ✅[^15] |✅[^16] | ✅[^17] |✅[^17]  |
 
 ### Ethereum
 
 |          | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
 | -------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Metamask | ✅           | ✅       | ?        | ❌       | ✅     | ✅     |
+| ETH Metamask              | ✅           | ✅[^18] | ❔        | ❔      | ✅[^19]| ✅[^19] |
 
 ### Altcoins
 
 |                    | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
 | ------------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Number of Altcoins | 5            | 10       | 4        | ❌       | many   | many   |
+| Number of Altcoins        | 100+         | 100+[^22] | 100+[^23]| 0         | 100+[^24]  | 100+[^25] |
 
 ### Features
 
 |                           | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
 | ------------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| BIP39 Passphrase          | ✅           | ✅       | ✅       | ✅       | ✅     | ✅     |
-| Manage Multiple Mnemonics | ✅           | ❌       | ?        | ❌       | ❌     | ?      |
-| BIP85                     | ✅           | ?        | ?        | ✅       | ❌     | ?      |
+| BIP39 Passphrase          | ✅           | ✅[^7]  | ✅ [^7]  | ✅ [^7] | ✅ [^7]| ✅ [^7] |
+| Manage Multiple Mnemonics | ✅           | ❌       | ❔      | ❌[^10]       | ❌     |❌[^21]    |
+| BIP85                     | ✅           | ❔        | ❔        | ✅[^20]     | ❔     | ❔      |
 
 ### Security
 
 |                         | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
 | ----------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
 | Runs on any device      | ✅           | ❌       | ❌       | ❌       | ❌     | ❌     |
-| Entropy with dice rolls | ✅           | ✅       | ?        | ✅       | ?      | ?      |
-| Entropy with coin flips | ✅           | ❌       | ?        | ❌       | ?      | ?      |
-| Social Recovery         | ✅           | ?        | ?        | ?        | ?      | ?      |
-| Seed XOR                | ➖           | ?        | ?        | ?        | ?      | ?      |
-| Duress Pin              | ❌           | ❌       | ❌       | ❌       | ❌     | ❌     |
+| Entropy with dice rolls   | ✅           | ✅       | ❔        | ✅       | ❌      | ❌      |
+| Entropy with coin flips   | ✅           | ❌       | ❔        | ❌       | ❔      | ❔      |
+| Social Recovery           | ✅           | ✅[^26]        | ❔        | ❔        | ❌[^27]      |✅[^28]    |
+| Seed XOR                  | ➖           | ❔        | ❔        | ✅[^29]       | ❔      | ❔      |
+| Duress Pin                | ❌           | ❔        | ❔        | ✅        | ❔      | ❔      |
 
 ### Cost
 
@@ -124,4 +131,4 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 | ------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
 | Avg. time to import | ?            | ?        | ?        | ?        | ?      | ?      |
 | Avg. time to sign   | ?            | ?        | ?        | ?        | ?      | ?      |
-| Cost                | $0\*-$50     | ?        | ?        | ?        | ?      | ?      |
+| Cost                      | $0           | $169[^30]        | $119[^31]        | $129-$199[^32]        | $59 -$177[^33]  | $53 - $188[^34] |
