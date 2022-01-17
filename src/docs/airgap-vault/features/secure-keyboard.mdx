@@ -2,6 +2,7 @@
 title: Secure Keyboard
 slug: /airgap-vault/secure-keyboard
 ---
+
 import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
 
 AirGap 3.11.0 introduces an in-app keyboard input feature. Some keyboard software records your data and sends it to a server. To eliminate the risk of getting hacked, we considered building our in-app keyboard with no dependencies from third parties.
@@ -11,9 +12,9 @@ AirGap 3.11.0 introduces an in-app keyboard input feature. Some keyboard softwar
 - The keyboard cannot record/save your mnemonic (some device keyboards do this for spell checking and send what you type to a server – this is not safe). Our in-app keyboard does connect to any network or relies on extra dependencies.
 - There is a "scramble" button that shuffles the order of the letters on the keyboard, which improves the security of someone watching over your shoulder.
 - The new keyboard allows only valid words from the BIP39 list while typing. So there can be no more typos, double spaces, etc. This eliminates the tendency to type an incompatible BIP39 word.
-- The keyboard has BIP39 words autocomplete for faster imports. It reduces the time it takes to type all 24 words thereby, enhancing productivity. 
+- The keyboard has BIP39 words autocomplete for faster imports. It reduces the time it takes to type all 24 words thereby, enhancing productivity.
 - There is a “hide” button that masks the mnemonic that you already entered, improving the security if someone watches over your shoulder.
 
 ### An overview of the in-app keyboard
 
-//TODO : couldn't take screenshot 
+//TODO : couldn't take screenshot
