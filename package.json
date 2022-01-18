@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "npm run generate-comparison-table && npm run embed-code && docusaurus start",
     "prepare": "node scripts/fix-coinlib.js",
-    "build": "npm run embed-code && docusaurus build && npm run generate-comparison-table",
+    "build": "npm run generate-comparison-table && npm run embed-code && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

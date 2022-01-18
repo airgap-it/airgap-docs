@@ -93,7 +93,11 @@ const getRow = (feature: Feature<Category>): string => {
       .map((entry) => {
         return `${entry.status} ${entry.notes.map((note) => {
           return `[^${addFootnote(
-            `[${note.text ? note.text : "Link"}](${note.url})`
+            `${
+              note.url
+                ? `[${note.text ? note.text : "Link"}](${note.url})}`
+                : note.text
+            }`
           )}]`;
         })}`;
       })
@@ -133,7 +137,7 @@ Object.values(allFeatures).forEach((feature) => {
 
 // console.log(footnotes);
 
-const filename = "docs/airgap-vault/features/comparison.mdx";
+const filename = "./src/docs/airgap-vault/features/comparison.mdx";
 let fileContents = getFile(filename);
 fileContents = fileContents.replace("<!-- TABLE -->", output.join("\n"));
 fileContents = fileContents.replace(
