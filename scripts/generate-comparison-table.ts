@@ -95,8 +95,8 @@ const getRow = (feature: Feature<Category>): string => {
           return `[^${addFootnote(
             `${
               note.url
-                ? `[${note.text ? note.text : "Link"}](${note.url})}`
-                : note.text
+                ? `[${note.text ? note.text : "Link"}](${note.url})    `
+                : `${note.text}    `
             }`
           )}]`;
         })}`;

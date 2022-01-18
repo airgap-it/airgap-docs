@@ -1,7 +1,7 @@
 import { Category, Feature, Status } from "./types";
 
 export const polkadot: Record<string, Feature<Category.POLKADOT>> = {
-  tezosContractCall: {
+  polkadotjs: {
     title: "Polkadot.js support",
     category: Category.POLKADOT,
     wallets: {
