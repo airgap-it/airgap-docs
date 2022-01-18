@@ -5,7 +5,7 @@ slug: /airgap-vault/comparison-of-airgap-vault-with-other-hardware-wallets
 
 This page shows a comparison between AirGap Vault and popular hardware wallets. We created the comparison to the best of our knowledge. If any features are missing or some information is wrong, please reach out to us.
 
-### Legend
+## Table
 
 ✅ - Supported
 
@@ -17,118 +17,8 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 
 ❔ - Unsure
 
-|                           | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| ------------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Altcoin Support           | ✅           | ✅      | ✅       | ❌      | ✅     | ✅     |
-| Open Source               | ✅           | ✅ [^1] | ✅ [^2]  | ✅ [^3] | ❕ [^4]  | ✅ [^5] |
-| Reproducible              | ✅           | ❔       | ✅ [^6]  | ❌ [^6] | ❔      | ✅ [^6] |
-| BIP39 Passphrase          | ✅           | ✅[^7]  | ✅ [^7]  | ✅ [^7] | ✅ [^7]| ✅ [^7] |
-| BTC Segwit                | ✅           | ✅[^8] | ✅ [^9] | ✅[^10]  | ✅[^11] | ✅[^11]  |
-| BTC Taproot               | ➖           | ❔       | ❔       | ❔      | ✅[^12] | ✅[^13] |
-| BTC Multisig              | ➖           | ✅[^14] | ✅[^15] |✅[^16] | ✅[^17] |✅[^17]  |
-| ETH Metamask              | ✅           | ✅[^18] | ❔        | ❔      | ✅[^19]| ✅[^19] |
-| BIP85                     | ✅           | ❔        | ❔        | ✅[^20]     | ❔     | ❔      |
-| Manage Multiple Mnemonics | ✅           | ❌       | ❔      | ❌[^10]       | ❌     |❌[^21]    |
-| Number of Altcoins        | 100+         | 100+[^22] | 100+[^23]| 0         | 100+[^24]  | 100+[^25] |
-| Runs on any device        | ✅           | ❌       | ❌       | ❌       | ❌     | ❌     |
-| Entropy with dice rolls   | ✅           | ✅       | ❔        | ✅       | ❌      | ❌      |
-| Entropy with coin flips   | ✅           | ❌       | ❔        | ❌       | ❔      | ❔      |
-| Social Recovery           | ✅           | ✅[^26]        | ❔        | ❔        | ❌[^27]      |✅[^28]    |
-| Seed XOR                  | ➖           | ❔        | ❔        | ✅[^29]       | ❔      | ❔      |
-| Duress Pin                | ❌           | ❔        | ❔        | ✅        | ❔      | ❔      |
-| Avg. time to import       | ❔           | ❔        | ❔        | ❔        | ❔      | ❔      |
-| Avg. time to sign         | ❔           | ❔        | ❔        | ❔        | ❔      | ❔      |
-| Cost                      | $0           | $169[^30]        | $119[^31]        | $129-$199[^32]        | $59 -$177[^33]  | $53 - $188[^34] |
+<!-- TABLE -->
 
-### Overall
+### Footnotes
 
-|                 | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| --------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Altcoin Support | ✅           | ✅      | ✅       | ❌      | ✅     | ✅     |
-| Open Source     | ✅           | ✅ [^1] | ✅ [^2]  | ✅ [^3] | ❕ [^4] | ✅ [^5] |
-| Reproducible    | ✅           | ❔ [^6]  | ✅ [^6]  | ❌ [^6] | ❌[^6] | ✅ [^6] |
-
-[^1]: [Keyst.one](https://keyst.one/#:~:text=Keystone%20has%20pioneered%20the%20hardware,bill%7D%20are%20also%20open%20source.)
-[^2]: [Shiftcrypto.ch](https://shiftcrypto.ch/bitbox02/#:~:text=The%20BitBox02%20features%20a%20dual,and%20is%20fully%20open%20source.)
-[^3]: https://coldcard.com/
-[^4]: [r/ledger](https://www.reddit.com/r/ledgerwallet/comments/kgi9yn/ledger_is_not_open_source_is_it_a_bad_sign/)
-[^5]: https://wiki.trezor.io/Open-source_software
-[^6]: [reproduceable hardware wallet](https://walletscrutiny.com/?verdict=reproducible&platform=hardware)
-[^7]: https://coinguides.org/bip39-wallets/
-[^8]: https://blog.keyst.one/the-relevance-benefits-of-keystones-btc-only-firmware-8965ebb42e48
-[^9]: [shiftcrypto medium](https://medium.com/shiftcrypto/bitbox-desktop-app-4-0-0-a-look-at-bitcoin-addressing-segwit-bech32-and-legacy-abcd788a684b)
-[^10]: https://coldcard.com/docs/faq
-[^11]: https://coinswitch.co/news/segwit-wallet
-[^12]: https://support.ledger.com/hc/en-us/articles/4410908103185-Creating-a-Bitcoin-Taproot-account-in-Ledger-Live?docs=true
-[^13]: https://wiki.trezor.io/Taproot
-[^14]: https://support.keyst.one/3rd-party-wallets/bitcoin-wallets/electrum/electrum-2-3-psbt-multi-signature
-[^15]: https://shiftcrypto.ch/blog/bitbox02-electrum-bitcoin-multisig/
-[^16]: https://coldcard.com/docs/multisig
-[^17]: https://themoneymongers.com/best-multisig-bitcoin-wallets/
-[^18]: https://support.keyst.one/3rd-party-wallets/eth-and-web3-wallets-keystone/bind-metamask-with-keystone 
-[^19]: https://metamask.io/faqs#:~:text=MetaMask%20currently%20supports%20Trezor%20and,Request%20feature.
-[^20]: https://coldcard.com/docs/bip85
-[^21]: [r/trezor](https://www.reddit.com/r/TREZOR/comments/qqufnd/does_one_trezor_t_support_multiple_walletsseed/)
-[^22]: https://support.keyst.one/
-[^23]: https://shiftcrypto.ch/coins/
-[^24]: https://www.ledger.com/supported-crypto-assets
-[^25]: https://trezor.io/coins/
-[^26]: https://blog.keyst.one/why-keystone-implemented-shamir-backups-71e319f972a6
-[^27]: https://www.hardwarewalletonline.com/security/shamir-backup/#shamir-ledger
-[^28]: https://wiki.trezor.io/Shamir_Backup
-[^29]: https://bitcoinmagazine.com/guides/how-to-use-coldcard-and-seed-xor
-[^30]: https://shop.keyst.one/products/keystone-pro
-[^31]: https://shiftcrypto.ch/bitbox02/
-[^32]: https://store.coinkite.com/store/coldcard
-[^33]: https://shop.ledger.com/
-[^34]: https://shop.trezor.io/
-
-
-
-
-### Bitcoin
-
-|              | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| ------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
-| BTC Segwit   | ✅           | ✅[^11] | ✅ [^10] | ✅[^9]  | ✅[^8] | ✅[^8]  |
-| BTC Taproot  | ➖           | ❔       | ❔       | ❔        | ✅[^12] | ✅[^13] |
-| BTC Multisig              | ➖           | ✅[^14] | ✅[^15] |✅[^16] | ✅[^17] |✅[^17]  |
-
-### Ethereum
-
-|          | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| -------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| ETH Metamask              | ✅           | ✅[^18] | ❔        | ❔      | ✅[^19]| ✅[^19] |
-
-### Altcoins
-
-|                    | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| ------------------ | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Number of Altcoins        | 100+         | 100+[^22] | 100+[^23]| 0         | 100+[^24]  | 100+[^25] |
-
-### Features
-
-|                           | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| ------------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| BIP39 Passphrase          | ✅           | ✅[^7]  | ✅ [^7]  | ✅ [^7] | ✅ [^7]| ✅ [^7] |
-| Manage Multiple Mnemonics | ✅           | ❌       | ❔      | ❌[^10]       | ❌     |❌[^21]    |
-| BIP85                     | ✅           | ❔        | ❔        | ✅[^20]     | ❔     | ❔      |
-
-### Security
-
-|                         | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| ----------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Runs on any device      | ✅           | ❌       | ❌       | ❌       | ❌     | ❌     |
-| Entropy with dice rolls   | ✅           | ✅       | ❔        | ✅       | ❌      | ❌      |
-| Entropy with coin flips   | ✅           | ❌       | ❔        | ❌       | ❔      | ❔      |
-| Social Recovery           | ✅           | ✅[^26]        | ❔        | ❔        | ❌[^27]      |✅[^28]    |
-| Seed XOR                  | ➖           | ❔        | ❔        | ✅[^29]       | ❔      | ❔      |
-| Duress Pin                | ❌           | ❔        | ❔        | ✅        | ❔      | ❔      |
-
-### Cost
-
-|                     | AirGap Vault | Keystone | Bitbox02 | ColdCard | Ledger | Trezor |
-| ------------------- | ------------ | -------- | -------- | -------- | ------ | ------ |
-| Avg. time to import | ?            | ?        | ?        | ?        | ?      | ?      |
-| Avg. time to sign   | ?            | ?        | ?        | ?        | ?      | ?      |
-| Cost                      | $0           | $169[^30]        | $119[^31]        | $129-$199[^32]        | $59 -$177[^33]  | $53 - $188[^34] |
+<!-- FOOTNOTES -->
