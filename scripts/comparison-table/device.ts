@@ -92,6 +92,18 @@ export const device: Record<string, Feature<Category.DEVICE>> = {
       trezor: { status: "🇨🇿 Czech Republic", notes: [] },
     },
   },
+  releaseDate: {
+    title: "Release Date",
+    category: Category.DEVICE,
+    wallets: {
+      airgap: { status: "2018", notes: [] },
+      keystone: { status: "2020", notes: [] },
+      bitbox: { status: "2016", notes: [] },
+      coldcard: { status: "2018", notes: [] },
+      ledger: { status: "2014", notes: [] },
+      trezor: { status: "2014", notes: [] },
+    },
+  },
   businessModel: {
     title: "Business Model",
     category: Category.DEVICE,
