@@ -54,4 +54,16 @@ export const features: Record<string, Feature<Category.FEATURES>> = {
       trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
+  encryptedBackup: {
+    title: "Encrypted Backup",
+    category: Category.FEATURES,
+    wallets: {
+      airgap: { status: Status.NOT_SUPPORTED, notes: [] },
+      keystone: { status: Status.NOT_SUPPORTED, notes: [] },
+      bitbox: { status: Status.SUPPORTED, notes: [] },
+      coldcard: { status: Status.SUPPORTED, notes: [] },
+      ledger: { status: Status.NOT_SUPPORTED, notes: [] },
+      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
+    },
+  },
 };
