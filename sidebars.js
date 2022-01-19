@@ -14,6 +14,19 @@ module.exports = {
       label: "AirGap Vault",
       items: [
         "airgap-vault/introduction",
+        "airgap-vault/features/comparison",
+        {
+          type: "category",
+          label: "Features",
+          items: [
+            "airgap-vault/features/address-explorer",
+            "airgap-vault/features/bip-39-wordlist",
+            "airgap-vault/features/dice-coin-entropy",
+            "airgap-vault/features/plausible-deniability",
+            "airgap-vault/features/secure-keyboard",
+          ],
+          collapsed: true,
+        },
         "airgap-vault/supported-devices",
         "airgap-vault/recommended-devices",
       ],

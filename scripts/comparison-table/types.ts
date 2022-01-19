@@ -1,8 +1,8 @@
 export enum Status {
   SUPPORTED = "✅",
   NOT_SUPPORTED = "❌",
-  PARTIALLY_SUPPORTED = "!",
-  IN_DEVELOPMENT = "➖",
+  PARTIALLY_SUPPORTED = "🧩",
+  IN_DEVELOPMENT = "⚙️",
   UNSURE = "?",
 }
 
