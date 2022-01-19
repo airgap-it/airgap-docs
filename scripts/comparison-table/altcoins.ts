@@ -10,11 +10,11 @@ export const altcoins: Record<string, Feature<Category.ALTCOINS>> = {
         notes: [],
       },
       keystone: {
-        status: "",
+        status: "ETH, XRP, DOT, BCH, LTC, KSM, TRX, DASH",
         notes: [{ text: "", url: "https://support.keyst.one/" }],
       },
       bitbox: {
-        status: "",
+        status: "ETH, LTC, ADA",
         notes: [{ text: "", url: "https://shiftcrypto.ch/coins/" }],
       },
       coldcard: {
@@ -22,27 +22,15 @@ export const altcoins: Record<string, Feature<Category.ALTCOINS>> = {
         notes: [],
       },
       ledger: {
-        status: "",
+        status: "Many",
         notes: [
           { text: "", url: "https://www.ledger.com/supported-crypto-assets" },
         ],
       },
       trezor: {
-        status: "",
+        status: "Many",
         notes: [{ text: "", url: "https://trezor.io/coins/" }],
       },
-    },
-  },
-  nofTokens: {
-    title: "Number of Altcoins",
-    category: Category.ALTCOINS,
-    wallets: {
-      airgap: { status: "100+", notes: [] },
-      keystone: { status: "100+", notes: [] },
-      bitbox: { status: "100+", notes: [] },
-      coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
-      ledger: { status: "100+", notes: [] },
-      trezor: { status: "100+", notes: [] },
     },
   },
 };

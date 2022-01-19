@@ -1,9 +1,9 @@
-import { cost } from "./comparison-table/cost";
+import { device } from "./comparison-table/device";
 import { usability } from "./comparison-table/usability";
 import { Category, Feature } from "./comparison-table/types";
 import { features } from "./comparison-table/features";
 import { readFileSync, writeFileSync } from "fs";
-import { overall } from "./comparison-table/overall";
+import { privacy } from "./comparison-table/privacy";
 import { bitcoin } from "./comparison-table/bitcoin";
 import { ethereum } from "./comparison-table/ethereum";
 import { security } from "./comparison-table/security";
@@ -95,7 +95,7 @@ const getRow = (feature: Feature<Category>): string => {
           return `[^${addFootnote(
             `${
               note.url
-                ? `[${note.text ? note.text : "Link"}](${note.url})    `
+                ? `[${note.text ? note.text : note.url}](${note.url})    `
                 : `${note.text}    `
             }`
           )}]`;
@@ -107,16 +107,16 @@ const getRow = (feature: Feature<Category>): string => {
 };
 
 const allFeatures = {
-  ...overall,
+  ...features,
+  ...security,
+  ...privacy,
   ...bitcoin,
   ...ethereum,
   ...polkadot,
   ...tezos,
   ...altcoins,
-  ...features,
-  ...security,
   ...usability,
-  ...cost,
+  ...device,
 };
 
 const output: string[] = [];

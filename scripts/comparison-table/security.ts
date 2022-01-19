@@ -22,18 +22,6 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
       trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
-  runsOnAnyDevice: {
-    title: "Runs on any device",
-    category: Category.SECURITY,
-    wallets: {
-      airgap: { status: Status.SUPPORTED, notes: [] },
-      keystone: { status: Status.NOT_SUPPORTED, notes: [] },
-      bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
-      coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
-      ledger: { status: Status.NOT_SUPPORTED, notes: [] },
-      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
-    },
-  },
   secureChip: {
     title: "Secure chip",
     category: Category.SECURITY,
@@ -54,21 +42,16 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
       trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
-  bip39: {
-    title: "BIP39 Passphrase",
+  runsOnAnyDevice: {
+    title: "Runs on any device",
     category: Category.SECURITY,
     wallets: {
       airgap: { status: Status.SUPPORTED, notes: [] },
-      keystone: { status: Status.SUPPORTED, notes: [] },
-      bitbox: { status: Status.SUPPORTED, notes: [] },
-      coldcard: { status: Status.SUPPORTED, notes: [] },
-      ledger: { status: Status.SUPPORTED, notes: [] },
-      trezor: {
-        status: Status.SUPPORTED,
-        notes: [
-          { text: "Passphrase has to be entered on online device", url: "" },
-        ],
-      },
+      keystone: { status: Status.NOT_SUPPORTED, notes: [] },
+      bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
+      coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
+      ledger: { status: Status.NOT_SUPPORTED, notes: [] },
+      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
   entropyDiceRoll: {
@@ -77,10 +60,10 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
     wallets: {
       airgap: { status: Status.SUPPORTED, notes: [] },
       keystone: { status: Status.SUPPORTED, notes: [] },
-      bitbox: { status: Status.UNSURE, notes: [] },
+      bitbox: { status: Status.SUPPORTED, notes: [] },
       coldcard: { status: Status.SUPPORTED, notes: [] },
       ledger: { status: Status.NOT_SUPPORTED, notes: [] },
-      trezor: { status: Status.UNSURE, notes: [] },
+      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
   entropyCoinFlip: {
@@ -89,10 +72,10 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
     wallets: {
       airgap: { status: Status.SUPPORTED, notes: [] },
       keystone: { status: Status.NOT_SUPPORTED, notes: [] },
-      bitbox: { status: Status.UNSURE, notes: [] },
+      bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
       coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
       ledger: { status: Status.NOT_SUPPORTED, notes: [] },
-      trezor: { status: Status.UNSURE, notes: [] },
+      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
   shamir: {
@@ -112,7 +95,7 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
         status: Status.SUPPORTED,
         notes: [
           {
-            text: "",
+            text: "SLIP39",
             url:
               "https://blog.keyst.one/why-keystone-implemented-shamir-backups-71e319f972a6",
           },
@@ -121,7 +104,7 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
       bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
       coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
       ledger: { status: Status.NOT_SUPPORTED, notes: [] },
-      trezor: { status: Status.UNSURE, notes: [] },
+      trezor: { status: Status.SUPPORTED, notes: [{ text: "SLIP39" }] },
     },
   },
   sskr: {
@@ -179,23 +162,6 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
       airgap: { status: Status.NOT_SUPPORTED, notes: [] },
       keystone: { status: Status.NOT_SUPPORTED, notes: [] },
       bitbox: { status: Status.SUPPORTED, notes: [] },
-      coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
-      ledger: { status: Status.NOT_SUPPORTED, notes: [] },
-      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
-    },
-  },
-  orderAnonymously: {
-    title: "Order Anonymously",
-    category: Category.SECURITY,
-    wallets: {
-      airgap: {
-        status: Status.SUPPORTED,
-        notes: [
-          { text: "Use any device, no need to sign up to receive a device." },
-        ],
-      },
-      keystone: { status: Status.NOT_SUPPORTED, notes: [] },
-      bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
       coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
       ledger: { status: Status.NOT_SUPPORTED, notes: [] },
       trezor: { status: Status.NOT_SUPPORTED, notes: [] },

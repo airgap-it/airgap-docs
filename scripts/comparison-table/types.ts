@@ -7,7 +7,7 @@ export enum Status {
 }
 
 export enum Category {
-  OVERALL = "Overall",
+  PRIVACY = "Privacy",
   BITCOIN = "Bitcoin",
   ETHEREUM = "Ethereum",
   TEZOS = "Tezos",
@@ -16,7 +16,7 @@ export enum Category {
   FEATURES = "Features",
   SECURITY = "Security",
   USABILITY = "Usability",
-  COST = "Cost",
+  DEVICE = "Device",
 }
 
 export interface Feature<T> {

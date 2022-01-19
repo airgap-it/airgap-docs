@@ -27,7 +27,14 @@ export const bitcoin: Record<string, Feature<Category.BITCOIN>> = {
     category: Category.BITCOIN,
     wallets: {
       airgap: { status: Status.SUPPORTED, notes: [] },
-      keystone: { status: Status.UNSURE, notes: [] },
+      keystone: {
+        status: Status.SUPPORTED,
+        notes: [
+          {
+            text: "BTC-only firmware required",
+          },
+        ],
+      },
       bitbox: { status: Status.SUPPORTED, notes: [] },
       coldcard: { status: Status.SUPPORTED, notes: [] },
       ledger: { status: Status.SUPPORTED, notes: [] },
@@ -38,18 +45,26 @@ export const bitcoin: Record<string, Feature<Category.BITCOIN>> = {
     title: "BTC Taproot",
     category: Category.BITCOIN,
     wallets: {
-      airgap: { status: Status.IN_DEVELOPMENT, notes: [{ text: "", url: "" }] },
+      airgap: {
+        status: Status.IN_DEVELOPMENT,
+        notes: [
+          {
+            text: "",
+            url: "https://github.com/airgap-it/airgap-vault/issues/106",
+          },
+        ],
+      },
       keystone: {
         status: Status.IN_DEVELOPMENT,
-        notes: [{ text: "", url: "" }],
+        notes: [],
       },
-      bitbox: { status: Status.IN_DEVELOPMENT, notes: [{ text: "", url: "" }] },
+      bitbox: { status: Status.IN_DEVELOPMENT, notes: [] },
       coldcard: {
         status: Status.IN_DEVELOPMENT,
-        notes: [{ text: "", url: "" }],
+        notes: [],
       },
       ledger: {
-        status: Status.IN_DEVELOPMENT,
+        status: Status.SUPPORTED,
         notes: [
           {
             text: "",
@@ -59,7 +74,7 @@ export const bitcoin: Record<string, Feature<Category.BITCOIN>> = {
         ],
       },
       trezor: {
-        status: Status.IN_DEVELOPMENT,
+        status: Status.SUPPORTED,
         notes: [{ text: "", url: "https://wiki.trezor.io/Taproot" }],
       },
     },
@@ -93,8 +108,8 @@ export const bitcoin: Record<string, Feature<Category.BITCOIN>> = {
         status: Status.SUPPORTED,
         notes: [{ text: "", url: "https://coldcard.com/docs/multisig" }],
       },
-      ledger: { status: Status.SUPPORTED, notes: [{ text: "", url: "" }] },
-      trezor: { status: Status.SUPPORTED, notes: [{ text: "", url: "" }] },
+      ledger: { status: Status.SUPPORTED, notes: [] },
+      trezor: { status: Status.SUPPORTED, notes: [] },
     },
   },
   btcPSBT: {

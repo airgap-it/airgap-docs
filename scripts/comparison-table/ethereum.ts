@@ -35,7 +35,7 @@ export const ethereum: Record<string, Feature<Category.ETHEREUM>> = {
     category: Category.ETHEREUM,
     wallets: {
       airgap: { status: Status.PARTIALLY_SUPPORTED, notes: [] },
-      keystone: { status: Status.UNSURE, notes: [] },
+      keystone: { status: Status.SUPPORTED, notes: [] },
       bitbox: { status: Status.UNSURE, notes: [] },
       coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
       ledger: { status: Status.UNSURE, notes: [] },

@@ -5,12 +5,12 @@ export const tezos: Record<string, Feature<Category.TEZOS>> = {
     title: "Show Contract Call Details",
     category: Category.TEZOS,
     wallets: {
-      airgap: { status: Status.UNSURE, notes: [] },
-      keystone: { status: Status.UNSURE, notes: [] },
-      bitbox: { status: Status.UNSURE, notes: [] },
-      coldcard: { status: Status.UNSURE, notes: [] },
-      ledger: { status: Status.UNSURE, notes: [] },
-      trezor: { status: Status.UNSURE, notes: [] },
+      airgap: { status: Status.SUPPORTED, notes: [] },
+      keystone: { status: Status.NOT_SUPPORTED, notes: [] },
+      bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
+      coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
+      ledger: { status: Status.NOT_SUPPORTED, notes: [] },
+      trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
 };

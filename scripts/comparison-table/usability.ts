@@ -13,8 +13,20 @@ export const usability: Record<string, Feature<Category.USABILITY>> = {
       trezor: { status: Status.NOT_SUPPORTED, notes: [] },
     },
   },
-  avgTimeToSetup: {
-    title: "Average Time To Set Up",
+  communication: {
+    title: "Communication to companion app",
+    category: Category.USABILITY,
+    wallets: {
+      airgap: { status: "QR", notes: [] },
+      keystone: { status: "QR, Micro SD", notes: [] },
+      bitbox: { status: "USB", notes: [] },
+      coldcard: { status: "Micro SD, USB", notes: [] },
+      ledger: { status: "USB, Bluethooth", notes: [] },
+      trezor: { status: "USB", notes: [] },
+    },
+  },
+  timeToSetup: {
+    title: "Time To Set Up",
     category: Category.USABILITY,
     wallets: {
       airgap: { status: Status.UNSURE, notes: [] },
@@ -25,8 +37,8 @@ export const usability: Record<string, Feature<Category.USABILITY>> = {
       trezor: { status: Status.UNSURE, notes: [] },
     },
   },
-  avgTimeToImport: {
-    title: "Average Time To Import",
+  timeToImport: {
+    title: "Time To Import",
     category: Category.USABILITY,
     wallets: {
       airgap: { status: Status.UNSURE, notes: [] },
@@ -37,8 +49,8 @@ export const usability: Record<string, Feature<Category.USABILITY>> = {
       trezor: { status: Status.UNSURE, notes: [] },
     },
   },
-  avgTimeToSign: {
-    title: "Average Time To Sign",
+  timeToSign: {
+    title: "Time To Sign",
     category: Category.USABILITY,
     wallets: {
       airgap: { status: Status.UNSURE, notes: [] },
