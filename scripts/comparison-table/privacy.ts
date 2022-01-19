@@ -13,8 +13,8 @@ export const privacy: Record<string, Feature<Category.PRIVACY>> = {
       trezor: { status: Status.SUPPORTED, notes: [] },
     },
   },
-  orderAnonymously: {
-    title: "Order Anonymously",
+  pruchaseAnonymously: {
+    title: "Purchase Anonymously",
     category: Category.PRIVACY,
     wallets: {
       airgap: {

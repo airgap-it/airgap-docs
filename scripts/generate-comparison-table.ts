@@ -107,8 +107,8 @@ const getRow = (feature: Feature<Category>): string => {
 };
 
 const allFeatures = {
-  ...features,
   ...security,
+  ...features,
   ...privacy,
   ...bitcoin,
   ...ethereum,
