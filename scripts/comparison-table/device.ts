@@ -96,7 +96,10 @@ export const device: Record<string, Feature<Category.DEVICE>> = {
     title: "Business Model",
     category: Category.DEVICE,
     wallets: {
-      airgap: { status: "Funding through integrations\nDonations", notes: [] },
+      airgap: {
+        status: "Funding through integrations<br />Donations",
+        notes: [],
+      },
       keystone: { status: "Device sales", notes: [] },
       bitbox: { status: "Device sales", notes: [] },
       coldcard: { status: "Device sales", notes: [] },
