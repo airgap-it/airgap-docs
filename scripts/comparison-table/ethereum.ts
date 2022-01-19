@@ -24,7 +24,7 @@ export const ethereum: Record<string, Feature<Category.ETHEREUM>> = {
           },
         ],
       },
-      bitbox: { status: Status.UNSURE, notes: [] },
+      bitbox: { status: Status.NOT_SUPPORTED, notes: [] },
       coldcard: { status: Status.NOT_SUPPORTED, notes: [] },
       ledger: { status: Status.SUPPORTED, notes: [] },
       trezor: { status: Status.SUPPORTED, notes: [] },

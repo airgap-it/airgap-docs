@@ -195,8 +195,26 @@ export const security: Record<string, Feature<Category.SECURITY>> = {
     title: "External Security Audit",
     category: Category.SECURITY,
     wallets: {
-      airgap: { status: Status.UNSURE, notes: [] },
-      keystone: { status: Status.UNSURE, notes: [] },
+      airgap: {
+        status: Status.SUPPORTED,
+        notes: [
+          {
+            text: "",
+            url:
+              "https://github.com/airgap-it/airgap-coin-lib/tree/master/docs/audits",
+          },
+        ],
+      },
+      keystone: {
+        status: Status.SUPPORTED,
+        notes: [
+          {
+            text: "",
+            url:
+              "https://github.com/KeystoneHQ/Keystone-developer-hub/tree/main/audit-report",
+          },
+        ],
+      },
       bitbox: { status: Status.UNSURE, notes: [] },
       coldcard: { status: Status.UNSURE, notes: [] },
       ledger: { status: Status.UNSURE, notes: [] },

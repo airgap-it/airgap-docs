@@ -36,7 +36,7 @@ const wallets = {
     github: "https://github.com/KeystoneHQ",
   },
   bitbox: {
-    name: "Bitbox02",
+    name: "BitBox02",
     website: "https://shiftcrypto.ch/bitbox02/",
     github: "https://github.com/digitalbitbox",
   },
