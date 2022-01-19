@@ -92,6 +92,18 @@ export const device: Record<string, Feature<Category.DEVICE>> = {
       trezor: { status: "🇨🇿 Czech Republic", notes: [] },
     },
   },
+  businessModel: {
+    title: "Business Model",
+    category: Category.DEVICE,
+    wallets: {
+      airgap: { status: "Funding through integrations\nDonations", notes: [] },
+      keystone: { status: "Device sales", notes: [] },
+      bitbox: { status: "Device sales", notes: [] },
+      coldcard: { status: "Device sales", notes: [] },
+      ledger: { status: "Device sales", notes: [] },
+      trezor: { status: "Device sales", notes: [] },
+    },
+  },
   cost: {
     title: "Cost",
     category: Category.DEVICE,
