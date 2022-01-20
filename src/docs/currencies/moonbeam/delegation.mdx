@@ -2,6 +2,8 @@
 title: Delegation
 ---
 
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
 If you hold GLMR in AirGap, you can delegate them to earn rewards following this guide.
 
 ## key considerations before staking
@@ -20,4 +22,53 @@ If you hold GLMR in AirGap, you can delegate them to earn rewards following this
 
 ## How to stake GLMR in AirGap Wallet
 
-//TODO
+- To begin staking GLMR, ensure you have set up a GLMR account. To set up a GLMR account, follow this [guide](https://support.airgap.it/guides/step-by-step-guide). The guide uses XTZ as an example, but the same process can be applied to GLMR.
+
+- Open your wallet and select your GLMR account. 
+- Click the delegation button.
+
+:::note Note
+The first two images show a balance of 3 GLMR, but there is a required minimum of 50 GLMR.
+:::
+
+<IPhoneWrapper src={"/img/moonbeam/moonbeam-overview.jpg"} />
+
+<IPhoneWrapper src={"/img/moonbeam/Moonbeam-delegation.jpg"} />
+
+- If you are interested in changing your collator. You can click the change collator button.
+
+<IPhoneWrapper src={"/img/moonbeam/moonbeam-collator.png"} />
+
+- Click the three dots at the top right corner and select change collator
+
+<IPhoneWrapper src={"/img/moonbeam/moonbeam-change.png"} />
+
+:::note Collators
+You can get a list of collators from https://moonbeam.subscan.io/validator
+:::
+
+- Paste the collator’s address and click the set collator button.
+
+<IPhoneWrapper src={"/img/moonbeam/moonbeam-specify-collator.png"} />
+
+:::note oversubscribed
+Depending on the collator you chose, you may see a warning about oversubscribing as well as a new minimum eligible for a reward. Please read the warning and make sure you understand it before delegating, or you may not receive a reward.
+Click the delegate button.
+:::
+
+<IPhoneWrapper src={"/img/moonbeam/moonbean-delegate.png"} />
+
+- Sign the transaction in the vault and confirm it in the wallet.
+
+<IPhoneWrapper src={"/img/moonbeam/vault-sign.png"} />
+
+<IPhoneWrapper src={"/img/moonbeam/wallet-confirm.png"} />
+
+- After confirming the transaction, you should receive a success modal.
+
+<IPhoneWrapper src={"/img/moonbeam/successfully-broadcasted.png"} />
+
+
+
+
+
