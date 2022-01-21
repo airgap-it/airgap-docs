@@ -2,6 +2,14 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.13.0
+
+#### Features
+
+- **Ethereum**: Support for "MetaMask" has been added. Use MetaMask as your watch-only wallet to manage your Ethereum accounts. You can find a tutorial here: https://support.airgap.it/guides/metamask
+- **Ethereum**: Added an account selection screen in case the PSBT from a watch-only wallet contains an invalid master fingerprint. Because a simple matching is not possible in this case, the user has to select the BTC account he wants to sign the transaction with.
+- **Moonbeam**: Add Moonbeam support
+
 ## 3.12.0
 
 #### Features

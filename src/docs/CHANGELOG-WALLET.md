@@ -2,6 +2,23 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.15.0
+
+#### Features
+
+- **Tezos**: Add support for Moonbeam
+
+## 3.14.0
+
+#### Features
+
+- **Tezos**: Add Hangzhou testnet
+
+#### Fixes
+
+- **Cosmos**: Transaction encoding fix
+- **Moonriver**: Delegation fix
+
 ## 3.13.0
 
 #### Features
