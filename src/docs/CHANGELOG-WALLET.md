@@ -6,7 +6,7 @@ title: AirGap Wallet Changelog
 
 #### Features
 
-- **Tezos**: Add support for Moonbeam
+- **Moonbeam**: Add support for Moonbeam
 
 ## 3.14.0
 
