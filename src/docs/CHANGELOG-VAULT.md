@@ -2,6 +2,12 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.13.1
+
+#### Features
+
+- **Security**: The authentication logic on Android was improved.
+
 ## 3.13.0
 
 #### Features
