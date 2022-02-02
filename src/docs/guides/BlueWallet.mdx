@@ -1,0 +1,80 @@
+---
+title: How to setup Bluewallet Watch-only wallet with AirGap Vault (BTC-Only)
+slug: /guides/bluewallet
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+
+Watch-only wallets allow you to keep track of your cold wallet (for example, AirGap Vault, Hardware wallet, and Paper wallet) without accessing your private key. Import your extended public key and watch it directly from apps such as Sparrow Wallet or BlueWallet .
+
+In this guide, we walk you through how to set up a watch-only wallet with BlueWallet and AirGap Vault. 
+
+### How to set up a watch-only wallet
+- Download BlueWallet from either Google Play store or Apple Store.
+- Update AirGap Vault to at least version 3.12
+- [App Store](https://itunes.apple.com/us/app/airgap-vault-secure-secrets/id1417126841?l=de&ls=1&mt=8) 
+- [Google Play](https://play.google.com/store/apps/details?id=it.airgap.vault)
+- [GitHub](https://github.com/airgap-it/airgap-vault/releases)
+
+Launch BlueWallet and click the Add now button
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-add.jpg"} />
+
+Specify any desirable name for your watch-only wallet and select Bitcoin, then click the import button.
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-select.jpg"} />
+
+Screenshots are not available for the next page since that part of blue wallet does not allow taking screenshots for security reasons.
+
+Click “Scan or Import a file” on the next page.
+
+Go to the AirGap Vault. Select your Bitcoin SegWit Account.
+
+<IPhoneWrapper src={"/img/bluewallet/vault-select-segwit.jpg"} />
+
+<IPhoneWrapper src={"/img/bluewallet/vault-qr.jpg"} />
+
+Click the SYNC ACCOUNT button and the next page will ask you for the interaction method, select the offline method.
+
+<IPhoneWrapper src={"/img/bluewallet/vault-sync.jpg"} />
+
+Change the QR-code standard to BC UR.
+
+<IPhoneWrapper src={"/img/bluewallet/vault-qr2.jpg"} />
+
+<IPhoneWrapper src={"/img/bluewallet/vault-bc-ur.jpg"} />
+
+Now scan the QR-code in the AirGap Vault from BlueWallet and then you will receive a notification saying “wallet has been successfully imported”. 
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-success.jpg"} />
+
+Wait for the BlueWallet to fully sync your balance.
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-interface.jpg"} />
+
+### Receiving BTC with BlueWallet.
+
+Users can choose between the AirGap or BlueWallet app to get their receiving address.
+
+To copy it from AirGap, go to the vault and select your btc account then click the three-dot at the top right corner. 
+
+<IPhoneWrapper src={"/img/bluewallet/vault-copy-address.jpg"} />
+
+To copy it from BlueWallet, Click on the Card showing the summary of your account and copy it beside the address.
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-btc.jpg"} />
+
+Click receive
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-recieve.jpg"} />
+
+Select a preference for notification, this is a one time request. Click on the address to copy.
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-notification.jpg"} />
+
+<IPhoneWrapper src={"/img/bluewallet/blue-wallet-notification.jpg"} />
+
+### Sending BTC with BlueWallet.
+//TODO
+
