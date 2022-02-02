@@ -5,14 +5,14 @@ slug: /airgap-vault/secure-keyboard
 
 import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
 
-AirGap 3.11.0 introduces an in-app keyboard input feature. Some keyboard software records your data and sends it to a server. To eliminate the risk of getting hacked, we considered building our in-app keyboard with no dependencies from third parties.
+Some keyboards record all the data that is entered and send it to a server. This is done for spell checking or to train the keyboard to give you better suggestions. To eliminate the risk of leaking your mnemonic through your keyboard, we built a secure in-app keyboard with no dependencies on third parties.
 
-### Advantage of the input keyboard
+### Advantages of the secure keyboard
 
-- The keyboard cannot record/save your mnemonic (some device keyboards do this for spell checking and send what you type to a server – this is not safe). Our in-app keyboard does connect to any network or relies on extra dependencies.
-- There is a "scramble" button that shuffles the order of the letters on the keyboard, which improves the security of someone watching over your shoulder.
-- The new keyboard allows only valid words from the BIP39 list while typing. So there can be no more typos, double spaces, etc. This eliminates the tendency to type an incompatible BIP39 word.
-- The keyboard has BIP39 words autocomplete for faster imports. It reduces the time it takes to type all 24 words thereby, enhancing productivity.
+- The keyboard cannot record/save your mnemonic (some device keyboards do this for spell checking and send what you type to a server - this is not safe). Our in-app keyboard does not connect to any network or rely on external dependencies.
+- There is a "scramble" button that shuffles the order of the letters on the keyboard, which improves the security if someone is watching over your shoulder.
+- The keyboard allows only valid words from the BIP39 list to be entered. So there can be no more typos, double spaces, etc.
+- The keyboard has BIP39 words autocomplete for faster imports. It reduces the time it takes to type all 24 words.
 - There is a “hide” button that masks the mnemonic that you already entered, improving the security if someone watches over your shoulder.
 
 ### An overview of the in-app keyboard
