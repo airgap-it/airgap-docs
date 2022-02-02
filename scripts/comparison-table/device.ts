@@ -97,7 +97,7 @@ export const device: Record<string, Feature<Category.DEVICE>> = {
     category: Category.DEVICE,
     wallets: {
       airgap: { status: "2018", notes: [] },
-      keystone: { status: "2021", notes: [] },
+      keystone: { status: "2018", notes: [] },
       bitbox: { status: "2016", notes: [] },
       coldcard: { status: "2018", notes: [] },
       ledger: { status: "2014", notes: [] },
