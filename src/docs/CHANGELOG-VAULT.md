@@ -2,6 +2,16 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.14.0
+
+#### Features
+
+- **Ethereum**: Message signing such as `Eth Sign`, `Personal Sign` and `Sign Typed Data` are now supported.
+
+#### Fixes
+
+- **Ethereum**: Parsing of some contract calls failed, which resulted in an error message and inability to sign the transaction.
+
 ## 3.13.1
 
 #### Features
