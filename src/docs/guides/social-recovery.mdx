@@ -24,20 +24,20 @@ A few ideas of where and with whom shares could be stored:
 - Online Backup
 
 :::caution
-Don’t put multiple shares in the same location.
+Don't put multiple shares in the same location.
 :::
 
 Some tips regarding the distribution of the shares:
 
 - Write down the shares on a piece of paper. Fold it up and put it into a sealed envelope.
-- Don’t tell contacts what the envelope is for.
-- Don’t tell people who the other trusted contacts are.
-- Don’t give shares to multiple people in the same circle. Doing this will increase the likelihood of them finding out about it and colluding against you.
+- Don't tell contacts what the envelope is for.
+- Don't tell people who the other trusted contacts are.
+- Don't give shares to multiple people in the same circle. Doing this will increase the likelihood of them finding out about it and colluding against you.
 - Regularly check if your contacts still have your shares.
 - Use BIP39 Passphrases and a decoy wallet for an even higher level of security.
 
 :::note
-The process of generating your social recovery shares is using an algorithm called [Shamir’s Secret](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) Sharing. This algorithm allows you to combine any of the shares to get back to your original secret while giving contacts with fewer than the required number of shares NO information about your original secret. This is, in contrast, to simply cutting your original secret into multiple pieces and giving it to your contacts. If you do that, you reveal a part of your secret to each one, leaving you vulnerable to brute force attacks. This is not the case if you use our social recovery generation.
+The process of generating your social recovery shares is using an algorithm called [Shamir's Secret](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) Sharing. This algorithm allows you to combine any of the shares to get back to your original secret while giving contacts with fewer than the required number of shares NO information about your original secret. This is, in contrast, to simply cutting your original secret into multiple pieces and giving it to your contacts. If you do that, you reveal a part of your secret to each one, leaving you vulnerable to brute force attacks. This is not the case if you use our social recovery generation.
 :::
 
 ## How to set up Social Recovery in AirGap Vault
@@ -97,4 +97,4 @@ For this example, we select three for the number of secret shares and two for th
 
 <IPhoneWrapper src={"/img/social-recovery/social-recovery-10.png"} />
 
-- Success, you’ve recovered your account using social recovery.
+- Success, you've recovered your account using social recovery.

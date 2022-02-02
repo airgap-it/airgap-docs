@@ -1,0 +1,103 @@
+---
+title: Coin Flip and Dice Roll Entropy Collection
+slug: /airgap-vault/coin-flip-dice-roll-entropy-collection
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+The sequence most wallets use to generate your seed phrase is to collect entropy from your device's random number generator (RNG), then turn this entropy into seed phrases, often represented as 12 or 24 words. For example: `joke alien raccoon team planet throw frame utility acid rich tobacco setup earth oven solid audit because category play orange slide nut purse ahead`
+
+This procedure appears uncomplicated, but there is an underlying security concern here. The problem is that it is not verifiable how most RNG chips work. There is no way to tell whether the output of those chips is truly random or if it outputs a predefined sequences that appears random, but can be reconstructed by the device manufacturer.
+
+We've been aware of this issue with random number generators since the first release of AirGap. As a result, before creating a secret, we collect additional entropy from the camera, microphone, accelerometer and touch input to decrease the attack vector from a compromised RNG. The resulting seed phrase will include both the RNG output and the inputs from the users. If someone wants to compromise and recalculate the secret, he must know both inputs, therefore a compromised RNG is no longer sufficient to steal your seed in AirGap.
+
+To take security further and eliminate any flaws from the RNG, we introduced the dice roll and coin flip feature. Instead of relying on the device to give you random numbers to generate the mnemonic, the users have to provide those random numbers themselves using either dice or a coins.
+
+## Advantages of Coin Flip and Dice Roll Entropy Collection
+
+- ### Elimination of RNG failure
+  Since the RNG is no longer involved when creating mnemonics, the associated risks are no longer an issue.
+- ### Verifiable seed phrase
+  It also solves the challenge of not trusting a software because the mnemonic created from the coin flip and dice roll input is deterministic. As a result, a different wallet or software can confirm that the same input will always yield the proper output. The user can be confident that the secret he created on an AirGap was generated randomly and has not been tampered with.
+
+## Steps involved in setting up Coin Flip and Dice Roll Entropy Collection
+
+The dice roll/coin flip feature is a simple, yet better way of entropy generation. You can produce a precise sequence of inputs by rolling dice or flipping a coin.
+
+- In the case of coin flips, 256 flips are required to achieve the randomness or entropy for a 24-word mnemonic.
+- In the case of dice rolls, 99 rolls are required.
+
+### Dice Roll
+
+Here are the things you will need:
+
+- The AirGap Vault app
+- Dice with 6 sides (Preferable: A new casino grade dice, more than one dice with good quality).
+- Dice tray (Optional)
+
+:::warning
+Don't use Dice Apps on your phone or computer. This defeats the purpose of eliminating the RNG chip.
+:::
+
+- Open the Vault app. On the setup page (also accessible throught the settings), toggle the Advanced Mode and click the GENERATE WITH DICE ROLLS button.
+
+<IPhoneWrapper src={"/img/dice-coin/dice1.png"} />
+<IPhoneWrapper src={"/img/dice-coin/dice2.jpeg"} />
+
+- Roll the dice on a tray (if available) or any flat surface.
+
+<IPhoneWrapper src={"/img/dice-coin/dice3.jpeg"} />
+
+If you're using only one dice, tossing at least 99 times may be tiresome. However, it is important to remember that this greatly increases the security of your funds, so it is absolutely worth it.
+
+- Repeat this process at least 99 times depending the number of dice you're using. For every roll, record the outcome on the app by clicking the number at the bottom.
+
+<IPhoneWrapper src={"/img/dice-coin/dice4.jpeg"} />
+
+:::Note
+There are multiple standards of how dice roll inputs can be interpreted. We have the two methods in AirGap. The default method and ColdCard method. The different methods are only relevant if you plan to verify the mnemonic with another wallet.
+:::
+
+- Click on the icon on the top right corner to select the method you want to use. The two methods generate two different mnemonics.
+
+<IPhoneWrapper src={"/img/dice-coin/dice5.jpeg"} />
+
+- Click the proceed icon, read and follow the instructions on the next page.
+
+<IPhoneWrapper src={"/img/dice-coin/dice6.jpeg"} />
+
+- Click the understood button to generate your mnemonic from your dice roll input.
+
+Hurray, you've successfully generated your mnemonic using dice rolls!
+
+### Coin flip
+
+Here are the things you will need:
+
+- The AirGap Vault app
+- A coin (Preferable: A new one)
+
+:::warning
+Don't use Coin-Flip Apps on your phone or computer. This defeats the purpose of eliminating the RNG chip.
+:::
+
+- Open the Vault app. On the setup page (also accessible throught the settings), toggle the Advanced Mode and click the GENERATE WITH COIN FLIPS button.
+
+<IPhoneWrapper src={"/img/dice-coin/coin1.png"} />
+<IPhoneWrapper src={"/img/dice-coin/coin2.jpeg"} />
+
+- Flip the coin 256 times.
+
+<IPhoneWrapper src={"/img/dice-coin/coin3.jpeg"} />
+
+- Record your outcome in the Vault using the head and tails button at the bottom of the page.
+
+<IPhoneWrapper src={"/img/dice-coin/coin4.jpeg"} />
+
+- Click the proceed icon, read and follow the instructions on the next page.
+
+<IPhoneWrapper src={"/img/dice-coin/coin5.jpeg"} />
+
+- Click the understood button to generate your mnemonic from your coin flip input.
+
+Hurray, you've successfully generated your mnemonic from using coin flips!.
