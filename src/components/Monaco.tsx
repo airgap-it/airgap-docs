@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from "react";
-import useThemeContext from "@theme/hooks/useThemeContext";
+import { useColorMode } from "@docusaurus/theme-common";
 import { libs } from "./monaco-types";
 
 const MonacoEditor = lazy(() => import("react-monaco-editor"));
 
 function Monaco(props) {
   let monacoRef;
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useColorMode();
 
   function onEditorWillMount(monaco) {
     monacoRef = monaco;
