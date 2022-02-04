@@ -20,22 +20,27 @@
     "generate-comparison-table": "npx ts-node scripts/generate-comparison-table.ts",
     "remove-folders": "rm -rf build-docs && rm -rf docs",
     "clear-folders": "npm run remove-folders && mkdir build-docs && mkdir docs",
-    "embed-code": "npm run generate-monaco-types && npm run pretty-source && tsc src/examples/*.ts && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && embedme 'build-docs/**/*.mdx' --source-root ./build-examples && rm -r docs && mv build-docs docs && npm run pretty-docs"
+    "embed-code": "npm run generate-monaco-types && npm run pretty-source && node scripts/copy-examples.js && npm run clear-folders && cp -r src/docs/* build-docs/ && embedme 'build-docs/**/*.mdx' --source-root ./build-examples && rm -r docs && mv build-docs docs && npm run pretty-docs"
   },
   "dependencies": {
-    "@airgap/coinlib-core": "0.10.6",
+    "@airgap/coinlib-core": "0.12.6",
     "@docusaurus/core": "2.0.0-beta.15",
     "@docusaurus/plugin-sitemap": "2.0.0-beta.15",
     "@docusaurus/preset-classic": "2.0.0-beta.15",
     "@mdx-js/react": "^1.6.21",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
     "classnames": "^2.3.1",
     "clsx": "^1.1.1",
+    "crypto-browserify": "^3.12.0",
     "mermaid": "^8.9.2",
     "monaco-editor": "^0.23.0",
+    "path-browserify": "^1.0.1",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-monaco-editor": "^0.43.0"
+    "react-monaco-editor": "^0.43.0",
+    "stream-browserify": "^3.0.0"
   },
   "browserslist": {
     "production": [
