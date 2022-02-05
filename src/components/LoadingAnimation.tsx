@@ -1,8 +1,8 @@
 import React from "react";
-import useThemeContext from "@theme/hooks/useThemeContext";
+import { useColorMode } from "@docusaurus/theme-common";
 
 const LoadingAnimation = () => {
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useColorMode();
 
   return (
     <svg

@@ -1,0 +1,286 @@
+---
+title: Connect AirGap Vault to MetaMask
+slug: /guides/metamask
+---
+
+import BrowserWindow from "@site/src/components/BrowserWindow/BrowserWindow";
+import DynamicImage from "@site/src/components/DynamicImage";
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+In this guide, we will explore how you can set up MetaMask as a watch-only wallet with AirGap Vault.
+
+MetaMask is a non-custodial wallet for accessing EVM-compatible blockchains.
+
+If you already have MetaMask installed, you can skip the next step and proceed to pair MetaMask with AirGap Vault.
+
+## 1. Installation
+
+On your PC, visit the [MetaMask website](https://metamask.io/) and click on "Download" and follow the instructions for your browser.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-add-to-chrome.png"
+  alt="MetaMask Add To Chrome"
+/>
+
+</BrowserWindow>
+
+Install the extension.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-add-extension.png"
+  alt="MetaMask Add Extension"
+/>
+
+</BrowserWindow>
+
+Confirm the installation by clicking on "Add extension" from the popup.
+
+Your browser will then download and automatically install the MetaMask extension.
+
+You will get a confirmation popup after completing this step, after which your browser will automatically launch a new tab.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-added-to-chrome.png"
+  alt="MetaMask Added To Chrome"
+/>
+
+</BrowserWindow>
+
+Click on "Get Started" to begin setting up MetaMask.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-get-started.png"
+  alt="MetaMask Get Started"
+/>
+
+</BrowserWindow>
+
+Choose between creating a new wallet and importing an existing one. For this guide, we will create a new wallet.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-create-wallet.png"
+  alt="MetaMask Create Wallet"
+/>
+
+</BrowserWindow>
+
+Set a secure password.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/create-password.png"
+  alt="MetaMask Create Password"
+/>
+
+</BrowserWindow>
+
+Keep your secret recovery phrase somewhere safe.
+
+:::caution Unused wallet
+If you are planning to use MetaMask with AirGap Vault, the wallet that you generated in this process will not be used. However, it is still recommended that you create a backup of it in case you send funds to it by accident.
+:::
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/secret-recovery-phrase.png"
+  alt="MetaMask Recovery Phrase Hidden"
+/>
+
+</BrowserWindow>
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-recovery-phrase.png"
+  alt="MetaMask Recovery Phrase Revealed"
+/>
+
+</BrowserWindow>
+
+Confirm your seed phrase in the order shown on the previous page, and then click the "Confirm" button.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/confirm-seed-phrase.png"
+  alt="MetaMask Confirm Seed Phrase"
+/>
+
+</BrowserWindow>
+
+Congratulations, you have successfully set up MetaMask, which is the first step in the process.
+
+## 2. Pair AirGap Vault with MetaMask
+
+Add a new ETH account to your Vault.
+
+:::caution New ETH account
+If you have previously generated an Ethereum account in AirGap Vault in an old version of the app, you will have to delete the old account and create a new one. It will be the same address, but internally we now use a different format that is compatible with MetaMask.
+:::
+
+Click on the arrow sign then the plus + sign at the bottom right corner.
+
+<IPhoneWrapper src={"/img/metamask/vault-create-account.jpg"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-add-account.jpg"} />
+
+Select Ethereum (ETH) and click the create button. Select the newly created ETH account.
+
+<IPhoneWrapper src={"/img/metamask/vault-add-ethereum.jpg"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-account-overview.jpg"} />
+
+Click the "Sync Account" button and select the offline mode.
+
+<IPhoneWrapper src={"/img/metamask/vault-sync-account.jpg"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-offline-device.jpg"} />
+
+Select MetaMask from the drop down.
+
+<IPhoneWrapper src={"/img/metamask/vault-select-metamask.jpg"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-dropdown-metamask.jpg"} />
+
+In MetaMask, click on the circle at the top right corner and select "Connect Hardware Wallet".
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/connect-hardware-wallet.png"
+  alt="MetaMask Connect Hardware Wallet"
+/>
+
+</BrowserWindow>
+
+Select "QR-based" and click "Continue".
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/select-qr-based-signer.png"
+  alt="MetaMask Select QR Based Signer"
+/>
+
+</BrowserWindow>
+
+Scan the QR-code in AirGap Vault.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-scan-qr-account.png"
+  alt="MetaMask Scan Account QR"
+/>
+
+</BrowserWindow>
+
+Select the Account that you want to add and click "Unlock".
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/select-account.png"
+  alt="MetaMask Select Account"
+/>
+
+</BrowserWindow>
+
+MetaMask should now be successfully paired with AirGap Vault.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/account-connected.png"
+  alt="MetaMask Account Connected"
+/>
+
+</BrowserWindow>
+
+## 3. Sending ETH Using MetaMask
+
+In MetaMask, click "Send". Input the destination address and specify the amount.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-send-prepare.png"
+  alt="MetaMask Prepare Transaction"
+/>
+
+</BrowserWindow>
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/transaction-confirm.png"
+  alt="MetaMask Confirm Transaction"
+/>
+
+</BrowserWindow>
+
+Open the Vault and scan the QR-code.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-request-signature.png"
+  alt="MetaMask Request Signature"
+/>
+
+</BrowserWindow>
+
+<IPhoneWrapper src={"/img/metamask/vault-request-signature.png"} />
+
+Inspect and verify the transaction details and ensure that they are correct. Then sign the transaction and select "offline device".
+
+<IPhoneWrapper src={"/img/metamask/vault-transaction-details.png"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-offline-device.jpg"} />
+
+Change the QR-code format to MetaMask and click the "Get Signature" button in MetaMask.
+
+<IPhoneWrapper src={"/img/metamask/vault-sign-metamask.png"} />
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/get-signature.png"
+  alt="MetaMask Get Signature"
+/>
+
+</BrowserWindow>
+
+Scan the QR-code from the Vault.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/metamask-scan-qr-signature.png"
+  alt="MetaMask Scan Signature QR"
+/>
+
+</BrowserWindow>
+
+After scanning the QR-code, the transaction will be sent to the Ethereum network and the process is completed. You can use the same process to send ERC-20 tokens or interact with any smart contract.
+
+<BrowserWindow url="extension://metamask">
+
+<DynamicImage
+  src="/img/metamask/transaction-broadcast.png"
+  alt="MetaMask Broadcast Transaction"
+/>
+
+</BrowserWindow>

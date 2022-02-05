@@ -1,0 +1,24 @@
+---
+title: BIP39 Wordlist
+slug: /airgap-vault/bip-39-wordlist
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+AirGap Vault includes a page that lists all valid english BIP39 words. It allows checking of words and finding similar words, all in the context of a secure offline device. Checking your own mnemonic against an online BIP39 list is always a security risk.
+
+### Find words
+
+It can happen that some letters of a word on the backup are not legible. It is then hard to find the original word. By using the wordlist and our fuzzy search, it is possible to find words even if a letter is wrong or missing.
+
+<IPhoneWrapper src={"/img/wordlist/wordlist.png"} />
+
+### Find typos
+
+It often happens that words are written down with typos when creating a backup. Sometimes it can happen that those typos exactly match another word in the list. If this happens, it is very hard to find the original word. As an example, if the word in the mnemonic was "tree", but "three" was written down instead, it is very hard to find that typo. With our fuzzy search, similar words can be found.
+
+<IPhoneWrapper src={"/img/wordlist/tree-typo.png"} />
+
+### Entropy with coin flips
+
+The binary representation of the words can be used to make converting binary entropy to a mnemonic easier. It can also be used to verify the generated mnemonic of our [coin flip feature](https://support.airgap.it/airgap-vault/coin-flip-dice-roll-entropy-collection).

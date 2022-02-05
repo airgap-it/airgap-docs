@@ -1,0 +1,81 @@
+---
+title: How to use Sparrow Wallet with AirGap Vault (BTC-Only)
+slug: /guides/sparrow
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+Watch-only wallets allow you to keep track of your cold wallet (for example, AirGap Vault) without accessing your private key. Import your extended public key to watch your balance and initiate transactions.
+
+In this guide, we work through, how to set up a watch-only wallet with Sparrow Wallet and AirGap Vault.
+
+### How to set up a watch-only wallet
+
+- Download Sparrow Wallet from [here](https://sparrowwallet.com/download/).
+- Update AirGap Vault to the latest version
+- [AirGap Vault - App Store](https://itunes.apple.com/us/app/airgap-vault-secure-secrets/id1417126841?l=de&ls=1&mt=8)
+- [AirGap Vault - Google Play](https://play.google.com/store/apps/details?id=it.airgap.vault)
+- [AirGap Vault - GitHub](https://github.com/airgap-it/airgap-vault/releases)
+
+In AirGap Vault select your Bitcoin SegWit Account.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-vault-interface.png"} />
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-segwit-qr.png"} />
+
+Click the SYNC ACCOUNT button and the next page will ask you for the interaction method, select the offline method.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-interaction.png"} />
+
+Change the QR-code standard to BC UR.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-qr-change.png"} />
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-bc-ur.png"} />
+
+Now, proceed to Sparrow Wallet to create a new wallet. Launch Sparrow and click file.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-file.png"} />
+
+Select New wallet from the drop-down menu. Please keep in mind that we are not creating a new wallet in Sparrow. We're in the process of syncing the wallet that was generated in the Vault to Sparrow.
+
+Specify any desired name for your watch-only wallet.
+
+Click the Create Wallet button.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-set-name.png"} />
+
+Select AirGapped Hardware Wallet
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-hardware.png"} />
+
+Under Keystone, Select Scan.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-keystone.png"} />
+
+Scan the QR-code from the AirGap Vault.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-scan.png"} />
+
+After sparrow successfully scans the QR-code from AirGap, It shows you details such as the derivative path and Xpub/Zpub key. Click the apply button to finalize the setup process.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-apply.png"} />
+
+The next interface will ask for you to set up a password which is an optional procedure. After clicking the set password you've successfully set up a Sparrow watch only wallet with AirGap.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-set-password.png"} />
+
+### Receiving BTC with Sparrow Wallet
+
+Users can choose between the AirGap or Sparrow Wallet app to get their receiving address.
+To copy it from AirGap, go to the vault and select your BTC account then click the three-dot at the top right corner.
+
+<IPhoneWrapper src={"/img/sparrow/vault-copy address.png"} />
+
+To copy it from Sparrow, go to receive and copy it beside the address.
+
+<IPhoneWrapper src={"/img/sparrow/sparrow-get-address-2.png"} />
+
+### Sending BTC with Sparrow
+
+_Docs for this section are not finished yet._

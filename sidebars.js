@@ -12,7 +12,24 @@ module.exports = {
     {
       type: "category",
       label: "AirGap Vault",
-      items: ["airgap-vault/introduction"],
+      items: [
+        "airgap-vault/introduction",
+        "airgap-vault/features/comparison",
+        {
+          type: "category",
+          label: "Features",
+          items: [
+            "airgap-vault/features/address-explorer",
+            "airgap-vault/features/bip-39-wordlist",
+            "airgap-vault/features/dice-coin-entropy",
+            "airgap-vault/features/plausible-deniability",
+            "airgap-vault/features/secure-keyboard",
+          ],
+          collapsed: true,
+        },
+        "airgap-vault/supported-devices",
+        "airgap-vault/recommended-devices",
+      ],
       collapsed: true,
     },
     {
@@ -138,6 +155,19 @@ module.exports = {
           items: ["troubleshooting/currencies/cosmos/FAQ"],
           collapsed: true,
         },
+      ],
+    },
+    {
+      type: "category",
+      label: "Guides",
+      items: [
+        "guides/metamask",
+        "guides/BIP-85",
+        "guides/sapling",
+        "guides/social-recovery",
+        "guides/step-by-step-guide",
+        "guides/update-webview",
+        "guides/vault-offline-update",
       ],
     },
     "FAQ",

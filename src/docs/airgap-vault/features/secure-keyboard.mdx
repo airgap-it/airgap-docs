@@ -1,0 +1,24 @@
+---
+title: Secure Keyboard
+slug: /airgap-vault/secure-keyboard
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+Some keyboards record all the data that is entered and send it to a server. This is done for spell checking or to train the keyboard to give you better suggestions. To eliminate the risk of leaking your mnemonic through your keyboard, we built a secure in-app keyboard with no dependencies on third parties.
+
+### Advantages of the secure keyboard
+
+- The keyboard cannot record/save your mnemonic (some device keyboards do this for spell checking and send what you type to a server - this is not safe). Our in-app keyboard does not connect to any network or rely on external dependencies.
+- There is a "scramble" button that shuffles the order of the letters on the keyboard, which improves the security if someone is watching over your shoulder.
+- The keyboard allows only valid words from the BIP39 list to be entered. So there can be no more typos, double spaces, etc.
+- The keyboard has BIP39 words autocomplete for faster imports. It reduces the time it takes to type all 24 words.
+- There is a “hide” button that masks the mnemonic that you already entered, improving the security if someone watches over your shoulder.
+
+### An overview of the in-app keyboard
+
+<IPhoneWrapper src={"/img/secure-keyboard/keyboard.png"} />
+
+<IPhoneWrapper src={"/img/secure-keyboard/scrambled-keyboard.png"} />
+
+<IPhoneWrapper src={"/img/secure-keyboard/masked-input.png"} />

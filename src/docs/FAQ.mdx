@@ -10,7 +10,11 @@ import TOCInline from "@theme/TOCInline";
 
 - We refer to the "Secret" as the 24 words you get when setting up a new Vault. This is also commonly referred to as a "Seed Phrase" or "Mnemonic". Those 24 words are everything you need to recover your funds in case you lose access to your Vault.
 
-- The "Recovery Key" is a key that is only used on Android. On Android, it is possible that the device randomly wipes the secure storage where your seed phrase is stored. If this happens, you have 2 options. You can either import your 24 words again, then the "Recovery Key" is not needed. Or you can enter the "Recovery Key", which will restore your 24 words.
+- The "Recovery Key" is a key that is only used on Android. On Android, it is possible that the device randomly wipes the secure storage where your seed phrase is stored. If this happens, AirGap Vault is no longer able to sign transactions. When this happened, your only option was to re-import your 24 words again. Because some people don't keep their 24 words accessible at all times, this was a cumbersome process for some. This is why we introduced the "Recovery Key". This key is used to create an encrypted backup of your seed on your phone. The encryption key for that backup is the "Recovery Key". If your secure storage is ever wiped and your seed is no longer accessible, AirGap Vault will prompt you for the "Recovery Key". If you provide it, it will decrypt the backup and restore your seed. If you can't provide it, you simply have to import your 24 words again.
+
+The "Recovery Key" does _not_ have to be backed up with your Secret. The 24 words (plus the optional BIP39 passphrase) is everything you need to recover your accounts on another device.
+
+If someone gets a hold of your "Recovery Key" and nothing else, this key is completely useless and it _cannot_ be used to recover your 24 words. The "Recovery Key" can only be used together with the Vault where it was set up. That's why it is reasonably safe to store the recovery key in a password manager, which you should _never_ do with your 24 words.
 
 :::caution
 The "Recovery Key" can only be used together with the Vault where it was set up. If your Vault is lost or defective, the "Recovery Key" will NOT allow you to access your funds. For that, you need a backup of your **24 words**.
@@ -162,7 +166,7 @@ Sometimes transactions might take longer to be confirmed by the network. When cr
 
 If you go to your account e.g. Tezos, you will see an entry below “Pending Transaction”. You can take a look at the block explorer to understand more about the status, by selecting the transaction and then “Open Blockexplorer”.
 
-If you have waited for a few hours and the transaction still hasn’t been confirmed. You can recreate the transaction again in AirGap Wallet, this time you can either use fast & expensive or set your own fee. Go through the signing process with AirGap Vault and broadcast the transaction with AirGap Wallet.
+If you have waited for a few hours and the transaction still hasn't been confirmed. You can recreate the transaction again in AirGap Wallet, this time you can either use fast & expensive or set your own fee. Go through the signing process with AirGap Vault and broadcast the transaction with AirGap Wallet.
 
 ## How can I participate in Staking?
 
@@ -174,7 +178,7 @@ To start delegating and receive rewards:
 2. Select “Delegation”
 3. Click “Delegate”
 4. Go through the transaction signing process with AirGap Vault
-5. You’re now delegated a will earn rewards
+5. You're now delegated a will earn rewards
 
 Supported Staking protocols:
 
@@ -185,7 +189,7 @@ Supported Staking protocols:
 
 ## How to setup your AirGap wallet step by step
 
-It’s easier than you expect. Did you already download the two applications AirGap wallet and Vault? What is your setup? Depending on the setup you may have a slightly different approach. However, you can have a read here
+It's easier than you expect. Did you already download the two applications AirGap wallet and Vault? What is your setup? Depending on the setup you may have a slightly different approach. However, you can have a read here
 https://medium.com/airgap-it/airgap-the-step-by-step-guide-c4c3d3fe9a05
 
 ## How do I exchange coins while using AirGap
@@ -217,14 +221,13 @@ Never say never, but as of now, AirGap does not have a utility token of its own 
 - Ethereum(ETH)
 - Groestlcoin(GRS)
 - Tezos(XTZ)
-- Cosmos(ATM)
+- Cosmos(ATOM)
 - Polkadot(DOT)
 - Kusama(KSM)
 
 ### FA1.2 / FA2 (Tezos)
 
-- tzBTC
-- USDtz
+- All FA1.2/2 tokens are supported
 
 ### ERC20 (Ethereum)
 
@@ -292,9 +295,9 @@ https://ethereum.stackexchange.com/questions/70017/can-someone-explain-the-meani
 
 This is an advanced feature. You should never change the default derivation path. Changing the derivation path can lead to you losing access to your funds.
 
-## Scanning the QR code using AirGap Vault isn’t working, what are the likely solutions?
+## Scanning the QR code using AirGap Vault isn't working, what are the likely solutions?
 
-In such a scenario you can play around with the screen brightness, too bright and too low may affect device QR code scanning functionality. Ensure the camera is accurately positioned and it isn’t blurred.
+In such a scenario you can play around with the screen brightness, too bright and too low may affect device QR code scanning functionality. Ensure the camera is accurately positioned and it isn't blurred.
 
 ## Can I still set a password after setting up my AirGap Vault and generating a secret?
 
@@ -373,7 +376,7 @@ Inside the AirGap wallet click on whatever coin you want to check for its transa
 
 ## Is it possible to store any erc20 token with AirGap?
 
-Yes, but the unlisted ones will not be visible in the AirGap Wallet. We are working on adding WalletConnect support, which will let you work with any ERC20 token.
+Yes, but the unlisted ones will not be visible in the AirGap Wallet. However, you can connect to any Ethereum DApp using the WalletConnect functionality to interact with those tokens.
 
 ## How do I create a second address for any of the supported coins in the vault?
 
@@ -411,4 +414,92 @@ This functionality will be available in the future.
 
 ## Why is it taking so long to derive my wallet?
 
-It shouldn’t take more than a couple seconds for your wallet to set up. Close the app and try again.
+It shouldn't take more than a couple seconds for your wallet to set up. Close the app and try again.
+
+## How do I find my exchange transaction ids?
+
+Currently, we do not have a UI for you to find transaction IDs for exchanges. However, if need be, please send us an email or use any of our support platforms with your address and amount attached, and we will be able to assist you.
+
+## I am having problems with Polkadot and Kusama seeing balance and also delegatioins.
+
+Polkadot and Kusama routinely update their runtime, and if it does contain breaking changes, that can sometimes cause issues. To be on the safe side, we are making sure to review the changelog to see if they have any breaking changes.
+
+## Why does our tezos baking record show unstable and not precise?
+
+Our baker payouts are done manually using AirGap. In the past, there was a bug in our payment script that affected a specific payout to a contract, resulting in a fee estimation failure. Due to this, we partially missed two payouts. After the bug was resolved, the missed payouts have been paid in full, and one of the following payouts has been paid twice as a way to compensate our delegators. So overall, our payouts are higher than they should be.
+
+## What actions to take if eth transactions have been dropped and replaced and it is under a pending state in the wallet?
+
+Every 24 hours, the pending states in the wallet are cleared. You can try again with a higher fee if the transaction was deleted from the mempool because the fee was too low.
+
+## There are significantly more coins available in the wallet than in the vault. So, does that mean the coins that aren't can't be placed in the vault are less safe?
+
+The coins that are only in the wallet and not in the vault are tokens based on either ERC20 tokens on Ethereum or FA1.2/2 on Tezos. There are no “less secure” coins that only exist in the wallet. Those tokens are stored on your ETH or XTZ accounts and securely managed by the vault.
+
+## Can I import the BTC account created in the AirGap Vault into other wallets using the private key?
+
+You cannot get the private key from the Vault but you can import the mnemonic phrase into any wallet that supports BIP39 and HD wallets.
+
+## How long does it take to exchange currencies on AirGap
+
+It usually takes around 20 to 30 minutes. If you did not receive the funds after an hour, please contact us.
+
+## If I send some AE, do I need to set fees, or does AirGap do it automatically, since the slider rests on disabled?
+
+The fee slider is selecting "Slow & Cheap" by default. That fee is high enough for AE at the moment. You can manually adjust the fee by clicking the toggle button on top of the slider.
+
+## Is it possible to have a new coin listed on AirGap?
+
+Yes it is possible, we want to support as many chains and coins as possible, but we also follow a procedure of getting in touch with the teams behind the coins for a potential integration.
+
+## What are the available exchange pairs?
+
+The list of available exchange pairs can be seen on the exchange tab. This functionality is provided to us by third parties (Changelly and ChangeNow) and may vary based on what they provide.
+
+## How do I go about ensuring the AirGap Vault stays up to date if not actually connected to the internet, what do you recommend?
+
+If you are on Android, you could transfer the new APK using an SD card. Otherwise, we recommend that you completely wipe and reset the phone and start over from scratch. That sounds like a lot of work, but you don't actually have to update the Vault all the time. Unless we find critical security issues or add a breaking change, you can just keep the version you have until you need a new feature that we release.
+
+## Why must I have a minimum of 1 DOT balance in my AirGap wallet?
+
+AirGap does not set any minimum balance requirement on any token or coin. This is a design on the Polkadot network, an address is only active when it holds a minimum amount (currently set at 1 DOT). This minimum amount is called an existential deposit (ED). An option to completely sweep an account will be added in the future.
+
+## Can I send NFTs (on Tezos) to my AirGap Wallet?
+
+Yes, you can send, manage and see your NFTs on AirGap.
+
+## How long does it take to unbound in Polkadot?
+
+Unbonding takes 28 days.
+
+## What is the Business Model AirGap / How does AirGap make money?
+
+AirGap is developed by [papers.ch](https://papers.ch), a company that has a focus in mobile security and blockchain technology. The development is partially funded out of our own pockets and part of it is paid through grants by various cryptocurrency foundations.
+
+## Does AirGap have any plan to develop a desktop version of the Vault?
+
+We do not have any plan to develop the desktop version of the Vault. But you can build the Vault to run on the desktop yourself. We will also add unofficial builds to our CI in the future. But we currently don't have any plans to distribute official desktop builds. The reason for this is that the Vault on Desktop is less secure unless it is used on an air-gapped laptop. We don't want to risk users installing it on their online machines by accident, so this is a feature only available for advanced users.
+
+## If I didn't back up my mnemonics when creating my wallet, how can I retrieve it?
+
+You can recover your mnemonics if you still have access to the Vault by going to Settings > Select Account > Show Mnemonic. Unfortunately, it also means that your funds cannot be accessed if you do not have access to the Vault anymore.
+
+## Why does AirGap Vault generate looping QR coded for signing ERC20 token transactions?
+
+ERC20 transactions can contain more data than a single QR code can display. In this case, it is split up into multiple parts.
+
+## Why is the price reflected on certain assets on my account not the same as the market price?
+
+This variation is most likely just a difference in the API that displays the price.
+
+## What is delegation in AirGap?
+
+Some protocols (Tezos, Cosmos, Polkadot) allow you to "delegate" your funds and earn rewards. Delegations are slightly different in each protocol in terms of rewards and risks. As a result, we recommend you do some research on your desired protocol. Tezos is the easiest, allowing you to delegate your whole balance with no risk, and without locking in your funds while receiving approximately 5 percent in rewards per year.
+
+## Does AirGap allow freezing of UTXOs?
+
+No, the AirGap Wallet companion app is a very simple wallet and doesn't offer any BTC specific features. To use advanced Bitcoin features, you can connect AirGap Vault to another "watch-only" wallet (eg. BlueWallet or Sparrow) and use AirGap Vault as the signer. This feature is currently in Beta and we're happy for any feedback.
+
+## How to add existing AE wallet (address) to AirGap Wallet?
+
+Simply import your existing mnemonics to AirGap Vault.

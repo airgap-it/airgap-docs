@@ -1,5 +1,69 @@
 ---
 title: Introduction
+slug: /airgap-vault/introduction
 ---
 
-TODO
+The AirGap Vault is a cold storage app that securely holds your private key and signs transactions through QR-codes. The cold storage feature of AirGap Vault makes it as secure as a hardware wallet.
+
+### AirGap Vault works alongside:
+
+- AirGap Wallet (Mobile, PC, and Web)
+- Blue Wallet
+- Sparrow Wallet
+- MetaMask
+
+### Supported features
+
+#### Offline transaction signing
+
+You can create an unsigned transaction in an online, view-only wallet such as the ones listed above, then AirGap Vault signs the transaction offline without risk of leaking your secret. Communication is done securely over QR codes.
+
+#### [Entropy collection with dice rolls and coin flips](https://medium.com/airgap-it/entropy-collection-with-dice-rolls-and-coin-flips-bd34945bf5ce)
+
+Most wallets use the random number generator (RNG) on your device to generate the entropy needed to create your seed phrase. This leaves room for RNG attacks, thereby making your wallet vulnerable to hackers. AirGap supports collecting entropy with dice rolls or coin flips to help you generate a secure and verifiable seed phrase.
+
+#### [BIP-39 Passphrase](https://medium.com/airgap-it/securing-your-crypto-with-plausible-deniability-and-bip-39-passphrases-3bb80be72e75)
+
+BIP-39 passphrase is an advanced security feature that allows you to create a new account by adding a set of words or characters to your 24-word seed phrase. This functionality enables plausible deniability. It helps you create a “hidden” wallet without anybody knowing it exists.
+
+#### [Social recovery](https://support.airgap.it/features/social-recovery)
+
+Social recovery is a feature that introduces the concept of guardians. These guardians are a trusted group of people who can help the owner of a wallet recover a lost or forgotten seed phrase.
+
+#### [BIP-85](https://support.airgap.it/features/bip85/)
+
+BIP-85 offers solutions to the challenge of having way too many seeds or mnemonics and needing to back them all up securely. It defines a way to derive new mnemonics from a master mnemonic. The benefit is that you have one mnemonic that you back-up, and then generate new multiple mnemonics out of it (for different wallets). Without BIP85, you might end up with dozens of different mnemonics that all need to be backed up.
+
+### Why AirGap Vault
+
+- Security: The cold storage feature of AirGap Vault makes it as secure as a hardware wallet
+- Advance features: AirGap supports advanced features such as BIP39 passphrase, coin flip and dice roll entropy generation, social recovery and BIP85,
+- Multi-purpose: AirGap Vault can be used alongside many companion apps
+- Working with standards: Your accounts can be restored on any modern-day wallet that supports BIP39
+- Mobility: The Vault is installed on a mobile phone, which makes it portable and easy to use on the go
+- Multi-currency: AirGap Vault supports multiple blockchains and tokens
+
+#### AirGap Vault supports the following blockchains:
+
+- Bitcoin (BTC - Legacy & SegWit)
+- Ethereum (ETH & ERC20)
+- Tezos(XTZ & FA1 & FA1.2 & NFTs)
+- Shielded Tezos
+- Polkadot (DOT)
+- Kusama (KSM)
+- Cosmos (ATOM)
+- Aeternity (AE)
+- Groestlcoin (GRS)
+- Moonriver (MOVR)
+
+:::note
+The Vault connected with MetaMask can sign transactions on Binance Smart Chain, Avalanche, Polygon, Fantom, Moonriver, Celo, and Fuse network.
+:::
+
+The Vault has one version.
+
+### Mobile
+
+[📱 Android — Google Play](https://play.google.com/store/apps/details?id=it.airgap.vault)
+
+[📱 iOS — App Store](https://itunes.apple.com/us/app/airgap-vault-secure-secrets/id1417126841?l=de&ls=1&mt=8)

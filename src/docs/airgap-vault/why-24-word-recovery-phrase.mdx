@@ -1,0 +1,18 @@
+---
+title: Why twenty-four word recovery phrase
+slug: /airgap-vault/why-24-word-recovery-phrase
+---
+
+AirGap Vault supports importing mnemonics that are shorter than 24 words. Specifically, it supports mnemonics of length 12, 15, 18, 21, and 24. However, when generating a new mnemonic with AirGap Vault, the output will always be a 24-word recovery phrase.
+
+So if you want a 12-word seed, you will have to generate it elsewhere and then import it into your Vault. If you do this, we strongly recommend that you generated it on an offline device.
+
+We chose to generate 24 words (256-bit entropy) not because 12 word mnemonics (128-bit entropy) are insecure, but the handling of shorter mnemonics is riskier in a few ways.
+
+- More entropy: The 24 words contain more entropy/randomness. In some cases, if the underlying random number generator isn't as good as it should be, the extra 128 bits of entropy you have in a 24-word phrase can make your mnemonic more secure.
+
+- Splitting up seed: Some people "split up" their secret into multiple parts by basically just cutting it into multiple parts. While this is a very bad idea for many reasons, people still do it. Even the bip39 tool by iancoleman has this feature for some reason. If you split up a 12 word mnemonic, the time to brute force it in case you find one part is a couple of minutes. With a 24 word mnemonic, it's still going to be thousands of years.
+
+- Unscramble: Some people like to "swap" some of their words or "scramble" their recovery phrase when they write it down. If you do this with a 24-word mnemonic, chances are higher that a brute force attack will not be successful in a reasonable amount of time. However with a 12-word mnemonic, all combinations can be checked in a few hours or less.
+
+So it's not really a "mathematical" reason why we use 24 words, but rather to protect our users from losing their funds if they make mistakes.

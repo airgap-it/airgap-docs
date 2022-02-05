@@ -91,11 +91,6 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Papers AG - Open Source MIT License`,
     },
-    announcementBar: {
-      id: "beta-docs",
-      content:
-        "This documentation is currently work in progress. Some pages might be incomplete.",
-    },
   },
   presets: [
     [
@@ -104,14 +99,20 @@ module.exports = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl: "https://github.com/airgap-it/airgap-docs/edit/main/src/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+        },
       },
     ],
   ],
-  plugins: [path.join(__dirname, "/plugins/monaco-editor")],
+  plugins: [
+    path.join(__dirname, "/plugins/monaco-editor"),
+    path.join(__dirname, "/plugins/build"),
+  ],
 };
