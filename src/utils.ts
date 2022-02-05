@@ -1,4 +1,3 @@
-import * as coinlib from "@airgap/coinlib-core";
 import * as ts from "typescript";
 
 function replaceAll(string: string, search: string, replace: string) {
@@ -32,6 +31,9 @@ export const runCoinlibCode = (
   setOutput: (str: string) => void
 ) => {
   let code = rawCode;
+
+  // import * as coinlib from "@airgap/coinlib-core";
+  const coinlib = require("@airgap/coinlib-core");
 
   let output = "";
   const appendOutput = (str: string) => {

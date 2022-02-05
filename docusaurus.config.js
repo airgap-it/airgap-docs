@@ -104,8 +104,15 @@ module.exports = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+        },
       },
     ],
   ],
-  plugins: [path.join(__dirname, "/plugins/monaco-editor")],
+  plugins: [
+    path.join(__dirname, "/plugins/monaco-editor"),
+    path.join(__dirname, "/plugins/build"),
+  ],
 };
