@@ -24,7 +24,7 @@ console.log("Address", address);
 `;
 
 function Playground() {
-  if (typeof window === "undefined" || typeof Buffer === "undefined") {
+  if (typeof window === "undefined") {
     return null;
   }
 

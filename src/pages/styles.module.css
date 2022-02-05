@@ -3,10 +3,6 @@
  * and scoped locally.
  */
 
-body > div {
-  overflow: hidden;
-}
-
 .runbox {
   margin: 10px;
 }
