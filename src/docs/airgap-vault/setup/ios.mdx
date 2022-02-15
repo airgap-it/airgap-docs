@@ -1,0 +1,67 @@
+---
+title: How To Set Up Secure A Cold Wallet With AirGap (iOS)
+slug: /airgap-vault/setup/secure-cold-wallet-airgap-ios
+sidebar_label: iOS
+---
+
+In this guide we will describe the steps of how a secure offline device can be set up.
+
+## Simple Setup
+
+1. Get a dedicated device, which will from now on ONLY be used for AirGap Vault, no other applications
+2. Update the device to the latest firmware and install all available updates
+3. Do a factory reset
+4. Set up the device and use a strong password, optionally protect the device with biometrics
+5. Install AirGap Vault
+6. Set device into Airplane mode and never turn it back on
+
+You now have a secure device set up and you can proceed to set up AirGap Vault.
+
+## Advanced Setup
+
+- Get a dedicated device, which will from now on ONLY be used for AirGap Vault, no other applications
+
+- Update the device to the latest firmware and install all available updates
+
+- Do a factory reset
+
+Your device is now in a factory reset state and we can proceed to set it up again and install AirGap Vault.
+
+- Take your every day phone (not the one you will use AirGap Vault on) and create a hotspot. Use a temporary and complicated password. We will use this hotspot to connect to the internet temporarily to download AirGap Vault. We create a mobile hotspot instead of using eg. your home network because after the setup, we can disable the mobile hotspot again, which means that your device can not re-connect to any hotspot, even if it tried.
+
+- Now proceed setting up your dedicated device. When asked to join a WiFi network, join the one we created in the step above.
+
+- Log in with your Apple ID (Ideally, create a new Apple ID just for this phone).
+
+- Set a strong password and optionally protect your device with biometrics
+
+- As soon as the setup process is finished, open the AppStore and download "AirGap Vault". Make sure you download the correct app, sometimes there are fake apps in the app store that pretend to be another app.
+
+- Now wait until AirGap Vault has finished downloading, then proceed
+
+- Disable WiFi
+
+- Disable Cellular (disable DATA in settings) - A cellular network basically connects you to the internet, which defeats the purpose of setting up your old mobile device as cold storage. Your device becomes safer and less vulnerable to internet-based attacks if you turn off your cellular network connection.
+
+- Disable Bluetooth and NFC - Bluetooth and NFC broadcast are wireless communication methods that may transmit sensitive information, raising privacy and security concerns. Switching both off brings your device closer to being air-gapped.
+
+- Enable Airplane mode - Airplane mode on most devices disconnects transmission signals such as cellular voice and data, Wi-Fi, Bluetooth, GPS, and location-based services. Putting the device in flight mode disables the buttons for the above-listed services. Therefore, even if you mistakenly click on any of them, it doesn't switch them on.
+
+- On your online device where you created the mobile hotspot, disconnect all devices and change the password of your mobile hotspot.
+
+Your AirGap Vault device should now be fully offline and not have any way to connect to the internet.
+
+- Make sure speakers are off - Data transmission over sound is possible, albeit with limited capacity. We recommend that you turn it off to achieve a truly air-gapped device.
+
+## Removing AirGap Vault
+
+To completely remove AirGap Vault from your device, we recommend the following steps:
+
+1. Remove all secrets from AirGap Vault
+2. In the AirGap Vault settings, enter the "Danger Zone" and select "Wipe"
+3. Remove AirGap Vault from your device
+4. Go to the settings and select "Erase All Content and Settings". This step might require you to connect to the internet.
+
+## Updating AirGap Vault
+
+On iOS, there is no way to update AirGap Vault while your device is offline. That's why we recommend to first remove AirGap Vault from your device, then completely wipe your device and start from scratch. Please follow the "Removing AirGap Vault" and "Advanced Setup" steps above.

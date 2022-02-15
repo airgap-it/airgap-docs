@@ -1,0 +1,59 @@
+---
+title: How To Set Up Secure A Cold Wallet With AirGap Vault (Android)
+slug: /airgap-vault/setup/secure-cold-wallet-airgap-android
+sidebar_label: Android
+---
+
+In this guide we will describe the steps of how a secure offline device can be set up.
+
+## Simple Setup
+
+1. Get a dedicated device, which will from now on ONLY be used for AirGap Vault, no other applications
+2. Update the device to the latest firmware and install all available updates
+3. Do a factory reset
+4. Set up the device and use a strong password, optionally protect the device with biometrics
+5. Install AirGap Vault
+6. Set device into Airplane mode and never turn it back on
+
+You now have a secure device set up and you can proceed to set up AirGap Vault.
+
+## Advanced Setup
+
+- Get a dedicated device, which will from now on ONLY be used for AirGap Vault, no other applications
+
+- Update the device to the latest firmware and install all available updates
+
+- Do a factory reset
+
+Your device is now in a factory reset state and we can proceed to set it up again and install AirGap Vault.
+
+- Set a strong password and optionally protect your device with biometrics. Make sure your disk is encrypted.
+
+- Disable WiFi
+
+- Disable Bluetooth
+
+- Enable Airplane mode
+
+Your AirGap Vault device should now be fully offline and not have any way to connect to the internet.
+
+- Make sure speakers are off - Data transmission over sound is possible, albeit with limited capacity. We recommend that you turn it off to achieve a truly air-gapped device.
+
+- On an online device, download a copy of the AirGap Vault application from GitHub, or build it yourself.
+
+- Copy the downloaded file from your online computer to the offline device via SD Card or USB Stick.
+
+## Removing AirGap Vault
+
+To completely remove AirGap Vault from your device, we recommend the following steps:
+
+1. Remove all secrets from AirGap Vault
+2. In the AirGap Vault settings, enter the "Danger Zone" and select "Wipe"
+3. Remove AirGap Vault from your device
+4. Do a factory reset
+
+## Updating AirGap Vault
+
+- On an online device, download a copy of the AirGap Vault application from GitHub, or build it yourself.
+
+- Copy the downloaded file from your online computer to the offline device via SD Card or USB Stick and replace the old installation.

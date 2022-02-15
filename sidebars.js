@@ -14,7 +14,35 @@ module.exports = {
       label: "AirGap Vault",
       items: [
         "airgap-vault/introduction",
-        "airgap-vault/features/comparison",
+        {
+          type: "category",
+          label: "Security",
+          items: [
+            "airgap-vault/security/introduction",
+            "airgap-vault/security/considerations",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Setup Cold Wallet",
+          items: [
+            "airgap-vault/setup/introduction",
+            "airgap-vault/setup/ios",
+            "airgap-vault/setup/android",
+            "airgap-vault/setup/desktop",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Devices",
+          items: [
+            "airgap-vault/supported-devices",
+            "airgap-vault/recommended-devices",
+          ],
+          collapsed: true,
+        },
         {
           type: "category",
           label: "Features",
@@ -27,8 +55,7 @@ module.exports = {
           ],
           collapsed: true,
         },
-        "airgap-vault/supported-devices",
-        "airgap-vault/recommended-devices",
+        "airgap-vault/features/comparison",
       ],
       collapsed: true,
     },
