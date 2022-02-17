@@ -12,7 +12,7 @@ This document assumes that you are running AirGap Vault on a secure offline devi
 
 ## Hardware
 
-AirGap can be installed on a variety of devices. Due to the fact that AirGap can be operated in an air-gapped way, even older devices are well suited for the purpose. However, it is important to note that older hardware is generally less secure than newer hardware. This is especially relevant if someone gets physical access to your device (see below). Depending on your thread model, investing in newer hardware might be advisable.
+AirGap can be installed on a variety of devices. Due to the fact that AirGap can be operated in an air-gapped way, even older devices are well suited for the purpose. However, it is important to note that older hardware is generally less secure than newer hardware. This is especially relevant if someone gets physical access to your device (see below). Depending on your threat model, investing in newer hardware might be advisable.
 
 When setting up a new phone as your air-gapped wallet, be sure to follow our [Best Practices](/airgap-vault/setup/introduction).
 
@@ -30,15 +30,15 @@ Because AirGap Vault runs on an offline device and is completely air-gapped, rem
 
 The only way for an attacker to get data onto an air-gapped device is by adding adding it to a QR code, which is then scanned by the user. There are 2 main considerations here:
 
-1. Our QR scanner was integrated in a way that makes sure the scanned QR codes are not processed, unless they are in an expected format. Even then, the way the data is used is strictly defined, so it is unlikely an attacker will be able to inject a malicious payload the offline device.
-2. Communication via QR codes is strictly one way. This means it is not possible for an attacker to have a back-and-forth interaction with the offline device, making it harder to exploit it.
-3. Even with animated QR codes, it is difficult to transfer a big payload to the offline device because users might get susupicious if they have to scan hundreds of QR codes for a simple transaction.
+1. Our QR scanner was integrated in a way that makes sure the scanned QR codes are not processed, unless they are in an expected format. Even then, the way the data is used is strictly defined, so it is unlikely an attacker will be able to inject a malicious payload on to the offline device.
+2. Communication via QR codes is strictly one way. This means it is not possible for an attacker to have a back-and-forth interaction with the offline device, making it harder to exploit.
+3. It is more difficult to transfer big payloads to an offline device because many QRs need to be scanned and the user can be warned about this.
 
 ## Local attacks
 
-If an attacker has phsyical access to your device for an extended period of time, you should consider your mnemonic as compromised. It is rather unlikely that an attacker will actually be able to get access to your secret because it's stored in an encrypted format and protected by the secure chip of the device, but it's better to be safe than sorry. If you lose your device or it gets stolen, you should follow our "[What to do if my secret is compromised?](/guides/secret-compromised)" guide.
+If an attacker has physical access to your device for an extended period of time, you should consider your mnemonic as compromised. It is rather unlikely that an attacker will actually be able to get access to your secret because it's stored in an encrypted format and protected by the secure chip of the device, but it's better to be safe than sorry. If you lose your device or it gets stolen, you should follow our "[What to do if my secret is compromised?](/guides/secret-compromised)" guide.
 
 A few notes:
 
 - No matter which Hardware Wallet you use, you should always consider your secret as compromised. Even if the hardware is considered secure, you never know what kind of exploits are released in the future. And if the attackers hold on to your device, they just have to wait until an exploit becomes available.
-- Because AirGap Vault is installed on a regular mobile phone, an attacker might not identify it as a device that holds something valuable like a cryptocurrency private key. This is why we advise to not mark your device where you install AirGap Vault as a "hardware wallet". You should also not put any "AirGap" stickers on it. If you do that, there is a big chance an attacker might ignore your device and not take it because thieves are usually careful when stealing phones because they can be tracked.
+- Because AirGap Vault is installed on a regular mobile phone, an attacker might not identify it as a device that holds something valuable like a cryptocurrency private key. We therefore encourage you to not mark the device with labels or stickers that might indicate to an attacker that is something other than an old phone.
