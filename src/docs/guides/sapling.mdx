@@ -19,13 +19,19 @@ Sapling or shielded transactions allows you to perform privacy-preserving transa
 
 ## How to use Sapling in AirGap
 
-<IPhoneWrapper src={"/img/sapling/1-add-tezos.png"} />
+:::note Screenshots
+The screenshots in this tutorial were taken on a testnet called "Edonet", but the flow is exactly the same on mainnet.
+:::
 
-Open the AirGap Vault to create a tezos account. Click "add account", select Tezos XTZ and click "create".
+First, make sure you have AirGap Vault set up with a secret.
+
+<IPhoneWrapper src={"/img/sapling/1-add-tezos.png"} />
 
 :::note Optional
 This particular step and the next three may not be required if you already have a tezos XTZ account setup.
 :::
+
+Create a Tezos account. Click "Add Account", select Tezos XTZ and click "Create".
 
 <IPhoneWrapper src={"/img/sapling/2-view-tezos-account.png"} />
 
@@ -40,18 +46,6 @@ Click "Sync Account" to synchronize your vault with your wallet.
 Click "Import" to import the Tezos XTZ account from the vault to the wallet.
 
 <IPhoneWrapper src={"/img/sapling/5-view-detail.png"} />
-
-In the AirGap wallet select the Tezos XTZ account you just created and click the three-dot on the top right corner.
-
-<IPhoneWrapper src={"/img/sapling/6-change-network.png"} />
-
-You will get a dropdown, Click "Change Network" so as specify the edonet network. The reason for the change of network is because sapling is currently only supported on the edonet network.
-
-<IPhoneWrapper src={"/img/sapling/7-change-network-edonet.png"} />
-
-You then get a pop-up. Change your network to edonet by selecting the edonet and clicking "ok".
-
-<IPhoneWrapper src={"/img/sapling/8-view-edonet-details.png"} />
 
 Fund your account with the necessary amount.
 
@@ -120,7 +114,7 @@ Sign the transaction
 <IPhoneWrapper src={"/img/sapling/24-shielded-wrapping-tx.png"} />
 
 :::note Wrapped
-Every shielded transaction has to be "wrapped" by a regular tezos transaction to pay the network fees. This is why there are some extra steps and you have to sign 2 transactions. First, you need to sign the "shielded transaction", then you have to choose which account to "wrap" it to pay the fee in tez.
+Every shielded transaction has to be "wrapped" by a regular tezos transaction to pay the network fees. This is why there are some extra steps and you have to sign 2 transactions. First, you need to sign the "shielded transaction", then you have to choose which account to "wrap" it to pay the fee in tez. The account that wraps the shielded transaction is public, but the transaction details of the shielded transaction are private.
 :::
 
 Selected your unshielded account to wrap the transaction.
