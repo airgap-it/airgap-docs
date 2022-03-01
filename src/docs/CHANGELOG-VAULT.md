@@ -2,6 +2,12 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.15.0
+
+#### Features
+
+- **Tezos**: Add new sapling contracts.
+
 ## 3.14.0
 
 #### Features

@@ -2,6 +2,14 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.16.0
+
+#### Features
+
+- **Tezos**: The objkt.com API has been switched to v2.
+- **Tezos**: When connecting to a dApp through beacon, the public key is now shared in the `edpk...` format instead of hex.
+- **Tezos**: Add new sapling contracts.
+
 ## 3.15.0
 
 #### Features
