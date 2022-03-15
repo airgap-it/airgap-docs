@@ -7,9 +7,9 @@ import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
 
 ## What is Social Recovery?
 
-Social recovery works by relying on a group of trusted people to assist you in recovering a lost secret. It solves the problem of having a single point of failure when you back up your seed words. The basics of how social recovery works are very simple: You will give each of your trusted contacts one piece of your original seed, but not all of it. That way, none of your contacts can access your funds, even if they tried to. Only if some people get together, the original seed can be recovered.
+Social recovery works by relying on a group of trusted people to assist you in recovering a lost secret. It solves the problem of having a single point of failure when you back up your secret recovery phrase. The basics of how social recovery works are very simple: You will give each of your trusted contacts one piece of your original secret recovery phrase, but not all of it. That way, none of your contacts can access your funds, even if they tried to. Only if some people get together, the original secret recovery phrase can be recovered.
 
-When setting up social recovery, you can specify how many shares you want to generate, and how many of those are needed to recover the original seed. As an example, you could create 3 shares and require 2 of them to recover your secret. You will then be given 3 new sets of words and you can give one set to each of your 3 trusted parties. If you ever need to reconstruct your original seed, any combination of 2 shares will allow you to do that. But each of your contacts by themselves will have no information about your original secret, making it a very secure system.
+When setting up social recovery, you can specify how many shares you want to generate, and how many of those are needed to recover the original secret recovery phrase. As an example, you could create 3 shares and require 2 of them to recover your secret. You will then be given 3 new sets of words and you can give one set to each of your 3 trusted parties. If you ever need to reconstruct your original secret recovery phrase, any combination of 2 shares will allow you to do that. But each of your contacts by themselves will have no information about your original secret, making it a very secure system.
 
 Common social recovery setups are a 2-of-3 and a 3-of-5 backup. Which one you choose depends on your preferences. A 2-of-3 backup is easy to set up, but it does leave you vulnerable if 2 contacts collude against you. A 3-of-5 backup is more resilient against this because it requires 3 contacts to collude against you.
 
@@ -44,7 +44,7 @@ The process of generating your social recovery shares is using an algorithm call
 
 If you want to set up social recovery functionality for your secrets, follow these steps:
 
-- Go to the Settings page and choose the mnemonic for which you wish to create social recovery.
+- Go to the Settings page and choose the secret recovery phrase for which you wish to create social recovery.
 
 <IPhoneWrapper src={"/img/social-recovery/social-recovery-01.png"} />
 
