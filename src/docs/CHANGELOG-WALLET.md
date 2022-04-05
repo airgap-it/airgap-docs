@@ -8,7 +8,7 @@ title: AirGap Wallet Changelog
 
 - **Astar**: Added Astar integration
 - **Tezos**: Updates for Tezos Ithaca upgrade
-- **General**Bug fixes and improvements
+- **General**: Bug fixes and improvements
 
 ## 3.16.0
 

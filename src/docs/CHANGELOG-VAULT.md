@@ -8,7 +8,7 @@ title: AirGap Vault Changelog
 
 - **Astar**: Added Astar integration
 - **Tezos**: Updates for Tezos Ithaca upgrade
-- **General**Bug fixes and improvements
+- **General**: Bug fixes and improvements
 
 ## 3.15.0
 
