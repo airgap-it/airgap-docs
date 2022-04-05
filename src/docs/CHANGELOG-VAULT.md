@@ -2,6 +2,14 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.16.0
+
+#### Features
+
+- **Astar**: Added Astar integration
+- **Tezos**: Updates for Tezos Ithaca upgrade
+- **General**Bug fixes and improvements
+
 ## 3.15.0
 
 #### Features
