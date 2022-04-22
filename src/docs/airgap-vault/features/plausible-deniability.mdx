@@ -6,27 +6,27 @@ sidebar_label: Plausible Deniability
 
 import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
 
-## Advance seed phrase security
+## Advance secret recovery phrase security
 
 :::caution Recommendation
 This option is recommended for experienced crypto users.
 :::
 
 Plausible deniability is a security feature that enables you to create a "hidden" account without anybody knowing it exists.
-It works by adding a passphrase when creating an account. This can be useful to protect you if you are threatened and compelled to provide your mnemonic, or simply as an additional security measure in case you expose your mnemonic by accident.
+It works by adding a passphrase when creating an account. This can be useful to protect you if you are threatened and compelled to provide your secret recovery phrase, or simply as an additional security measure in case you expose your secret recovery phrase by accident.
 
 ### How the passphrase works
 
 When setting up AirGap, a 24-word recovery phrase was shown to you, which has to be backed up in a secure location. These 24 words provide access to all your accounts.
 
 - The passphrase is essentially a set of characters, similar to a password, added to your 24-word recovery phrase that grants access to a new account. This passphrase can be anything from a single word space to a long sentence.
-- The passphrase acts as a layer of security in case of an attack. For instance, if your 24-word seed phrase were to be compromised. The attacker has to access both the seed phrase and the passphrase in order to steal your funds.
+- The passphrase acts as a layer of security in case of an attack. For instance, if your 24-word secret recovery phrase were to be compromised. The attacker has to access both the secret recovery phrase and the passphrase in order to steal your funds.
 - Each unique passphrase opens a distinct set of accounts. You may use as many passphrases on top of the same 24 words.
 - It works for every coin in AirGap.
 - By default, the passphrase is empty.
 
 :::note Recommendation
-If you want to set up plausible deniability for your mnemonic, you should add both a normal account (without a BIP-39 passphrase, also called “decoy” account), and another account with a BIP-39 passphrase.
+If you want to set up plausible deniability for your secret recovery phrase, you should add both a normal account (without a BIP-39 passphrase, also called “decoy” account), and another account with a BIP-39 passphrase.
 You then put a small number of coins on the “decoy” account and put the majority of your funds on your hidden account.
 :::
 
@@ -55,9 +55,9 @@ If you want to generate an account with a passphrase, follow these steps.
 
 - Your passphrase is case-sensitive and can include special characters. Lowercase and uppercase characters are distinguished.
 - Your passphrase is not stored anywhere. You take responsibility for keeping it safe, whether that means creating a physical backup or simply remembering it. If you lose your BIP-39 passphrase, you will lose access to your funds.
-- The mnemonic and BIP-39 passphrases are both needed to recover your account. Make sure you properly back up both of them. Don't back them up in the same location though, because an attacker will have immediate access to your hidden wallet if he has both.
+- The secret recovery phrase and BIP-39 passphrases are both needed to recover your account. Make sure you properly back up both of them. Don't back them up in the same location though, because an attacker will have immediate access to your hidden wallet if he has both.
 - Always add funds to your “hidden” or “decoy” account so attackers will think they have access to your wallet and stop looking.
-- You should closely monitor any balance changes on your standard or “decoy” account. If the balance ever decreases, you will immediately know that someone has access to your mnemonic and you should move your funds to a new mnemonic immediately.
-- If an attacker has access to your mnemonic, he can try to brute force your passphrase. Depending on how strong your passphrase is, this takes between a couple of seconds and thousands of years. Choose a passphrase that is at least 10 characters long. The longer the better.
+- You should closely monitor any balance changes on your standard or “decoy” account. If the balance ever decreases, you will immediately know that someone has access to your secret recovery phrase and you should move your funds to a new secret recovery phrase immediately.
+- If an attacker has access to your secret recovery phrase, he can try to brute force your passphrase. Depending on how strong your passphrase is, this takes between a couple of seconds and thousands of years. Choose a passphrase that is at least 10 characters long. The longer the better.
 
 [Securing your crypto with plausible deniability and BIP-39 passphrases](https://medium.com/airgap-it/securing-your-crypto-with-plausible-deniability-and-bip-39-passphrases-3bb80be72e75)
