@@ -2,6 +2,19 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.18.1
+
+#### Fixes
+
+- **WalletConnect**: Improved the stability of WalletConnect
+
+## 3.18.0
+
+#### Features
+
+- **Astar**: Added Astar integration
+- **Tezos**: Listed uBTC, DOGAMI and kUSD Tezos tokens
+
 ## 3.17.0
 
 #### Features
