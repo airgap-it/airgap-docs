@@ -2,6 +2,22 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.17.1
+
+#### Features
+
+- **General**: Update app to Angular 13
+
+#### Bugfixes
+
+- **Reproducibility**: We are continuing to investigate the issues around reproducing our app and included an imporvement in this release that should hopefully address the sporadic reproducibility issues. You can follow the progress here: https://github.com/airgap-it/airgap-vault/issues/127
+
+## 3.17.0
+
+#### Features
+
+- **Shiden**: Added Shiden integration
+
 ## 3.16.0
 
 #### Features
