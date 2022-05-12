@@ -2,6 +2,12 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.17.2
+
+#### Bugfixes
+
+- **General**: A regression was introduced in the last update which prevented certain protocols from working properly. This releases fixes the issue.
+
 ## 3.17.1
 
 #### Features
