@@ -119,6 +119,24 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Moonbeam (GLMR)",
+          items: [
+            "currencies/moonbeam/introduction",
+            "currencies/moonbeam/delegation",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Moonriver (MOVR)",
+          items: [
+            "currencies/moonriver/introduction",
+            "currencies/moonriver/delegation",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
           label: "Cosmos (ATOM)",
           items: [
             "currencies/cosmos/introduction",
