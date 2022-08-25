@@ -11,7 +11,7 @@ title: AirGap Wallet Changelog
 
 #### Fixes
 
-- **Transaction Prepare**: When pasting an address, the fee is now evaluated and the "Create Transaction" button enabled automatically.
+- **Transaction Prepare**: When pasting an address, the fee is immediately calculated and the "Create Transaction" button enabled
 - **Translations**: Fix issue where chinese language was not selected
 
 ## 3.18.3
