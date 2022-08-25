@@ -2,6 +2,31 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.18.0
+
+#### Features
+
+- **Pairing**: Redesign the "account detail" page. Instead of showing the address as a QR code, we now display companion apps that you can use with the selected account. For example, if you select an Ethereum account, it will show the *MetaMask* option, alongside *AirGap Wallet*. For Bitcoin (SegWit), it will show *BlueWallet* and *Sparrow Wallet* as an option
+- **Secret Import**: Improved the behavior when adding or removing words
+
+#### Fixes
+
+- **Ethereum**: Fixed an issue where a prompt to enter a BIP39 passphrase was shown by accident when doing ERC-20 transfers 
+- **Wordlist**: Added the missing back button
+- **App**: Fixed an issue where subsequent deeplinks could result in the app becoming unresponsive
+
+## 3.17.4
+
+#### Bugfixes
+
+- **Tezos**: Add USDT token
+
+## 3.17.3
+
+#### Features
+
+- **Tezos**: Add BTCtz and ETHtz tokens
+
 ## 3.17.2
 
 #### Bugfixes

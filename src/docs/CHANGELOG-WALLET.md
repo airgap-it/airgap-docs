@@ -2,6 +2,28 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.18.4
+
+#### Features
+
+- **App**: Add Dark Mode (Thanks to a PR from [r-muhairi](https://github.com/airgap-it/airgap-wallet/pull/153))
+- **WalletConnect**: Add account selection in case the user has multiple Ethereum addresses
+
+#### Fixes
+
+- **Transaction Prepare**: When pasting an address, the fee is now evaluated and the "Create Transaction" button enabled automatically.
+- **Translations**: Fix issue where chinese language was not selected
+
+## 3.18.3
+
+#### Features
+
+- **Tezos**: Add USDT token
+## 3.18.2
+
+#### Features
+
+- **Tezos**: Add Jakartanet
 ## 3.18.1
 
 #### Fixes
