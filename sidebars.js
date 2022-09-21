@@ -215,6 +215,7 @@ module.exports = {
         "guides/vault-offline-update",
         "guides/blue-wallet",
         "guides/sparrow-wallet",
+        "guides/interaction",
       ],
     },
     "FAQ",
