@@ -1,0 +1,90 @@
+---
+title: Connect AirGap Vault to MetaMask
+slug: /guides/metamask-mobile
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+In this guide, we will explore how you can set up MetaMask mobile as a watch-only wallet with AirGap Vault.
+
+MetaMask mobile is a non-custodial wallet that brings the experience of MetaMask extension to your mobile device for accessing all EVM-compatible blockchains.
+
+If you already have MetaMask mobile installed and set up, you can skip the next step and proceed to pair MetaMask with AirGap Vault.
+
+:::note Other EVM network
+In this guide, we used the ETH Network as an example and BNB network for creating a transaction, but the AirGap Vault is blockchain agnostic. It can sign transactions on any EVM chain by adding the RPC of that chain to MetaMask. Nothing needs to be done on the Vault, besides the steps listed below.
+We've tested it for Avalanche, Polygon, Celo, FUSE network, Moonriver, Moonbeam, and Astar.
+:::
+
+## 1. Installation
+
+On your mobile device, visit the respective store and download MetaMask.
+
+[Android](https://play.google.com/store/apps/details?id=io.metamask)
+
+[iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202)
+
+Launch MetaMask and click the Get started button.
+
+<IPhoneWrapper src={"/img/mmmobile/mm01.jpg"} />
+
+Click the create wallet button.
+
+<IPhoneWrapper src={"/img/mmmobile/mm02.jpg"} />
+
+Read the terms of service and if you agree to it, click the "I agree" button.
+
+Setup a password.
+
+MetaMask will display a 12-word recovery phrase, which you do not need back up since you are connecting to AirGap Vault. 
+
+MetaMask will ask you to verify the recovery phrase.
+
+The wallet landing page will look like this.
+
+<IPhoneWrapper src={"/img/mmmobile/mm03a.jpg"} />
+
+## 2. Pair AirGap Vault with MetaMask
+
+Click the navigation button at the top left corner
+
+<IPhoneWrapper src={"/img/mmmobile/mm03.png"} />
+
+Click the drop-down at the center left corner.
+
+<IPhoneWrapper src={"/img/mmmobile/mm04a.jpg"} />
+
+Click connect hardware wallet.
+
+<IPhoneWrapper src={"/img/mmmobile/mm04.png"} />
+
+Click the continue button
+
+<IPhoneWrapper src={"/img/mmmobile/mm05.png"} />
+
+Open the Vault and add an ETH account to your Vault.
+
+Click on the arrow sign then the plus + sign at the bottom right corner.
+
+<IPhoneWrapper src={"/img/metamask/vault-create-account.jpg"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-add-account.jpg"} />
+
+Select Ethereum (ETH) and click the create button. Select the newly created ETH account.
+
+<IPhoneWrapper src={"/img/metamask/vault-add-ethereum.jpg"} />
+
+<IPhoneWrapper src={"/img/metamask/vault-account-overview.jpg"} />
+
+Click the MetaMask button
+
+<IPhoneWrapper src={"/img/mmmobile/mm06.jpg"} />
+
+Scan the QR-code from MetaMask mobile.
+
+<IPhoneWrapper src={"/img/mmmobile/mm07.png"} />
+
+Select your desired wallet. In most cases, it will be 0, but we selected 4 for this guide.
+
+<IPhoneWrapper src={"/img/mmmobile/mm08.png"} />
+
