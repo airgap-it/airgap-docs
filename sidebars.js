@@ -207,7 +207,7 @@ module.exports = {
       label: "Guides",
       items: [
         "guides/metamask",
-        "/guides/metamask-mobile",
+        "guides/metamask-mobile",
         "guides/BIP-85",
         "guides/sapling",
         "guides/social-recovery",
