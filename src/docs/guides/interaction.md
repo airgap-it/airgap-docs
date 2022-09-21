@@ -1,5 +1,5 @@
 ---
-title: interaction
+title: Interaction
 slug: /guides/interaction
 ---
 
