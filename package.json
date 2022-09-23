@@ -27,7 +27,7 @@
     "@docusaurus/preset-classic": "2.0.0-alpha.72",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
-    "mermaid": "^8.9.2",
+    "mermaid": "^8.14.0",
     "monaco-editor": "^0.23.0",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
