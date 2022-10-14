@@ -2,6 +2,25 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.19.0
+
+#### Features
+
+- **AirGap Wallet**: AirGap has a new logo!
+- **iPad**: The app can now be used in landscape mode on iPad
+- **Tezos**: Sapling transactions are now enabled on ghostnet
+
+#### Fixes
+
+- **Signing Page**: Text was not readable when dark mode was enabled
+- **Capacitor**: Updated dependencies to latest version to prevent app crashes
+
+## 3.18.5
+
+#### Fixes
+
+- **Tezos**: Add compatibility with Kathmandu
+
 ## 3.18.4
 
 #### Features

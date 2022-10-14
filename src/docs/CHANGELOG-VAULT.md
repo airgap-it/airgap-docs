@@ -2,6 +2,41 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.19.0
+
+#### Features
+
+- **AirGap Vault**: AirGap has a new logo!
+- **AirGap Vault**: New splash screen that supports dark mode
+- **Secrets Tab**: The "Accounts" tab in the bottom navigation has been removed and was replaced by the "Secrets" tab. The secrets are now no longer managed in the settings, but rather in the secrets tab. This should make the relationship between secrets and accounts clearer
+- **Styling**: The secondary color was changed from pink to a light purple
+- **Onboarding**: Added a new onboarding process to explain how AirGap Vault works with AirGap Wallet and other watch-only wallets like MetaMask, Sparrow or BlueWallet
+- **Installation Type**: During the setup, the user now needs to specify whether the device is an online or an offline device
+- **Advanced Mode**: There is now an advanced mode that can be turned on in the settings. The default is the "Simple" mode, which hides some of the more advanced features
+- **Add Account**: It is now possible to add multiple accounts at once
+- **Account List**: It is now possible to remove multiple accounts at once
+- **Recovery Phrases**: The recovery phrase is now blurred by default. The user has to manually disable the blur to improve security
+- **About Page**: The about page was redesigned and some useful resources were added
+- **Secret Setup**: The Secret Setup page was redesigned
+- **Interaction Settings**: The wording was changed to better explain the purpose of the interaction settings. Instead of "Same Device", we now call the action "App Switching". Instead of "Offline Device", we now call it "QR Code Scanning"
+- **Ethereum**: Add Rabby wallet as a pairing option
+- **Ethereum**: For legacy, non-HD accounts, the MetaMask option was removed and replaced with a migration notice
+- **Duplicate Secrets**: It is no longer possible to add duplicate secrets
+- **Recovery Phrase Backup Rules**: The page displaying the best practices for the recovery phrase backup now require the user to accept each individual point in order to continue to the next page
+- **Text**: Improve various texts in the app to make them clearer
+- **iPad**: The app can now be used in landscape mode on iPad
+
+- **Lifehash Identicons (Advanced Only)**: If the advanced mode is enabled, the lifehash of the recovery phrase will displayed in the secret card and when adding a new secret
+- **Recovery Phrase Fingerprint (Advanced Only)**: If the advanced mode is enabled, the fingerprint of the recovery phrase will be displayed in the secret card and when adding a new secret
+- **Sync Specific Secrets (Advanced Only)**: If the advanced mode is enabled, it is now possible to sync all accounts of multiple secrets with one animated QR code
+- **Account info (Advanced Only)**: If the advanced mode is enabled, the account detail page shows additional information like if it's a HD wallet or if a BIP39 passphrase was used
+
+#### Fixes
+
+- **All Pages**: Floating buttons should now no longer cover the bottom of the page
+- **Interaction**: Sharing multiple accounts at once would always default to QR codes, even if the same device option was selected
+- **Capacitor**: Updated dependencies to latest version to prevent app crashes
+
 ## 3.18.0
 
 #### Features
