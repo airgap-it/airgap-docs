@@ -12,6 +12,7 @@ module.exports = {
   organizationName: "airgap-it",
   projectName: "airgap-docs",
   themeConfig: {
+    image: "img/preview.png",
     navbar: {
       logo: {
         alt: "AirGap Logo",
