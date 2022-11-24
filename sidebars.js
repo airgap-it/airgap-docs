@@ -218,6 +218,7 @@ module.exports = {
         "guides/blue-wallet",
         "guides/sparrow-wallet",
         "guides/interaction",
+        "guides/temple-to-airgap"
       ],
     },
     "FAQ",
