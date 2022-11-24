@@ -1,0 +1,53 @@
+---
+title: How to import your wallet from Temple to AirGap
+slug: /guides/temple-to-airgap
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+:::caution Hot 🔥 Wallet
+Temple is a hot wallet, and we do not recommend that you import a recovery phrase from a hot wallet into AirGap. A recovery phrase from a hot wallet has been exposed to a network, which defeats the purpose of having a cold wallet like AirGsp.
+For best practice, [set up a new wallet in AirGap](https://support.airgap.it/guides/step-by-step-guide) and send your funds to the address of that wallet.
+:::
+
+## Get your recovery phrase from Temple wallet
+
+Launch Temple wallet and click on the account avatar.
+
+<IPhoneWrapper src={"/img/temple/temple1.png"} />
+
+Click Settings
+
+<IPhoneWrapper src={"/img/temple/temple2.png"} />
+
+Click “Reveal Seed Phrase”
+
+<IPhoneWrapper src={"/img/temple/temple3.png"} />
+
+Input your password and click the reveal button
+
+<IPhoneWrapper src={"/img/temple/temple4.png"} />
+
+Write down your recovery phrase.
+
+<IPhoneWrapper src={"/img/temple/temple5.png"} />
+
+Launch AirGap Vault and Click import recovery phrase
+
+<IPhoneWrapper src={"/img/temple/temple6.png"} />
+
+Input your recovery phrase and click the confirm button
+
+<IPhoneWrapper src={"/img/temple/temple7.png"} />
+
+Label your wallet and click the confirm button.
+
+:::note Label
+A label is a name to Identify your wallet just in case you have multiple of them in AirGap
+:::
+
+<IPhoneWrapper src={"/img/temple/temple8.png"} />
+
+You’ve successfully imported your wallet from Temple to AirGap
+
+<IPhoneWrapper src={"/img/temple/temple9.png"} />
