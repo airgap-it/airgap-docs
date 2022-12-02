@@ -219,6 +219,7 @@ module.exports = {
         "guides/sparrow-wallet",
         "guides/interaction",
         "guides/temple",
+        "guides/ledger",
       ],
     },
     "FAQ",
