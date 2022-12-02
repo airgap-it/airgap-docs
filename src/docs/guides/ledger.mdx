@@ -1,0 +1,36 @@
+---
+title: How to import your wallet from Ledger to AirGap
+slug: /guides/ledger-to-airgap
+---
+
+import BrowserWindow from "@site/src/components/BrowserWindow/BrowserWindow";
+import DynamicImage from "@site/src/components/DynamicImage";
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+Ledger does not provide a way to recover your seed phrase if you do not back it up, but they do provide a way to check if the backed-up seed phrase is the correct one. You can verify your seed phrase by following the guidelines listed here: [I lost my 24-word recovery phrase – Ledger Support](https://support.ledger.com/hc/en-us/articles/4404382075537-I-lost-my-24-word-recovery-phrase?support=true)
+If you do not have access to your seed phrase and would like to move your asset from Ledger to AirGap, [Create a new wallet in AirGap by following this guide](https://support.airgap.it/guides/step-by-step-guide), and then [transfer your funds from Ledger](https://support.ledger.com/hc/en-us/articles/4404382228753-Send-crypto-assets-?docs=true) to the newly created AirGap address.
+If you have your seed phrase you can follow the guide below. 
+
+To move your funds from Ledger, import the backed-up seed phrase into AirGap by following the guide below.
+
+## Import your recovery phrase from AirGap
+
+Launch AirGap Vault and Click import recovery phrase
+
+<IPhoneWrapper src={"/img/temple/temple6.png"} />
+
+Input your recovery phrase and click the confirm button
+
+<IPhoneWrapper src={"/img/temple/temple7.png"} />
+
+Label your wallet and click the confirm button.
+
+:::note Label
+A label is a name to Identify your wallet just in case you have multiple of them in AirGap
+:::
+
+<IPhoneWrapper src={"/img/temple/temple8.png"} />
+
+You’ve successfully imported your wallet from Temple to AirGap
+
+<IPhoneWrapper src={"/img/temple/temple9.png"} />
