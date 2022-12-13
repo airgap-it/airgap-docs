@@ -221,7 +221,7 @@ module.exports = {
         "guides/temple",
         "guides/ledger",
         "guides/import-recovery-phrase",
-        "guides/recovery-plate",
+        "guides/plate",
       ],
     },
     "FAQ",
