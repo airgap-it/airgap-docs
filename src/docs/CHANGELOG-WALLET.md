@@ -38,11 +38,13 @@ title: AirGap Wallet Changelog
 #### Features
 
 - **Tezos**: Add USDT token
+
 ## 3.18.2
 
 #### Features
 
 - **Tezos**: Add Jakartanet
+
 ## 3.18.1
 
 #### Fixes
