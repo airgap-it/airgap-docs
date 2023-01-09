@@ -18,10 +18,145 @@ This page shows a comparison between AirGap Vault and popular hardware wallets. 
 
 ❔ - Unsure
 
-<!-- TABLE -->
+## Security
+
+|                          | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ------------------------ | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Completely air-gapped    | ✅                                 | ✅                             | ❌ [^1]                                      | ✅                                | ❌                                | ❌                           |
+| Secure chip              | ✅ [^2]                            | ✅                             | ✅                                           | ✅                                | ✅                                | ❌                           |
+| Runs on any device       | ✅                                 | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+| Entropy with dice rolls  | ✅                                 | ✅                             | ✅                                           | ✅                                | ❌                                | ❌                           |
+| Entropy with coin flips  | ✅                                 | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+| Social Recovery / Shamir | ✅ [^3]                            | ✅ [^4]                        | ❌                                           | ❌                                | ❌                                | ✅ [^5]                      |
+| SSKR                     | ⚙️                                 | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+| Seed XOR                 | ⚙️                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| Duress Pin               | ❌                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| Brick Me Pin             | ❌                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| Countdown Login          | ❌                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| Countdown To Brick       | ❌                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| Anti-Phishing Words      | ❌                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| External Security Audit  | ✅ [^6]                            | ✅ [^7]                        | ?                                            | ?                                 | ?                                 | ?                            |
+| Anti-Klepto Protection   | ❌                                 | ❌                             | ✅                                           | ❌                                | ❌                                | ❌                           |
+
+## Features
+
+|                    | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ------------------ | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Multiple Mnemonics | ✅                                 | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+| BIP39 Passphrase   | ✅                                 | ✅                             | ✅                                           | ✅                                | ✅                                | ✅ [^8]                      |
+| BIP85              | ✅                                 | ❌                             | ❌                                           | ✅                                | ❌                                | ❌                           |
+| BIP39 Wordlist     | ✅ [^9]                            | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+| Encrypted Backup   | ❌                                 | ❌                             | ✅                                           | ✅                                | ❌                                | ❌                           |
+
+## Privacy
+
+|                        | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ---------------------- | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| No KYC required to use | ✅                                 | ✅                             | ✅                                           | ✅                                | ✅                                | ✅                           |
+| Purchase Anonymously   | ✅ [^10]                           | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+
+## Bitcoin
+
+|                  | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ---------------- | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| BTC Only Version | ❌                                 | ✅ [^11]                       | ✅                                           | ✅                                | ❌                                | ❌                           |
+| BTC Segwit       | ✅                                 | ✅ [^12]                       | ✅                                           | ✅                                | ✅                                | ✅                           |
+| BTC Taproot      | ⚙️ [^13]                           | ⚙️                             | ⚙️                                           | ⚙️                                | ✅ [^14]                          | ✅ [^15]                     |
+| BTC Multisig     | ⚙️                                 | ✅ [^16]                       | ✅ [^17]                                     | ✅ [^18]                          | ✅                                | ✅                           |
+| PSBT             | ✅                                 | ✅                             | ?                                            | ✅                                | ?                                 | ?                            |
+| Sparrow Wallet   | ✅                                 | ✅                             | ✅                                           | ✅                                | ✅                                | ✅                           |
+| BlueWallet       | ✅                                 | ✅                             | ?                                            | ✅                                | ?                                 | ?                            |
+
+## Ethereum
+
+|                            | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| -------------------------- | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| MetaMask                   | ✅ [^19]                           | ✅ [^20]                       | ❌                                           | ❌                                | ✅                                | ✅                           |
+| Show Contract Call Details | 🧩                                 | ✅                             | ?                                            | ❌                                | ?                                 | ?                            |
+
+## Polkadot
+
+|                     | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ------------------- | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Polkadot.js support | ❌                                 | ✅                             | ❌                                           | ❌                                | ?                                 | ?                            |
+
+## Tezos
+
+|                                 | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ------------------------------- | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Show Contract Call Details      | ✅                                 | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+| Shielded / Sapling Transactions | ✅                                 | ❌                             | ❌                                           | ❌                                | ❌                                | ❌                           |
+
+## Altcoins
+
+|                    | [AirGap Vault](https://airgap.it/)            | [Keystone](https://keyst.one/)                | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ------------------ | --------------------------------------------- | --------------------------------------------- | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Number of Altcoins | ETH, DOT, KSM, ATOM, XTZ, MOVR, GLMR, AE, GRS | ETH, XRP, DOT, BCH, LTC, KSM, TRX, DASH [^21] | ETH, LTC, ADA [^22]                          | ❌                                | Many [^23]                        | Many [^24]                   |
+
+## Usability
+
+|                                | [AirGap Vault](https://airgap.it/) | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| ------------------------------ | ---------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Large Screen                   | ✅                                 | ✅                             | ❌                                           | 🧩                                | ❌                                | ❌                           |
+| Communication to companion app | QR                                 | QR, Micro SD                   | USB                                          | Micro SD, USB                     | USB, Bluethooth                   | USB                          |
+| Time To Set Up                 | ?                                  | ?                              | ?                                            | ?                                 | ?                                 | ?                            |
+| Time To Import                 | ?                                  | ?                              | ?                                            | ?                                 | ?                                 | ?                            |
+| Time To Sign                   | ?                                  | ?                              | ?                                            | ?                                 | ?                                 | ?                            |
+
+## Device
+
+|                | [AirGap Vault](https://airgap.it/)          | [Keystone](https://keyst.one/) | [BitBox02](https://shiftcrypto.ch/bitbox02/) | [ColdCard](https://coldcard.com/) | [Ledger](https://www.ledger.com/) | [Trezor](https://trezor.io/) |
+| -------------- | ------------------------------------------- | ------------------------------ | -------------------------------------------- | --------------------------------- | --------------------------------- | ---------------------------- |
+| Open Source    | ✅ [^25]                                    | ✅ [^26]                       | ✅ [^27]                                     | ✅ [^28]                          | ✅ [^29]                          | ✅ [^30]                     |
+| Reproducible   | ✅ [^31]                                    | ❌ [^32]                       | ✅ [^33]                                     | ❌ [^34]                          | ❌ [^35]                          | ✅ [^36]                     |
+| Made In        | 🇨🇭 Switzerland                              | 🇨🇳 China                       | 🇨🇭 Switzerland                               | 🇨🇦 Canada                         | 🇫🇷 France                         | 🇨🇿 Czech Republic            |
+| Release Date   | 2018                                        | 2018                           | 2016                                         | 2018                              | 2014                              | 2014                         |
+| Business Model | Funding through integrations<br />Donations | Device sales                   | Device sales                                 | Device sales                      | Device sales                      | Device sales                 |
+| Cost           | $0 [^37]                                    | $119 - $479 [^38]              | $119 [^39]                                   | $129 [^40]                        | $69 - $179 [^41]                  | $60 - $199 [^42]             |
 
 If any important features are missing, please let us know or create a Pull Request.
 
 ### Footnotes
 
-<!-- FOOTNOTES -->
+[^1] [https://shiftcrypto.ch/blog/does-airgap-make-bitcoin-hardware-wallets-more-secure/](https://shiftcrypto.ch/blog/does-airgap-make-bitcoin-hardware-wallets-more-secure/)  
+[^2] Depends on the device. Modern mobile phones all have secure elements.  
+[^3] Currently not using a standard, will be replaced by SSKR  
+[^4] [SLIP39](https://blog.keyst.one/why-keystone-implemented-shamir-backups-71e319f972a6)  
+[^5] SLIP39  
+[^6] [https://github.com/airgap-it/airgap-coin-lib/tree/master/docs/audits](https://github.com/airgap-it/airgap-coin-lib/tree/master/docs/audits)  
+[^7] [https://github.com/KeystoneHQ/Keystone-developer-hub/tree/main/audit-report](https://github.com/KeystoneHQ/Keystone-developer-hub/tree/main/audit-report)  
+[^8] Passphrase has to be entered on online device  
+[^9] Only English  
+[^10] Use any device, no need to sign up to receive a device.  
+[^11] [https://blog.keyst.one/the-relevance-benefits-of-keystones-btc-only-firmware-8965ebb42e48](https://blog.keyst.one/the-relevance-benefits-of-keystones-btc-only-firmware-8965ebb42e48)  
+[^12] BTC-only firmware required  
+[^13] [https://github.com/airgap-it/airgap-vault/issues/106](https://github.com/airgap-it/airgap-vault/issues/106)  
+[^14] [https://support.ledger.com/hc/en-us/articles/4410908103185-Creating-a-Bitcoin-Taproot-account-in-Ledger-Live?docs=true](https://support.ledger.com/hc/en-us/articles/4410908103185-Creating-a-Bitcoin-Taproot-account-in-Ledger-Live?docs=true)  
+[^15] [https://wiki.trezor.io/Taproot](https://wiki.trezor.io/Taproot)  
+[^16] [https://support.keyst.one/3rd-party-wallets/bitcoin-wallets/electrum/electrum-2-3-psbt-multi-signature](https://support.keyst.one/3rd-party-wallets/bitcoin-wallets/electrum/electrum-2-3-psbt-multi-signature)  
+[^17] [https://shiftcrypto.ch/blog/bitbox02-electrum-bitcoin-multisig/](https://shiftcrypto.ch/blog/bitbox02-electrum-bitcoin-multisig/)  
+[^18] [https://coldcard.com/docs/multisig](https://coldcard.com/docs/multisig)  
+[^19] [https://support.airgap.it/guides/metamask](https://support.airgap.it/guides/metamask)  
+[^20] [https://support.keyst.one/3rd-party-wallets/eth-and-web3-wallets-keystone/bind-metamask-with-keystone](https://support.keyst.one/3rd-party-wallets/eth-and-web3-wallets-keystone/bind-metamask-with-keystone)  
+[^21] [https://support.keyst.one/](https://support.keyst.one/)  
+[^22] [https://shiftcrypto.ch/coins/](https://shiftcrypto.ch/coins/)  
+[^23] [https://www.ledger.com/supported-crypto-assets](https://www.ledger.com/supported-crypto-assets)  
+[^24] [https://trezor.io/coins/](https://trezor.io/coins/)  
+[^25] [https://github.com/airgap-it/airgap-vault](https://github.com/airgap-it/airgap-vault)  
+[^26] [https://github.com/KeystoneHQ](https://github.com/KeystoneHQ)  
+[^27] [https://github.com/digitalbitbox](https://github.com/digitalbitbox)  
+[^28] [https://github.com/Coldcard](https://github.com/Coldcard)  
+[^29] [https://github.com/LedgerHQ](https://github.com/LedgerHQ)  
+[^30] [https://github.com/trezor](https://github.com/trezor)  
+[^31] [https://walletscrutiny.com/android/it.airgap.vault/](https://walletscrutiny.com/android/it.airgap.vault/)  
+[^32] [https://walletscrutiny.com/hardware/cobovaultessential/](https://walletscrutiny.com/hardware/cobovaultessential/)  
+[^33] [https://walletscrutiny.com/hardware/bitBox2/](https://walletscrutiny.com/hardware/bitBox2/)  
+[^34] [https://walletscrutiny.com/hardware/coldcardMk3/](https://walletscrutiny.com/hardware/coldcardMk3/)  
+[^35] [https://walletscrutiny.com/hardware/ledgerNanoX/](https://walletscrutiny.com/hardware/ledgerNanoX/)  
+[^36] [https://walletscrutiny.com/hardware/trezorOne/](https://walletscrutiny.com/hardware/trezorOne/)  
+[^37] Requires an old device  
+[^38] [Shop](https://shop.keyst.one/products/keystone-pro)  
+[^39] [Shop](https://shiftcrypto.ch/bitbox02/)  
+[^40] [Shop](https://store.coinkite.com/store/coldcard)  
+[^41] [Shop](https://shop.ledger.com/)  
+[^42] [Shop](https://shop.trezor.io/)

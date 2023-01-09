@@ -220,6 +220,8 @@ module.exports = {
         "guides/interaction",
         "guides/temple",
         "guides/ledger",
+        "guides/import-recovery-phrase",
+        "guides/plate",
       ],
     },
     "FAQ",
