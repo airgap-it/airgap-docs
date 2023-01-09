@@ -2,6 +2,12 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.20.0
+
+#### Fixes
+
+- **Tezos**: Fix transaction creation for certain contract calls
+
 ## 3.19.0
 
 #### Features
@@ -38,11 +44,13 @@ title: AirGap Wallet Changelog
 #### Features
 
 - **Tezos**: Add USDT token
+
 ## 3.18.2
 
 #### Features
 
 - **Tezos**: Add Jakartanet
+
 ## 3.18.1
 
 #### Fixes
