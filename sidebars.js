@@ -163,6 +163,15 @@ module.exports = {
           ],
           collapsed: true,
         },
+        {
+          type: "category",
+          label: "Internet Computer (ICP)",
+          items: [
+            "currencies/icp/introduction",
+            "currencies/icp/wallet-compatibility",
+          ],
+          collapsed: true,
+        },
       ],
       collapsed: false,
     },
