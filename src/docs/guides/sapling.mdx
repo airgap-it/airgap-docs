@@ -1,0 +1,161 @@
+---
+title: Tezos Sapling
+slug: /features/tezos-sapling
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+:::caution Support
+We will only be able to give limited support because all shielded transactions are private.
+:::
+
+<div class="yt-container">
+  <iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/CIxoMVp774o"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+## What is Sapling
+
+Sapling or shielded transactions allows you to perform privacy-preserving transactions of fungible tokens in a decentralized environment. It was an original idea from the Electric Coin Company, the company behind the ZCash protocol and it has long been the gold standard for transaction protection in blockchain, whereby the confidentiality of the sums and the unlinkability of the sender and receiver are protected. This feature was recently added to the Tezos network.
+
+## What are the use cases for Sapling
+
+- True privacy: Due to cryptocurrency's pseudonymous nature most people believe it provides privacy for payments but in reality, it does not. In fact, crypto gives less protection than fiat monetary authorities in certain ways, since it is a public blockchain that can theoretically reveal the real identity behind a public address if someone has enough resources to do chain analysis. With the introduction of sapling, transactions can now be routed through a shielded pool thereby providing true privacy and anonymity.
+
+## How to use Sapling in AirGap
+
+:::note Optional
+The next three steps may not be required if you already have a tezos XTZ and Shielded XTZ account setup.
+:::
+
+First, make sure you have AirGap Vault set up with a secret.
+
+<IPhoneWrapper src={"/img/sapling/sapling-01.jpg"} />
+
+Create a Tezos & Shielded Tez XTZ account. Click "Add Account", select Tezos XTZ & Shielded Tez XTZ and click "Create".
+
+<IPhoneWrapper src={"/img/sapling/sapling-02.jpg"} />
+
+The next page shows you an overview of all your accounts. Sync both account to AirGap Wallet.
+
+<IPhoneWrapper src={"/img/sapling/sapling-03.jpg"} />
+
+Click both Account to sync Vault to Wallet. Click the AirGap Wallet button.
+
+<IPhoneWrapper src={"/img/sapling/sapling-04.jpg"} />
+
+Select your interaction settings and Sync Vault to the Wallet.
+
+<IPhoneWrapper src={"/img/sapling/sapling-05.png"} />
+
+Import Account from Vault to Wallet. Repeat the same importation steps for the Shielded Tez XTZ Account.
+
+<IPhoneWrapper src={"/img/sapling/sapling-06.png"} />
+
+The next page shows you an overview of all your accounts. Select the shielded Tezos XTZ account you just created.
+
+<IPhoneWrapper src={"/img/sapling/sapling-07.png"} />
+
+Click the set contract button.
+
+<IPhoneWrapper src={"/img/sapling/sapling-08.png"} />
+
+In here you can input your desired sapling contract. Click the set address button.
+
+:::note Contract address
+The sapling address in this guide was blurred out as we do not endorse any specific address.
+:::
+
+:::warning Injection Service
+In this guide, we do not use any injection service.
+
+Whenever you interact with a sapling contract, even if the transactions that you send are not linkable to an identity, you still need to pay the fees of the contract with a normal tz address. One way to work around that is to set up an injection service that will send the transaction on your behalf in exchange for a small fee that you can add inside the shielded transaction.
+
+The service can still learn your IP address, which sometimes is even more sensitive than your tz address, so to solve that problem you can provide the service as a hidden Tor service.
+:::
+
+<IPhoneWrapper src={"/img/sapling/sapling-07.png"} />
+
+Click "Fund Account" to fund your shielded XTZ account from your unshielded XTZ account.
+
+<IPhoneWrapper src={"/img/sapling/sapling-09.png"} />
+
+Then select any unshielded Tezos account to pay the fee for the funding operation.
+
+<IPhoneWrapper src={"/img/sapling/sapling-10.png"} />
+
+Input the neccessary amount and the leave the address unchanged. This address belongs to your shielded tezos account.
+Click "Create Transaction".
+
+<IPhoneWrapper src={"/img/sapling/sapling-11.jpg"} />
+
+Click "Sign Transaction".
+
+<IPhoneWrapper src={"/img/sapling/sapling-12.png"} />
+
+Click "Confirm".
+
+<IPhoneWrapper src={"/img/sapling/sapling-13.png"} />
+
+Within minutes, your coins should have arrived in your shielded account.
+
+<IPhoneWrapper src={"/img/sapling/sapling-14.png"} />
+
+This transaction is shielded. Nobody can see which account you funded.
+Click the send button to send XTZ from your shielded XTZ to another shielded XTZ.
+
+<IPhoneWrapper src={"/img/sapling/sapling-15.png"} />
+
+On this page, we are creating a shielded transaction to another shielded account.
+Specify amount, address and click "Create Transaction"
+
+<IPhoneWrapper src={"/img/sapling/sapling-16.jpg"} />
+
+Sign the transaction
+
+<IPhoneWrapper src={"/img/sapling/sapling-17.png"} />
+
+Confirm the transaction
+
+<IPhoneWrapper src={"/img/sapling/sapling-18.png"} />
+
+Selected your unshielded account to wrap the transaction.
+
+:::note Wrapped
+Every shielded transaction has to be "wrapped" by a regular tezos transaction to pay the network fees. This is why there are some extra steps and you have to sign 2 transactions. First, you need to sign the "shielded transaction", then you have to choose which account to "wrap" it to pay the fee in tez. The account that wraps the shielded transaction is public, but the transaction details of the shielded transaction are private.
+:::
+
+<IPhoneWrapper src={"/img/sapling/sapling-19.jpg"} />
+
+Sign transaction again.
+
+<IPhoneWrapper src={"/img/sapling/sapling-20.png"} />
+
+Confirm the transaction.
+
+<IPhoneWrapper src={"/img/sapling/sapling-21.png"} />
+
+This transaction is shielded. Nobody can see how much you sent or to whom.
+
+Click the send button to unshield your XTZ.
+
+<IPhoneWrapper src={"/img/sapling/sapling-22.png"} />
+
+On this page, we want to unshield the remaining 0.5 XTZ tokens. Click the Send button, Specify amount, paste any unshielded XTZ account address and click "Create Transaction".
+
+<IPhoneWrapper src={"/img/sapling/sapling-23.jpg"} />
+
+Sign the transaction.
+
+<IPhoneWrapper src={"/img/sapling/sapling-24.png"} />
+
+Confirm the transaction.
+
+Just as you selected your unshielded account to wrap the previous transaction to pay for the network fee. repeat the same process. Sign and Confirm the transaction.
+
+<IPhoneWrapper src={"/img/sapling/sapling-25.png"} />
+
+You have successfully unshield 0.5 XTZ.

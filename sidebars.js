@@ -219,6 +219,7 @@ module.exports = {
         "guides/metamask-mobile",
         "guides/rabby",
         "guides/BIP-85",
+        "guides/sapling",
         "guides/social-recovery",
         "guides/step-by-step-guide",
         "guides/update-webview",
