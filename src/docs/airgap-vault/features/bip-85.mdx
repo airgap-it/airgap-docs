@@ -1,0 +1,36 @@
+---
+title: BIP-85
+slug: /airgap-vault/bip85
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+:::caution Advanced features
+BIP-85 is an advanced feature. Make sure you understand how it works before you use it.
+:::
+
+<div class="yt-container">
+  <iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/JVuURYQkhxg"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+## What is BIP-85
+
+[BIP-85](https://github.com/bitcoin/bips/blob/master/bip-0085.mediawiki) allows you to derive "entropy" from your secret recovery phrase.
+The entropy that is derived can be used in other wallets or applications.
+Even if that wallet is compromised and the derived entropy is compromised, the parent secret recovery phrase (and all other derived entropies) are still safe.
+This allows you to manage multiple secret recovery phrases (eg. for multiple wallets) while only having to back up one.
+
+## What are the use cases for BIP-85
+
+- Financial Structure: Most organizations have a hierarchical structure in place, and this also involves managing funds. The financial department in an organization could want to assign a separate wallet to a separate department without giving access to the main account to any department. With BIP-85 an organization can now create different secret recovery phrases for different departments without sharing the master secret recovery phrase. If one department's finance is compromised, the whole organization and the rest department are still safe.
+- Secret recovery phrase creation without the need to backup: An individual can create child secret recovery phrases for elderly parents or their kids who are unable to store or secure secret recovery phrases.
+- Multi-wallet setup: A user can now own multiple wallets without worrying about backing them all up aside from the master secret recovery phrase used in generating the other wallet.
+
+## How to setup BIP-85 in AirGap Vault
+
+### [Visit the guide page to learn how to setup BIP-85 in AirGap Vault](/guides/bip85/)

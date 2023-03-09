@@ -1,0 +1,99 @@
+---
+title: Setup Coin Flip and Dice Roll
+slug: /guides/coin-flip-dice-roll-entropy-collection
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+<div class="yt-container">
+  <iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/XnlLXajILHs"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+## How to setup Coin Flip and Dice Roll
+
+The dice roll/coin flip feature is a simple, yet better way of entropy generation. You can produce a precise sequence of inputs by rolling dice or flipping a coin.
+
+- In the case of coin flips, 256 flips are required to achieve the randomness or entropy for a 24-word secret recovery phrase.
+- In the case of dice rolls, 99 rolls are required.
+
+### Dice Roll
+
+Here are the things you will need:
+
+- The AirGap Vault app
+- Dice with 6 sides (Preferable: A new casino grade dice, more than one dice with good quality).
+- Dice tray (Optional)
+
+:::warning
+Don't use Dice Apps on your phone or computer. This defeats the purpose of eliminating the RNG chip.
+:::
+
+- Open the Vault app. On the setup page (also accessible throught the settings), toggle the Advanced Mode and click the GENERATE WITH DICE ROLLS button.
+
+<IPhoneWrapper src={"/img/dice-coin/dice1.png"} />
+<IPhoneWrapper src={"/img/dice-coin/dice2.jpeg"} />
+
+- Roll the dice on a tray (if available) or any flat surface.
+
+<img src={"/img/dice-coin/dice3.jpeg"} />
+
+If you're using only one dice, tossing at least 99 times may be tiresome. However, it is important to remember that this greatly increases the security of your funds, so it is absolutely worth it.
+
+- Repeat this process at least 99 times depending the number of dice you're using. For every roll, record the outcome on the app by clicking the number at the bottom.
+
+<IPhoneWrapper src={"/img/dice-coin/dice4.jpeg"} />
+
+:::note
+There are multiple standards of how dice roll inputs can be interpreted. We have the two methods in AirGap. The default method and ColdCard method. The different methods are only relevant if you plan to verify the secret recovery phrase with another wallet.
+:::
+
+To verify the generated secret recovery phrase using the cold card method, you can follow this [guide](https://coldcard.com/docs/verifying-dice-roll-math).
+
+- Click on the icon on the top right corner to select the method you want to use. The two methods generate two different secret recovery phrases.
+
+<IPhoneWrapper src={"/img/dice-coin/dice5.jpeg"} />
+
+- Click the proceed icon, read and follow the instructions on the next page.
+
+<IPhoneWrapper src={"/img/dice-coin/dice6.jpeg"} />
+
+- Click the understood button to generate your secret recovery phrase from your dice roll input.
+
+Hurray, you've successfully generated your secret recovery phrase using dice rolls!
+
+### Coin flip
+
+Here are the things you will need:
+
+- The AirGap Vault app
+- A coin (Preferable: A new one)
+
+:::warning
+Don't use Coin-Flip Apps on your phone or computer. This defeats the purpose of eliminating the RNG chip.
+:::
+
+- Open the Vault app. On the setup page (also accessible throught the settings), toggle the Advanced Mode and click the GENERATE WITH COIN FLIPS button.
+
+<IPhoneWrapper src={"/img/dice-coin/coin1.png"} />
+<IPhoneWrapper src={"/img/dice-coin/coin2.jpeg"} />
+
+- Flip the coin 256 times.
+
+<img src={"/img/dice-coin/coin3.jpeg"} />
+
+- Record your outcome in the Vault using the head and tails button at the bottom of the page.
+
+<IPhoneWrapper src={"/img/dice-coin/coin4.jpeg"} />
+
+- Click the proceed icon, read and follow the instructions on the next page.
+
+<IPhoneWrapper src={"/img/dice-coin/coin5.jpeg"} />
+
+- Click the understood button to generate your secret recovery phrase from your coin flip input.
+
+Hurray, you've successfully generated your secret recovery phrase from using coin flips!.

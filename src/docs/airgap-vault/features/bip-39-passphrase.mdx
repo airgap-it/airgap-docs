@@ -1,0 +1,43 @@
+---
+title: BIP 39 Passphrase (Plausible Deniability)
+slug: /airgap-vault/bip39
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+<div class="yt-container">
+  <iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/Dg3Dy7ifrEY"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+## Advance secret recovery phrase security
+
+:::caution Recommendation
+This option is recommended for experienced crypto users.
+:::
+
+Plausible deniability is a security feature that enables you to create a "hidden" account without anybody knowing it exists.
+It works by adding a passphrase when creating an account. This can be useful to protect you if you are threatened and compelled to provide your secret recovery phrase, or simply as an additional security measure in case you expose your secret recovery phrase by accident.
+
+## How the passphrase works
+
+When setting up AirGap, a 24-word recovery phrase was shown to you, which has to be backed up in a secure location. These 24 words provide access to all your accounts.
+
+- The passphrase is essentially a set of characters, similar to a password, added to your 24-word recovery phrase that grants access to a new account. This passphrase can be anything from a single word space to a long sentence.
+- The passphrase acts as a layer of security in case of an attack. For instance, if your 24-word secret recovery phrase were to be compromised. The attacker has to access both the secret recovery phrase and the passphrase in order to steal your funds.
+- Each unique passphrase opens a distinct set of accounts. You may use as many passphrases on top of the same 24 words.
+- It works for every coin in AirGap.
+- By default, the passphrase is empty.
+
+:::note Recommendation
+If you want to set up plausible deniability for your secret recovery phrase, you should add both a normal account (without a BIP-39 passphrase, also called “decoy” account), and another account with a BIP-39 passphrase.
+You then put a small number of coins on the “decoy” account and put the majority of your funds on your hidden account.
+:::
+
+## How to set up a passphrase in AirGap Vault
+
+### [Visit the guide page to learn how to setup BIP-39 in AirGap Vault](/guides/bip39/)

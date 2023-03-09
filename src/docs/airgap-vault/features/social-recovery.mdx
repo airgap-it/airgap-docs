@@ -1,6 +1,6 @@
 ---
-title: Setup social recovery
-slug: /features/social-recovery
+title: Social Recovery
+slug: /airgap-vault/social-recovery
 ---
 
 import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
@@ -51,59 +51,4 @@ The process of generating your social recovery shares is using an algorithm call
 
 ## How to set up Social Recovery in AirGap Vault
 
-If you want to set up social recovery functionality for your secrets, follow these steps:
-
-- Go to the Settings page and choose the secret recovery phrase for which you wish to create social recovery.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-01.png"} />
-
-- Select “Social Recovery”.
-
-On the next page you get a set of numbers.
-
-1. The number of secret shares: This number determines the amount of social contact you wish to maintain.
-2. The number of shares needed for recovery: This number determines the number of secret shares needed to successfully recover your secret.
-
-For this example, we select three for the number of secret shares and two for the number of shares needed for recovery.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-02.png"} />
-
-- Click the “start” button and back up the first social recovery phrase.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-03.png"} />
-
-- Click the “next” button and confirm the first social recovery phrase.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-04.png"} />
-
-- Click the “next” or “continue” button and backup the second social recovery phrase.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-05.png"} />
-
-- Click the “next” button and confirm the second social recovery phrase.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-06.png"} />
-
-- Click the “next” or “continue” button and backup the third-social recovery phrase.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-07.png"} />
-
-- Click the “next” button and confirm the third social recovery phrase.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-08.png"} />
-
-- Click “Finish”.
-- Make sure you validate that you wrote everything down correctly by importing your newly created social recovery.
-- Now put each of the shares into a sealed envelope and securely distribute them among your trusted contacts
-
-## How to recover your secret with social recovery in AirGap Vault
-
-- To recover your account from social recovery shares, open the AirGap vault and select the “social recovery” import method.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-09.png"} />
-
-- Select the number of shares that are required for recovery and input the social recovery phrases from the initial setup. In our case, it was two. Click the “Recover” button.
-
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-10.png"} />
-
-- Success, you've recovered your account using social recovery.
+### [Visit the guide page to learn how to setup social recovery in AirGap Vault](/guides/social-recovery/)
