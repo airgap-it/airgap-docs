@@ -52,6 +52,7 @@ module.exports = {
             'airgap-vault/features/bip-85',
             'airgap-vault/features/dice-coin-entropy',
             'airgap-vault/features/bip-39-passphrase',
+            'airgap-vault/features/multi-wallet',
             'airgap-vault/features/secure-keyboard',
             'airgap-vault/features/social-recovery',
             'airgap-vault/features/sapling',
