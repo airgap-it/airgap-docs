@@ -73,8 +73,9 @@ module.exports = {
           type: 'category',
           label: 'Features',
           items: [
-            'airgap-wallet/features/staking',
             'airgap-wallet/features/identicons',
+            'airgap-wallet/features/exchange',
+            'airgap-wallet/features/staking',
             'airgap-wallet/features/nfts',
           ],
           collapsed: true,
