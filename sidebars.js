@@ -72,7 +72,10 @@ module.exports = {
         {
           type: 'category',
           label: 'Features',
-          items: ['airgap-wallet/features/staking'],
+          items: [
+            'airgap-wallet/features/staking',
+            'airgap-wallet/features/identicons',
+          ],
           collapsed: true,
         },
       ],
