@@ -75,6 +75,7 @@ module.exports = {
           items: [
             'airgap-wallet/features/staking',
             'airgap-wallet/features/identicons',
+            'airgap-wallet/features/nfts',
           ],
           collapsed: true,
         },
