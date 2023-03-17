@@ -3,15 +3,14 @@ title: Setup social recovery
 slug: /guides/social-recovery
 ---
 
-import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+import IPhoneWrapper from '@site/src/components/IPhoneWrapper';
 
-<div class="yt-container">
+<div class='yt-container'>
   <iframe
-    class="yt-video"
-    src="https://www.youtube.com/embed/aT5Bi16D4Fw"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
+    class='yt-video'
+    src='https://www.youtube.com/embed/aT5Bi16D4Fw'
+    frameborder='0'
+    allowfullscreen></iframe>
 </div>
 
 :::note
@@ -22,11 +21,13 @@ The process of generating your social recovery shares is using an algorithm call
 
 If you want to set up social recovery functionality for your secrets, follow these steps:
 
-- Go to the Settings page and choose the secret recovery phrase for which you wish to create social recovery.
+- Select the setting of the secret you want to set up socail recovery phrase for.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-01.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery.png'} />
 
 - Select “Social Recovery”.
+
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-01.png'} />
 
 On the next page you get a set of numbers.
 
@@ -35,31 +36,31 @@ On the next page you get a set of numbers.
 
 For this example, we select three for the number of secret shares and two for the number of shares needed for recovery.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-02.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-02.png'} />
 
 - Click the “start” button and back up the first social recovery phrase.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-03.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-03.png'} />
 
 - Click the “next” button and confirm the first social recovery phrase.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-04.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-04.png'} />
 
 - Click the “next” or “continue” button and backup the second social recovery phrase.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-05.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-05.png'} />
 
 - Click the “next” button and confirm the second social recovery phrase.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-06.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-06.png'} />
 
 - Click the “next” or “continue” button and backup the third-social recovery phrase.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-07.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-07.png'} />
 
 - Click the “next” button and confirm the third social recovery phrase.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-08.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-08.png'} />
 
 - Click “Finish”.
 - Make sure you validate that you wrote everything down correctly by importing your newly created social recovery.
@@ -69,10 +70,10 @@ For this example, we select three for the number of secret shares and two for th
 
 - To recover your account from social recovery shares, open the AirGap vault and select the “social recovery” import method.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-09.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-09.png'} />
 
 - Select the number of shares that are required for recovery and input the social recovery phrases from the initial setup. In our case, it was two. Click the “Recover” button.
 
-<IPhoneWrapper src={"/img/social-recovery/social-recovery-10.png"} />
+<IPhoneWrapper src={'/img/social-recovery/social-recovery-10.png'} />
 
 - Success, you've recovered your account using social recovery.
