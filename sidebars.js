@@ -261,6 +261,7 @@ module.exports = {
     'glossary',
     'CHANGELOG-VAULT',
     'CHANGELOG-WALLET',
+    'UPCOMING',
     {
       type: 'link',
       label: 'AirGap Website',
