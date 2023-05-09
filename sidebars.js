@@ -193,6 +193,15 @@ module.exports = {
           ],
           collapsed: true,
         },
+        {
+          type: 'category',
+          label: 'Coreum (CORE)',
+          items: [
+            'currencies/coreum/introduction',
+            'currencies/coreum/wallet-compatibility',
+          ],
+          collapsed: true,
+        },
       ],
       collapsed: false,
     },
