@@ -8,7 +8,7 @@ title: AirGap Upcoming Features
 
 ICP (Internet Computer Protocol) staking will be available in the upcoming version of AirGap Wallet. With AirGap ICP staking, you can participate in the security of the Internet Computer network and earn rewards in the form of ICP coins. Staking involves locking up your ICP as collateral to support the operation of the network. In return for your contribution, you will receive rewards in the form of additional ICP. Staking is an important part of the Internet Computer network as it helps to ensure the security and reliability of the system.
 
-**estimation: NO ETA**
+**estimation: May 2023**
 
 ## Optimism Integration
 
@@ -16,12 +16,6 @@ Optimism (OP) is a Layer 2 scaling solution built on the Ethereum blockchain. It
 This Integration will allow AirGap users to store ETH and ERC20 tokens built on OP and interact with decentralized applications (DApps) on OP using WalletConnect.
 
 **estimation: ending of June 2023**
-
-## AirGap Knox
-
-AirGap Knox is a powerful tool for anyone who wants to take their security to the next level. It's a tool that takes security to the next level by disabling all forms of network on an OS level, thereby achieving true offline security. Once installed, the AirGap Knox takes control of the system and initiates blocking all connections on a deep system level — whether it's wifi, cellular, NFC, or Bluetooth. From then on, those can no longer be reactivated – Turning your device into a true cold wallet. The AirGap Knox acts as a device manager and guards the usability by restricting only the launch of the AirGap Vault. After the automatic installation, your seed phrase can then be generated in total privacy and top security because the AirGap Knox managed to cut off any network connectivity from the very beginning.
-
-**estimation: NO ETA**
 
 ## Improved UX for social recovery
 
@@ -35,7 +29,7 @@ With the new and improved UX, AirGap Wallet will make it easier to set up social
 
 The on-off ramp feature for AirGap Wallet is an upcoming addition that will make it easier for users to buy and sell digital assets directly within the app. This feature will allow users to convert from fiat to crypto and vice-versa without a separate exchange or service. With the on-off ramp feature, users can buy and sell cryptocurrencies directly within the AirGap wallet, using a simple and streamlined process.
 
-**estimation: NO ETA**
+**estimation: May 2023**
 
 ## Seed XOR (New Social Recovery standard)
 
