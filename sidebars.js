@@ -199,6 +199,7 @@ module.exports = {
           items: [
             'currencies/coreum/introduction',
             'currencies/coreum/wallet-compatibility',
+            'currencies/coreum/delegation',
           ],
           collapsed: true,
         },
