@@ -19,19 +19,19 @@ The AirGap Vault is a cold storage app that securely holds your private key and 
 
 You can create an unsigned transaction in an online, view-only wallet such as the ones listed above, then AirGap Vault signs the transaction offline without risk of leaking your secret. Communication is done securely over QR codes.
 
-#### [Entropy collection with dice rolls and coin flips](https://medium.com/airgap-it/entropy-collection-with-dice-rolls-and-coin-flips-bd34945bf5ce)
+#### [Entropy collection with dice rolls and coin flips](/airgap-vault/coin-flip-dice-roll-entropy-collection)
 
 Most wallets use the random number generator (RNG) on your device to generate the entropy needed to create your secret recovery phrase. This leaves room for RNG attacks, thereby making your wallet vulnerable to hackers. AirGap supports collecting entropy with dice rolls or coin flips to help you generate a secure and verifiable secret recovery phrase.
 
-#### [BIP-39 Passphrase](https://medium.com/airgap-it/securing-your-crypto-with-plausible-deniability-and-bip-39-passphrases-3bb80be72e75)
+#### [BIP-39 Passphrase](/airgap-vault/bip39)
 
 BIP-39 passphrase is an advanced security feature that allows you to create a new account by adding a set of words or characters to your 24-word secret recovery phrase. This functionality enables plausible deniability. It helps you create a “hidden” wallet without anybody knowing it exists.
 
-#### [Social recovery](https://support.airgap.it/features/social-recovery)
+#### [Social recovery](/airgap-vault/social-recovery)
 
 Social recovery is a feature that introduces the concept of guardians. These guardians are a trusted group of people who can help the owner of a wallet recover a lost or forgotten secret recovery phrase.
 
-#### [BIP-85](https://support.airgap.it/features/bip85/)
+#### [BIP-85](/airgap-vault/bip85)
 
 BIP-85 offers solutions to the challenge of having way too many secret recovery phrases and needing to back them all up securely. It defines a way to derive new secret recovery phrases from a master secret recovery phrase. The benefit is that you have one secret recovery phrase that you back-up, and then generate new multiple secret recovery phrases out of it (for different wallets). Without BIP85, you might end up with dozens of different secret recovery phrases that all need to be backed up.
 
