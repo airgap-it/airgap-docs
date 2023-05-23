@@ -195,6 +195,7 @@ module.exports = {
           label: "Internet Computer (ICP)",
           items: [
             "currencies/icp/introduction",
+            "currencies/icp/delegation",
             "currencies/icp/wallet-compatibility",
           ],
           collapsed: true,
