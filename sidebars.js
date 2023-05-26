@@ -51,6 +51,7 @@ module.exports = {
             "airgap-vault/features/bip-39-wordlist",
             "airgap-vault/features/bip-85",
             "airgap-vault/features/dice-coin-entropy",
+            "airgap-vault/features/key-generation",
             "airgap-vault/features/bip-39-passphrase",
             "airgap-vault/features/multi-wallet",
             "airgap-vault/features/multi-seed",

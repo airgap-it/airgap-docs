@@ -1,0 +1,23 @@
+---
+title: Secure Key Generation
+slug: /airgap-vault/secure-key-generation
+---
+
+To generate your Seed-Phrase, most wallets use the random number generator (RNG), that is built into the device. This leaves room for RNG attacks.
+
+This procedure appears uncomplicated, but there is an underlying security concern here. The problem is that it is not verifiable how most RNG chips work. There is no way to tell whether the output of those chips is truly random or if it outputs a predefined sequences that appears random, but can be reconstructed by the device manufacturer.
+
+To help you generate a secure seed phrase, AirGap supports entropy collections from various sources. The default generator collects data from audio, video, touch and accelerometer and mixes it up with the output of the hardware random number generator.
+The generated secret is saved in the secure enclave of the device, only accessible by the form of authentication set on your device.
+
+AirGap also offers Coin flip & Dice Roll entropy collection. For more information have a look [here](/airgap-vault/coin-flip-dice-roll-entropy-collection)
+
+## Setup secure seed phrase generation
+
+<div class="yt-container">
+  <iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/MIGSf8Lisc4"
+    frameborder="0"
+    allowfullscreen></iframe>
+</div>
