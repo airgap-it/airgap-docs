@@ -77,6 +77,7 @@ module.exports = {
           items: [
             "airgap-wallet/features/identicons",
             "airgap-wallet/features/exchange",
+            "airgap-wallet/features/ramp",
             "airgap-wallet/features/darkmode",
             "airgap-wallet/features/api-check",
             "airgap-wallet/features/staking",
