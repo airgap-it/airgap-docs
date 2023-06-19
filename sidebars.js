@@ -118,6 +118,15 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Optimism ETH (ETH)",
+          items: [
+            "currencies/optimism/introduction",
+            "currencies/optimism/wallet-compatibility",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
           label: "Tezos (XTZ)",
           items: [
             "currencies/tezos/introduction",
