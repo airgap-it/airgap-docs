@@ -23,7 +23,7 @@ BIP-85 is an advanced feature. Make sure you understand how it works before you 
 To derive a BIP-85 child entropy from one of your Secrets, go to the Settings page and open the detail page.
 Click on "Generate BIP85 Child secret recovery phrase" to get to the generation page.
 
-<IPhoneWrapper src={"/img/bip85/1-bip85-settings.png"} />
+<IPhoneWrapper src={"/img/bip85/1-bip85-settings.PNG"} />
 
 On the BIP-85 Generation page, you can set a few settings.
 
@@ -35,7 +35,7 @@ On the BIP-85 Generation page, you can set a few settings.
 To derive the same child secret recovery phrase again, all of the input values (length, index, passphrase) need to be the same. So make sure you don't forget any of the values.
 :::
 
-<IPhoneWrapper src={"/img/bip85/2-bip85-generate.png"} />
+<IPhoneWrapper src={"/img/bip85/2-bip85-generate.PNG"} />
 
 On the next page you can see the derived secret recovery phrase. You can now write it on a piece of paper or directly import it into another wallet.
 
@@ -43,11 +43,15 @@ On the next page you can see the derived secret recovery phrase. You can now wri
 The child secret recovery phrase do not have to be backed up. They can always be derived again from the parent own. You just have to make sure that you properly back up your parent secret recovery phrase.
 :::
 
-<IPhoneWrapper src={"/img/bip85/3-bip85-view.png"} />
+<IPhoneWrapper src={"/img/bip85/3-bip85-view.PNG"} />
 
-If you click on "Verify", you will be taken to a screen that lets you validate that you have written down the child secret recovery phrase correctly
+Here you can set a name for your secret. You can also set an encryption password to your secret. You have to eneter this password every time your secret is accessed.
 
-<IPhoneWrapper src={"/img/bip85/4-bip85-verify.png"} />
+<IPhoneWrapper src={"/img/bip85/4-bip85-verify.PNG"} />
+
+In the last step, add the accounts that you require and hit "Create".
+
+<IPhoneWrapper src={"/img/bip85/5-bip85-accounts.PNG"} />
 
 ## Recovery
 
