@@ -4,33 +4,6 @@ title: AirGap Upcoming Features
 
 # Upcoming AirGap Features:
 
-## ICP Staking
-
-ICP (Internet Computer Protocol) staking will be available in the upcoming version of AirGap Wallet. With AirGap ICP staking, you can participate in the security of the Internet Computer network and earn rewards in the form of ICP coins. Staking involves locking up your ICP as collateral to support the operation of the network. In return for your contribution, you will receive rewards in the form of additional ICP. Staking is an important part of the Internet Computer network as it helps to ensure the security and reliability of the system.
-
-**estimation: May 2023**
-
-## Optimism Integration
-
-Optimism (OP) is a Layer 2 scaling solution built on the Ethereum blockchain. It enables faster and cheaper transactions compared to the Ethereum network while maintaining the same level of security and decentralization.
-This Integration will allow AirGap users to store ETH and ERC20 tokens built on OP and interact with decentralized applications (DApps) on OP using WalletConnect.
-
-**estimation: ending of June 2023**
-
-## Improved UX for social recovery
-
-Social recovery is a process where you can recover your wallet using a set of trusted contacts who have been designated in advance.
-
-With the new and improved UX, AirGap Wallet will make it easier to set up social recovery and manage your trusted contacts. The process will be streamlined and user-friendly, making it easy for anyone to set up social recovery and ensure that their funds are always secure.
-
-**estimation: NO ETA**
-
-## On-off ramp for AirGap Wallet
-
-The on-off ramp feature for AirGap Wallet is an upcoming addition that will make it easier for users to buy and sell digital assets directly within the app. This feature will allow users to convert from fiat to crypto and vice-versa without a separate exchange or service. With the on-off ramp feature, users can buy and sell cryptocurrencies directly within the AirGap wallet, using a simple and streamlined process.
-
-**estimation: May 2023**
-
 ## Seed XOR (New Social Recovery standard)
 
 Seed XOR is a more powerful and standardized social recovery method than the previous one available in AirGap. It provides a higher level of security and protection for recovery phrases. By using XOR encryption and a streamlined interface, it simplifies the process of social recovery and ensures that your funds are always safe and secure.
