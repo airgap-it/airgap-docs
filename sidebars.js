@@ -221,6 +221,15 @@ module.exports = {
           ],
           collapsed: true,
         },
+        {
+          type: "category",
+          label: "Rootstock (RBTC)",
+          items: [
+            "currencies/rootstock/introduction",
+            "currencies/rootstock/wallet-compatibility",
+          ],
+          collapsed: true,
+        },
       ],
       collapsed: false,
     },
