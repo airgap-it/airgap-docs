@@ -294,6 +294,7 @@ module.exports = {
         "guides/address-book",
       ],
     },
+    "isolated-module",
     "FAQ",
     "glossary",
     "CHANGELOG-VAULT",
