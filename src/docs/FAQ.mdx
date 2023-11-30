@@ -443,7 +443,11 @@ If you are on Android, you could transfer the new APK using an SD card. Otherwis
 
 ## Why must I have a minimum of 1 DOT balance in my AirGap wallet?
 
-AirGap does not set any minimum balance requirement on any token or coin. This is a design on the Polkadot network, an address is only active when it holds a minimum amount (currently set at 1 DOT). This minimum amount is called an existential deposit (ED). An option to completely sweep an account will be added in the future.
+AirGap does not set any minimum balance requirement on any token or coin. This is a design on the Polkadot network, an address is only active when it holds a minimum amount (currently set at 1 DOT). If the balance on an account drops below 1 DOT, the remaining balance is reaped (burned from the wallet). This minimum amount is called an existential deposit (ED). An option to completely sweep an account will be added in the future.
+
+## Why does my DOT transaction to an empty address fail??
+
+If you send less than the Existential Deposit (1 DOT) to an empty address, the transaction will fail as the receiving address would not hold the Existential Deposit.
 
 ## Can I send NFTs (on Tezos) to my AirGap Wallet?
 
