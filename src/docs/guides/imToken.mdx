@@ -1,0 +1,86 @@
+---
+title: Setup imToken Wallet with AirGap Vault
+slug: /guides/imTOKEN
+---
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+This guide will explore how you can link imToken Wallet with AirGap Vault.
+
+If you already have imToken installed, you can skip the next step and proceed to pair imToken with AirGap Vault.
+
+## 1. Installation
+
+Download and install the [imToken Wallet](https://token.im/download).
+
+## 2. AirGap setup
+Download AirGap Vault from the [Google Play store](https://play.google.com/store/apps/details?id=it.airgap.vault), [App Store](https://apps.apple.com/us/app/airgap-vault-secure-secrets/id1417126841?l=de&ls=1) or directly from [Github](https://github.com/airgap-it/airgap-vault/releases) and install it on a dedicated offline device. Follow the setup guide [here](https://medium.com/airgap-it/airgap-set-up-guide-861e0f4b39b6) or watch the [video guide](https://www.youtube.com/watch?v=M9ICKaLxuwQ&t=1s&ab_channel=AirGap.it). The setup takes no longer than 5 minutes..
+
+## 3. imToken setup
+Head over to your imToken Wallet. Tap on Create Identity.
+<IPhoneWrapper src={"/img/imToken/imToken1.png"} />
+
+Choose a name for your Identity and set a password for it. Even though this account will not be used by you, it's mandatory to create one.
+<IPhoneWrapper src={"/img/imToken/imToken2.png"} />
+
+You can choose to backup the mnemonic or skip it.
+<IPhoneWrapper src={"/img/imToken/imToken3.png"} />
+
+After you reach the home screen, tap on the three lines on the top left corner.
+<IPhoneWrapper src={"/img/imToken/imToken4.png"} />
+
+Tap on the Plus icon.
+<IPhoneWrapper src={"/img/imToken/imToken5.png"} />
+
+Select connect with other wallets
+<IPhoneWrapper src={"/img/imToken/imToken6.png"} />
+
+Tap "Other QR-based wallets"
+<IPhoneWrapper src={"/img/imToken/imToken7.png"} />
+
+Now you would need to scan a QR code which we will fetch from the Vault app.
+<IPhoneWrapper src={"/img/imToken/imToken8.png"} />
+
+## 4. Binding imToken with AirGap Vault
+Tap on the account that you wish to import to imToken Wallet.
+<IPhoneWrapper src={"/img/imToken/imToken9.png"} />
+
+Select imToken as your desired wallet.
+<IPhoneWrapper src={"/img/imToken/imToken10.png"} />
+
+You will get a QR code - 
+<IPhoneWrapper src={"/img/imToken/imToken11.png"} />
+
+Scan this QR code with the imToken Wallet app.
+Now, tap the accounts that you want to link with imToken Wallet. The, tap Continue.
+<IPhoneWrapper src={"/img/imToken/imToken12.png"} />
+
+That's it. Now you have succesfully linked your AirGap Vault account with imToken Wallet.
+<IPhoneWrapper src={"/img/imToken/imToken13.png"} />
+
+## 5. Making a Transaction
+Select the coin/token that you want to transfer.
+<IPhoneWrapper src={"/img/imToken/imToken14.png"} />
+
+Tap on the Send button
+<IPhoneWrapper src={"/img/imToken/imToken15.png"} />
+
+Enter the receiver's address and the amount that you want to transfer.
+<IPhoneWrapper src={"/img/imToken/imToken16.png"} />
+
+Check all the details properly and hit the send button
+<IPhoneWrapper src={"/img/imToken/imToken17.png"} />
+
+It will give you a QR code to scan.
+<IPhoneWrapper src={"/img/imToken/imToken18.png"} />
+
+Open the Vault app and tap on the scanner button and scan the QR code.
+<IPhoneWrapper src={"/img/imToken/imToken19.png"} />
+
+Again, check the transaction details and tap the Sign button.
+<IPhoneWrapper src={"/img/imToken/imToken20.png"} />
+
+Now, the Vault app will provide you a QR code of the signed transaction.
+<IPhoneWrapper src={"/img/imToken/imToken21.png"} />
+
+Scan this with the imToken app. That's it. You will recieve a confirmation message on the top.
+<IPhoneWrapper src={"/img/imToken/imToken22.png"} />
