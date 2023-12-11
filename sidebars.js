@@ -272,7 +272,7 @@ module.exports = {
       label: "Guides",
       items: [
         "guides/metamask",
-        "guides/metamask-mobile"
+        "guides/metamask-mobile",
         "guides/imToken",
         "guides/rabby",
         "guides/bip-85",
