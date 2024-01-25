@@ -89,7 +89,11 @@ module.exports = {
     {
       type: "category",
       label: "AirGap Knox",
-      items: ["airgap-knox/introduction", "airgap-knox/device"],
+      items: [
+        "airgap-knox/introduction",
+        "airgap-knox/device",
+        "airgap-knox/faqs",
+      ],
       collapsed: true,
     },
     {
@@ -273,6 +277,7 @@ module.exports = {
       items: [
         "guides/metamask",
         "guides/metamask-mobile",
+        "guides/specter",
         "guides/imToken",
         "guides/rabby",
         "guides/bip-85",
