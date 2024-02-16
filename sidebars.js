@@ -296,6 +296,7 @@ module.exports = {
         "guides/bip-39-passphrase",
         "guides/dice-coin-entropy",
         "guides/address-book",
+        "guides/blockwallet",
       ],
     },
     "isolated-module",
