@@ -1,0 +1,70 @@
+---
+title: Create a Multisig wallet on Ethereum with SAFE
+slug: /guides/safewallet
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+AirGap users can create multisig wallets through third-party providers. Currently, AirGap supports multisig creation on [Tezos](https://medium.com/airgap-it/how-to-create-a-multisig-wallet-with-airgap-on-tezos-68999d2a672a) and Ethereum blockchain only. However, AirGap is open to change. We are happy to work with developers together to make Multisig possible on other chains as well.
+In this blog, we will focus on Multisig on Ethereum via [Safe Wallet](https://app.safe.global/welcome).
+
+Note that you can create a multi-sig with AirGap, only on the web version of the wallet.
+
+The below-mentioned guides are for those who already have AirGap fully set up. If you are a first-time user, you can check out the setup guide [here](https://support.airgap.it/guides/step-by-step-guide).
+
+## Create a Multisig wallet with AirGap on Ethereum
+
+1. Go to the [Safe](https://app.safe.global/welcome) Wallet website on your browser.
+
+2. From the home screen, click on the connect wallet button.
+
+![](/img/safe/1.png)
+
+3. From the list of wallets, select “Keystone”. This is because Keystone and AirGap use the same [QR-Code technology](https://eips.ethereum.org/EIPS/eip-4527) for signing transactions. We are working on getting added to the list to improve the user experience.
+
+![](/img/safe/2.png)
+
+4. Simply Click “Sync Keystone”. The steps shown in the popup are specific for Keystone users and can be ignored. Your Camera will now be turned on to scan your AirGap Vault Sync QR-Code. If the camera does not turn on, make sure to allow it in the browser settings.
+
+![](/img/safe/3.png)
+
+5. You will be required to scan a QR code from the Vault app. If you are new to AirGap Vault, follow the [step-by-step guide](https://support.airgap.it/guides/step-by-step-guide). Open
+   AirGap Vault and tap on your desired secret. Then, select an Ethereum account from the list. Now, tap on “Metamask” (both, SafeWallet and MetaMask use the same QR-standard) The AirGap Vault will now show you a SyncQR code -Scan it with your PC.
+
+   <IPhoneWrapper src={"/img/blockwallet/9.png"} />
+   <IPhoneWrapper src={"/img/blockwallet/10.png"} />
+
+6. When you are done scanning the QR, Click on “Scan Accounts”. Then, select your desired account from the list and click Connect.
+
+![](/img/safe/4.png)
+![](/img/safe/5.png)
+
+7. Now, on the overview page we ,click “Continue with Keystone”.
+
+![](/img/safe/6.png)
+
+8. Now, set a name for your Multisig wallet. Make sure that you have selected Ethereum as your desired blockchain. Tap Next.
+
+![](/img/safe/7.png)
+
+9. Here, you need to set the owners of the Multisig wallet. Click on Add new Owner to add multiple owners. You can add as many owners as you like. Carefully enter their addresses and set an Alias for each owner. Then, you need to select the threshold. The threshold of a Multisig wallet is the minimum number of signatures required to authorize a transaction or make changes to the wallet. When done, tap next.
+
+![](/img/safe/8.png)
+
+10. Review the owners of the Multisig wallet and the threshold. Also, make sure that you have enough ETH to pay the gas fees required for this transaction. If you do not have enough ETH, you can buy it via Mt.Pelerin [here](http://mtpelerin.com/join?rfr=bcH4RmHm).
+
+![](/img/safe/9.png)
+
+11. After a few seconds, a popup with a QR code will pop up. Scan this QR code with your AirGap Vault app. Verify the transaction details and tap the “Sign transaction” button.
+
+![](/img/safe/10.png)
+
+<IPhoneWrapper src={"/img/safe/11.png"} />
+
+12. The AirGap Vault will now give you a QR code. Click “Scan Keystone” and then scan the QR code from Vault. SafeWallet will start validating the transaction. This might take a moment. When it's done, you can start using your Multisig wallet.
+
+![](/img/safe/12.png)
+
+13. That's it, you have successfully created a Multisig wallet with AirGap on the Ethereum network. Now you can add crypto to your multi-sig wallet and make transactions with it.
+
+![](/img/safe/13.png)

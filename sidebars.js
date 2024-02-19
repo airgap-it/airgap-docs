@@ -297,6 +297,7 @@ module.exports = {
         "guides/dice-coin-entropy",
         "guides/address-book",
         "guides/blockwallet",
+        "guides/safewallet",
       ],
     },
     "isolated-module",
