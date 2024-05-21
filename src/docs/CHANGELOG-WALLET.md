@@ -2,6 +2,55 @@
 title: AirGap Wallet Changelog
 ---
 
+# 3.31.0
+
+#### Fixes
+
+- Bug fixes and improvements
+
+## 3.30.0
+
+#### Features
+
+- **Rootstock**: Added support for Rootstock
+
+## 3.29.0
+
+#### Features
+
+- **Ethereum**: added support for WETH and Verse tokens
+- **Tezos**: added support for uXTZ
+
+## 3.28.0
+
+#### Features
+
+- **WalletConnect**: Added support for WalletConnect 2
+
+## 3.26.0
+
+#### Features
+
+- **ICP**: Added support for ICP staking
+
+## 3.25.2
+
+#### Fixes
+
+- Bug fixes and improvements
+
+## 3.25.0
+
+#### Features
+
+- **Coreum**: Added support for Coreum
+
+## 3.24.0
+
+#### Features
+
+- **ICP**: Added support for ckBTC
+
 ## 3.20.0
 
 #### Fixes
