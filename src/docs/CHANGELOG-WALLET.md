@@ -2,7 +2,21 @@
 title: AirGap Wallet Changelog
 ---
 
-# 3.31.0
+## 3.32.0
+
+#### Fixes
+
+- **Coreum & Cosmos**: Resolved bug that prevented staking from working correctly on both Coreum and Cosmos chains.
+- **Kusama, Polkadot, Moonbean, Moonriver, Astar, Shiden**: Fixed a bug that prevented new transactions on substrate-based chains from being displayed on the history page.
+- **Scanner**: Fixed an issue where, after scanning a QR code, the scanning page would close but the camera would remain open.
+
+#### Features
+
+- **Acurast**: Added support for Acurast cACU tokens.
+- **Language**: Added language support for German, Russian, Chinese, French, Spanish, and Portuguese (Brazil).
+- **Isolated Module**: Added a card that redirects to the Isolated Module documentation page to help users learn how to add their own coin to AirGap if it’s not listed in the wallet.
+
+## 3.31.0
 
 #### Fixes
 

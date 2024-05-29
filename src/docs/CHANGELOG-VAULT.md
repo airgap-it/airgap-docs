@@ -2,7 +2,20 @@
 title: AirGap Vault Changelog
 ---
 
-# 3.31.0
+## 3.32.0
+
+#### Fixes
+
+- **Social recovery**: Corrected typo on the social recovery splash screen & resolved an issue that prevented users from recovering a secret through the social security feature.
+
+#### Features
+
+- **Acurast**: Added support for Acurast cACU tokens.
+- **Passphrase**: Added a note on the import page to showcase passphrase support.
+- **Isolated Module**: Added a card that redirects to the Isolated Module page to help users add their own coin if it’s not listed.
+- **Language**: Added language support for German, Russian, Chinese, French, Spanish, and Portuguese (Brazil).
+
+## 3.31.0
 
 #### Fixes
 
