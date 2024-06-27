@@ -312,6 +312,7 @@ module.exports = {
         "guides/interaction",
         "guides/temple",
         "guides/ledger",
+        "guides/trezor",
         "guides/import-recovery-phrase",
         "guides/plate",
         "guides/bip-39-passphrase",

@@ -1,0 +1,44 @@
+---
+title: How to import your wallet from Trezor to AirGap
+slug: /guides/trezor-to-airgap
+---
+
+import BrowserWindow from "@site/src/components/BrowserWindow/BrowserWindow";
+import DynamicImage from "@site/src/components/DynamicImage";
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+To move your funds from Trezor, import the backed-up seed phrase into AirGap by following the guide below.
+
+## Import your recovery phrase from AirGap
+
+Launch AirGap Vault and Click import recovery phrase
+
+<IPhoneWrapper src={"/img/temple/temple6.png"} />
+
+Input your recovery phrase and click the confirm button
+
+<IPhoneWrapper src={"/img/temple/temple7.png"} />
+
+Label your wallet and click the confirm button.
+
+:::note Label
+A label is a name to Identify your wallet just in case you have multiple of them in AirGap
+:::
+
+<IPhoneWrapper src={"/img/temple/temple8.png"} />
+
+You’ve successfully imported your seed phrase from Trezor to AirGap
+
+<IPhoneWrapper src={"/img/temple/temple9.png"} />
+
+Open the imported secret. Tap on the 3 dots in the top right corner and select "Add Account".
+
+<IPhoneWrapper src={"/img/trezor/1.png"} />
+
+Now, select the account that you want to import and tap "Add Account" button.
+
+<IPhoneWrapper src={"/img/trezor/2.png"} />
+
+If you have setup passphrase on your Trezor, you need to turn on advanced mode and enter the passphrase there. If not, you can simply ignore this step.
+
+<IPhoneWrapper src={"/img/trezor/3.png"} />
