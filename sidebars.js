@@ -320,6 +320,8 @@ module.exports = {
         "guides/address-book",
         "guides/blockwallet",
         "guides/safewallet",
+        "guides/delegate-xtz",
+        "guides/stake-xtz",
       ],
     },
     "isolated-module",
