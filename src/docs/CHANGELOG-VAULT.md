@@ -2,6 +2,10 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.32.3
+
+**Substrate**: Resolved a bug that prevented staking and transfer from working on substrate-based chains - Polkadot, Kusama, Astar & Shiden.
+
 ## 3.32.0
 
 #### Fixes

@@ -2,6 +2,13 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.32.3
+
+#### Fixes
+
+**Substrate**: Resolved a bug that prevented staking and transfer from working on substrate-based chains - Polkadot, Kusama, Astar & Shiden.
+**WalletConnect** Resolved a bug that prevented WalletConnect from properly working on Android.
+
 ## 3.32.0
 
 #### Fixes
