@@ -6,7 +6,8 @@ title: AirGap Vault Changelog
 
 #### Fixes
 
-**Splash Screen**: Fix the stuck splash screen behavior..
+**Splash Screen**: Fix the stuck splash screen behavior.
+**QR Code**: Resolve bug that prevent changes in QR code setting from persisting.
 
 ## 3.32.3
 
