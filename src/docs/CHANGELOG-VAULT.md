@@ -2,6 +2,12 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.32.5
+
+#### Fixes
+
+**Splash Screen**: Fix the stuck splash screen behavior..
+
 ## 3.32.3
 
 **Substrate**: Resolved a bug that prevented staking and transfer from working on substrate-based chains - Polkadot, Kusama, Astar & Shiden.

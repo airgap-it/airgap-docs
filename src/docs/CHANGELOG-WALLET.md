@@ -2,6 +2,15 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.32.5
+
+#### Fixes
+
+**QR Code**: Resolve bug that prevent changes in QR code setting from persisting.
+**Tezos**: Fix max stakeable Tezos balance issue.
+**Tezos**: Fix balance error for non staked accounts
+**Bitcoin**: Fix Bitcoin transaction history showing the wrong amount.
+
 ## 3.32.3
 
 #### Fixes
