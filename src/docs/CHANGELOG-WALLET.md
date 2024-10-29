@@ -6,17 +6,17 @@ title: AirGap Wallet Changelog
 
 #### Fixes
 
-**QR Code**: Resolve bug that prevent changes in QR code setting from persisting.
-**Tezos**: Fix max stakeable Tezos balance issue.
-**Tezos**: Fix balance error for non staked accounts
-**Bitcoin**: Fix Bitcoin transaction history showing the wrong amount.
+- **QR Code**: Resolve bug that prevent changes in QR code setting from persisting.
+- **Tezos**: Fix max stakeable Tezos balance issue.
+- **Tezos**: Fix balance error for non staked accounts
+- **Bitcoin**: Fix Bitcoin transaction history showing the wrong amount.
 
 ## 3.32.3
 
 #### Fixes
 
-**Substrate**: Resolved a bug that prevented staking and transfer from working on substrate-based chains - Polkadot, Kusama, Astar & Shiden.
-**WalletConnect** Resolved a bug that prevented WalletConnect from properly working on Android.
+- **Substrate**: Resolved a bug that prevented staking and transfer from working on substrate-based chains - Polkadot, Kusama, Astar & Shiden.
+- **WalletConnect** Resolved a bug that prevented WalletConnect from properly working on Android.
 
 ## 3.32.0
 
