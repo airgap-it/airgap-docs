@@ -2,6 +2,13 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.32.6
+
+#### Fixes
+
+- **Moonbeam & Moonriver**: Resolved an issue that prevented users from transferring tokens on Moonriver and Moonbeam
+- **LifeHash**: Updated LifeHash icons.
+
 ## 3.32.5
 
 #### Fixes

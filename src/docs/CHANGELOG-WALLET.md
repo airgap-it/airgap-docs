@@ -2,6 +2,15 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.32.6
+
+#### Fixes
+
+- **Tezos**: Adjusted the Tezos baker’s available delegation count to reflect accurate availability.
+- **Tezos**: Updated Tezos parameters for the Quebec upgrade.
+- **Cosmos**: Resolved an issue that prevented certain users from claiming rewards on Cosmos.
+- **Moonbeam & Moonriver**: Resolved an issue that prevented users from transferring tokens on Moonriver and Moonbeam
+
 ## 3.32.5
 
 #### Fixes
