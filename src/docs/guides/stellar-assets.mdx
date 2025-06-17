@@ -1,0 +1,84 @@
+---
+title: Setup Stellar Assets
+slug: /guides/stellar-assets
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+## How to setup Stellar assets in AirGap
+
+In this guide, we'll walk through how to set up Stellar assets in AirGap. Currently, AirGap supports the following five Stellar-based tokens:
+
+- AQUA
+- USDC
+- EURO
+- VELO Token
+- Stronghold Token
+
+By following this guide, you’ll be able to add and manage any of the tokens listed above in your AirGap Wallet.
+
+Launch the wallet and select your Stellar account
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token.png"} />
+
+Click the "Add Tokens" button
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token1.png"} />
+
+Select the asset you want to add. You can choose multiple assets, but in this example, we’ll only select the Stronghold Token. Then the click the "Add Tokens" button
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token2.png"} />
+
+Select the tokeasset n you've added
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token3.png"} />
+
+Click "Set Trustline" button to set a trustline for the asset
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token4.png"} />
+
+:::note Trustline
+Trustline in stellar is a mechanism that help prevent users from receiving unwanted assets by requiring them to actively opt-in to hold a specific asset. You can't hold or recieve an asset below the amount you specified.
+:::
+
+:::note Max Trustline
+Leave input blank to specify max possible trustline
+:::
+
+Specify the amount into the input. In this example we left the input blank.
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token5.png"} />
+
+Select your interaction style. In this example we used an offline device.
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token6.png"} />
+
+Scan QR with your AirGap vault
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token7.png"} />
+
+Sign transaction
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token8.png"} />
+
+Select your interaction style. In this example we use the QR code scanning.
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token9.png"} />
+
+Scan QR with your AirGap Wallet
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token10.png"} />
+
+Click the "confirm button" to broadcast transaction
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token11.png"} />
+
+Transaction should be successful
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token12.png"} />
+
+Select the asset to check if trustline has been updated
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token13.png"} />
+
+Send you address to a sender and you should be able to recieve the assets you've added to your AirGap Wallet.

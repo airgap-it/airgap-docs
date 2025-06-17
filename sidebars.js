@@ -322,6 +322,7 @@ module.exports = {
         "guides/safewallet",
         "guides/delegate-xtz",
         "guides/stake-xtz",
+        "guides/stellar-assets",
       ],
     },
     "isolated-module",
