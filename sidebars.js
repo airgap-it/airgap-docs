@@ -323,6 +323,7 @@ module.exports = {
         "guides/delegate-xtz",
         "guides/stake-xtz",
         "guides/stellar-assets",
+        "guides/stellar-multisig",
       ],
     },
     "isolated-module",

@@ -1,0 +1,142 @@
+---
+title: Setup Stellar Multisig
+slug: /guides/stellar-multisig
+---
+
+import IPhoneWrapper from "@site/src/components/IPhoneWrapper";
+
+## How to setup Stellar Multisig in AirGap
+
+### How to enable stellar multisig in AirGap
+
+In this guide, we'll walk through how to set up Stellar Multisig in AirGap.
+
+:::note Stellar Multisig
+To better understand thresholds, weights, and how Stellar multisig works, please visit the [Stellar documentation](https://developers.stellar.org/docs/learn/encyclopedia/security/signatures-multisig)
+:::
+
+Launch the wallet and select your Stellar account
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig.png"} />
+
+Click the "Enable Multisig" button
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig1.png"} />
+
+Input the signer and click the "Add Signer" button
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig2.png"} />
+
+Select your interaction style. In this example we used an offline device.
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token6.png"} />
+
+Scan QR with your AirGap vault
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig3.png"} />
+
+Sign transaction
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig4.png"} />
+
+Select your interaction style. In this example we use the QR code scanning.
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig5.png"} />
+
+Scan QR with your AirGap Wallet
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig6.png"} />
+
+Click the "confirm button" to broadcast transaction
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig7.png"} />
+
+Transaction should be successful
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig8.png"} />
+
+Select the Stellar account to confirm you've now switched to a multisig acccount. It should now like this:
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig9.png"} />
+
+### How to remove a signer or add extra signer
+
+Click the "Manage Multisig" button
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig10.png"} />
+
+Input the signer you want to add or remove.
+Assign a weight of 0 to remove a signer or any another weight to include a signer. Click the "Update Multisig" button
+
+:::note AirGap Implementation
+In AirGap's implementation, the low threshold must be lower than the medium threshold, and the medium threshold must be lower than the high threshold. Additionally, the total combined weight of all signers must exceed the high threshold.
+This design enforces proper multisig hierarchy, preventing misconfigurations that could allow low-weight signers to authorize high-level operations.
+:::
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig11.png"} />
+
+Select your interaction style. In this example we used an offline device.
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token6.png"} />
+
+Scan QR with your AirGap vault
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig12.png"} />
+
+Sign transaction
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig14.png"} />
+
+Select your interaction style. In this example we use the QR code scanning.
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig15.png"} />
+
+Scan QR with your AirGap Wallet
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig16.png"} />
+
+Since this is a multisig account, broadcasting the transaction without meeting the required threshold will fail. Therefore the "comfirmed" button is disabled by default. Toggle the "Display Details" button to copy the XDR and complete the signing process.
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig17.png"} />
+
+### How to sign XDR in AirGap
+
+Proceed to sign the XDR to collect additional signatures. Open the accounts that are listed as signers.
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig18.png"} />
+
+Click the "Sign XDR" button and input the XDR. Then click "Sign" button.
+
+:::note XDR copied from AirGap
+The XDR copied from AirGap Multisig may include quotation marks. Please remove them before signing the XDR.
+:::
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig19.png"} />
+
+Select your interaction style. In this example we used an offline device.
+
+<IPhoneWrapper src={"/img/stellar-assets/stellar_add_token6.png"} />
+
+Scan QR with your AirGap vault
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig20.png"} />
+
+Sign transaction
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig21.png"} />
+
+Select your interaction style. In this example we use the QR code scanning.
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig22.png"} />
+
+Scan QR with your AirGap Wallet
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig23.png"} />
+
+Click the "confirm" button to the broadcast transaction
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig24.png"} />
+
+Transaction should be successful
+
+<IPhoneWrapper src={"/img/stellar-multisig/stellar_multisig25.png"} />
