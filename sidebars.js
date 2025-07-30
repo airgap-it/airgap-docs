@@ -118,7 +118,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Currencies",
+      label: "Supported Chains",
       items: [
         {
           type: "category",
@@ -155,6 +155,8 @@ module.exports = {
             "currencies/tezos/Staking-and-Delegation",
             "currencies/tezos/sapling",
             "currencies/tezos/wallet-compatibility",
+            "currencies/tezos/stake-xtz",
+            "currencies/tezos/delegate-xtz",
           ],
           collapsed: true,
         },
@@ -259,6 +261,8 @@ module.exports = {
           items: [
             "currencies/stellar/introduction",
             "currencies/stellar/wallet-compatibility",
+            "currencies/stellar/stellar-assets",
+            "currencies/stellar/stellar-multisig",
           ],
           collapsed: true,
         },
