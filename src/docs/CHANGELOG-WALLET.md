@@ -2,6 +2,39 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.34.1
+
+#### Features
+
+- **Acurast**: Added support for Acurast Mainnet
+
+#### Fixes
+
+- **Bitcoin**: Transaction issue when sending from BTC Legacy to BTC Taproot addresses
+- **Optimism**: Optimism transaction QR bug
+- **Cosmos**: Cosmos reward claiming process
+- **Polkadot & Kusama**: Polkadot & Kusama migration to AssetHub
+- **Tezos**: Tezos Sapling transaction issues
+- **Acurast**: Acurast signing through Beacon integration
+- **UI**: Android Edge-to-Edge UI layout for smoother visual experience
+
+## 3.34.0
+
+#### Features
+
+- **Bitcoin**: Added support for Bitcoin Taproot
+
+## 3.33.0
+
+#### Features
+
+- **Stellar**: Added support for XLM and its leading tokens: USDC, VELO, Stronghold, AQUA, EURC
+
+#### Fixes
+
+- **EVM**: Fixed incorrect rendering of EVM addresses beginning with 0x0.
+- **Android SDK**: Updated to the latest Android SDK
+
 ## 3.32.6
 
 #### Fixes

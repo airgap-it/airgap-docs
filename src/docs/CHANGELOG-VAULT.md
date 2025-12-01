@@ -2,6 +2,42 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.34.1
+
+#### Features
+
+- **Acurast**: Added support for Acurast Mainnet
+
+#### Fixes
+
+- **Bitcoin**: Transaction issue when sending from BTC Legacy to BTC Taproot addresses
+- **Optimism**: Optimism transaction QR bug
+- **Cosmos**: Cosmos reward claiming process
+- **Polkadot & Kusama**: Polkadot & Kusama migration to AssetHub
+- **Tezos**: Tezos Sapling transaction issues
+- **Acurast**: Acurast signing through Beacon integration
+- **UI**: Android Edge-to-Edge UI layout for smoother visual experience
+- **UI**: Unified Lifehash experience for consistent identity visualization across devices
+
+## 3.34.0
+
+#### Features
+
+- **Bitcoin**: Added support for Bitcoin Taproot
+
+## 3.33.0
+
+#### Features
+
+- **Stellar**: Added support for XLM and its leading tokens: USDC, VELO, Stronghold, AQUA, EURC
+- **Aeternity**: Enabled sync with SuperHero Wallet for Aeternity users.
+- **BIP 85**: Removed BIP85 index limit for advanced users
+
+#### Fixes
+
+- **EVM**: Fixed incorrect rendering of EVM addresses beginning with 0x0.
+- **Android SDK**: Updated to the latest Android SDK
+
 ## 3.32.6
 
 #### Fixes
