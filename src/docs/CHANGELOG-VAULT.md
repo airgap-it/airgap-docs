@@ -2,6 +2,19 @@
 title: AirGap Vault Changelog
 ---
 
+## 3.34.3
+
+#### Features
+
+- **Base**: Introduced Base chain support
+- **BNB Chain**: Introduced BNB Chain support
+
+## 3.34.2
+
+#### Fixes
+
+- **Tezos**: Fixed issues with Tezos Reveal operations
+
 ## 3.34.1
 
 #### Features

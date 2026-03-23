@@ -2,6 +2,29 @@
 title: AirGap Wallet Changelog
 ---
 
+## 3.34.3
+
+#### Features
+
+- **Base**: Introduced Base chain support
+- **BNB Chain**: Introduced BNB Chain support
+- **Currency**: Added currency selection: GBP, EUR, and CHF
+- **Privacy**: New Hide Balance option for extra privacy
+- **Acurast**: Added support for ACU on Ethereum, Base, and BNB Chain
+
+#### Fixes
+
+- **Tezos**: Updated compatibility with the latest Tezos tallinet upgrade
+- **Acurast**: Fixed Acurast beacon signing issues for large payloads
+- **Sync**: Improved Vault <-> Wallet synchronisation to fix sync inconsistencies
+
+## 3.34.2
+
+#### Fixes
+
+- **Tezos**: Fixed issues with Tezos Reveal operations
+- Bug fixes and improvements
+
 ## 3.34.1
 
 #### Features
