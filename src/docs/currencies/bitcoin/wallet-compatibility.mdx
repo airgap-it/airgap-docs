@@ -7,11 +7,31 @@ import WalletCompatibilityIntro from "../../template/wallet-compatibility-intro.
 
 <WalletCompatibilityIntro />
 
+### Legacy (P2PKH)
+
 | Wallet     | Default Derivation Path | Import AirGap Seed In Wallet | Link                                               |
 | ---------- | ----------------------- | ---------------------------- | -------------------------------------------------- |
 | AirGap     | `m/44'/0'/0'`           | default                      | [AirGap](https://airgap.it)                        |
 | Ledger     | `m/44'/0'/0'`           | default                      | [Ledger](https://www.ledger.com/)                  |
 | Electrum   | _not BIP 39_            | default (select BIP39)       | [Electrum](https://electrum.org/)                  |
 | BIP39 Tool | `m/44'/0'/0'`           | default                      | [BIP39 Tool](https://iancoleman.io/bip39/#english) |
+
+### SegWit (P2WPKH — BIP84)
+
+| Wallet     | Default Derivation Path | Import AirGap Seed In Wallet | Link                                               |
+| ---------- | ----------------------- | ---------------------------- | -------------------------------------------------- |
+| AirGap     | `m/84'/0'/0'`           | default                      | [AirGap](https://airgap.it)                        |
+| Ledger     | `m/84'/0'/0'`           | default                      | [Ledger](https://www.ledger.com/)                  |
+| Electrum   | _not BIP 39_            | default (select BIP39)       | [Electrum](https://electrum.org/)                  |
+| BIP39 Tool | `m/84'/0'/0'`           | default                      | [BIP39 Tool](https://iancoleman.io/bip39/#english) |
+
+### Taproot (P2TR — BIP86)
+
+| Wallet     | Default Derivation Path | Import AirGap Seed In Wallet | Link                                               |
+| ---------- | ----------------------- | ---------------------------- | -------------------------------------------------- |
+| AirGap     | `m/86'/0'/0'`           | default                      | [AirGap](https://airgap.it)                        |
+| Ledger     | `m/86'/0'/0'`           | default                      | [Ledger](https://www.ledger.com/)                  |
+| Electrum   | _not BIP 39_            | default (select BIP39)       | [Electrum](https://electrum.org/)                  |
+| BIP39 Tool | `m/86'/0'/0'`           | default                      | [BIP39 Tool](https://iancoleman.io/bip39/#english) |
 
 The following website has additional information regarding Wallet Compatibility: https://walletsrecovery.org/

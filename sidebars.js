@@ -89,35 +89,6 @@ module.exports = {
     },
     {
       type: "category",
-      label: "AirGap Knox",
-      items: [
-        "airgap-knox/introduction",
-        "airgap-knox/device",
-        {
-          type: "category",
-          label: "Features",
-          items: [
-            "airgap-vault/features/address-explorer",
-            "airgap-vault/features/bip-39-wordlist",
-            "airgap-vault/features/bip-85",
-            "airgap-vault/features/dice-coin-entropy",
-            "airgap-vault/features/key-generation",
-            "airgap-vault/features/bip-39-passphrase",
-            "airgap-vault/features/multi-seed",
-            "airgap-vault/features/secure-keyboard",
-            "airgap-vault/features/social-recovery",
-            "airgap-vault/features/sapling",
-            "airgap-vault/features/address-book",
-            "airgap-vault/features/multi-sig",
-          ],
-          collapsed: true,
-        },
-        "airgap-knox/faqs",
-      ],
-      collapsed: true,
-    },
-    {
-      type: "category",
       label: "Supported Chains",
       items: [
         {
@@ -144,6 +115,24 @@ module.exports = {
           items: [
             "currencies/optimism/introduction",
             "currencies/optimism/wallet-compatibility",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Base (ETH)",
+          items: [
+            "currencies/base/introduction",
+            "currencies/base/wallet-compatibility",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "BNB Chain (BNB)",
+          items: [
+            "currencies/bnb-chain/introduction",
+            "currencies/bnb-chain/wallet-compatibility",
           ],
           collapsed: true,
         },
@@ -214,6 +203,15 @@ module.exports = {
           items: [
             "currencies/groestlcoin/introduction",
             "currencies/groestlcoin/wallet-compatibility",
+          ],
+          collapsed: true,
+        },
+        {
+          type: "category",
+          label: "Acurast (ACU)",
+          items: [
+            "currencies/acurast/introduction",
+            "currencies/acurast/wallet-compatibility",
           ],
           collapsed: true,
         },
