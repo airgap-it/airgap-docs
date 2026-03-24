@@ -103,12 +103,12 @@ function seedEntropy(additionalEntropyArray) {
   console.log(
     entropyHashHexString +
       toHexString(secureRandomArray) +
-      toHexString(additionalEntropyArray)
+      toHexString(additionalEntropyArray),
   );
   entropyHashHexString = sha3_256(
     entropyHashHexString +
       toHexString(secureRandomArray) +
-      toHexString(additionalEntropyArray)
+      toHexString(additionalEntropyArray),
   );
   return entropyHashHexString;
 }
@@ -186,6 +186,9 @@ Supported Staking protocols:
 - Cosmos
 - Polkadot
 - Kusama
+- TX chain (Coreum)
+- Moonbeam
+- Moonriver
 
 ## How to setup your AirGap wallet step by step
 
@@ -203,7 +206,7 @@ AirGap is a product of Papers.ch, which is a software development company locate
 
 ## Will AirGap be available in other languages aside from English?
 
-Currently, AirGap is available in English, German and Chinese. We are planning to add more languages. If you could help us translate our apps, please reach out to us!
+Currently, AirGap is available in English, German (AI translated), Chinese (AI translated), Spanish (AI translated), Portuguese, Russian, and French (AI translated) . We are planning to add more languages. If you could help us translate our apps, please reach out to us!
 
 ## Are you planning on having a token for AirGap?
 
@@ -211,7 +214,7 @@ Never say never, but as of now, AirGap does not have a utility token of its own 
 
 ## What are the supported coins/tokens on the AirGap wallet?
 
-- Bitcoin(BTC)
+- Bitcoin(BTC) - Legacy, Segwit & Taproot
 - Aeternity(AE)
 - Ethereum(ETH)
 - Groestlcoin(GRS)
@@ -219,6 +222,18 @@ Never say never, but as of now, AirGap does not have a utility token of its own 
 - Cosmos(ATOM)
 - Polkadot(DOT)
 - Kusama(KSM)
+- TX chain (CORE) - formerly Coreum
+- Internet computer (ICP)
+- Acurast(ACU)
+- Stellar Lumen(XLM)
+- Moonbean(GLMR)
+- Moonriver(MOVR)
+- Aster(ASTR)
+- Shiden(SDN)
+- Optimism(OP)
+- Base(BASE)
+- BNB chain(BNB)
+- Rootstock(RSK)
 
 ### FA1.2 / FA2 (Tezos)
 
